@@ -6,7 +6,7 @@ session_start();
 <br>
 <h3>Crear producto</h3>
 
-<form action="index.php" method="POST">
+<form action="opcionesProductos.php" method="POST">
     <input type="hidden" name="form1" value="crearProducto">
 
     Nombre: <input type="text" name="nombre_producto" required><br>
