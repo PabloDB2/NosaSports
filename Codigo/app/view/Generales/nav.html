@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<style>
+    nav{
+
+background-color: rgb(104,86,52);
+color: white;
+width: 100vw;
+max-width: 100%;
+height: 60px;
+margin-top:70px;
+display: flex;
+justify-content: flex-end; 
+align-items: center; 
+/*Si el z-index es menor que el de la imagen va a estar por debajo*/
+z-index: 1;  
+
+/*Añado una linea de sombra en el nav*/
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}  
+
+@media (max-width: 480px) {
+nav {
+    height: 40px; /* Reduce la altura del navbar */
+    font-size: 18px;
+}
+
+}
+</style>
+<body>
+    
+
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Productos</a>
+        <a href="#">Favoritos</a>
+        <a href="#">Contactanos</a>  
+    </nav>
+
+    <img class="logo" src="/NosaSports/Codigo/app/view/Img/logo.png" alt="">
+
+    
+</body>
+</html>

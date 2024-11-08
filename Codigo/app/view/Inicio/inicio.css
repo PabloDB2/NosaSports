@@ -1,0 +1,161 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    flex-grow: 1;
+}
+
+
+.logo{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 10;
+    top:0px;
+}
+
+.imgFondo1{
+    width: 100%;
+    height:450px;
+    /*relative permite el uso del z-index*/
+    position: relative;
+    z-index:2;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: white;
+    margin-right: 15px;
+    margin-left:10px;
+    font-size: 22px;
+}
+
+.texto1{
+
+    z-index:3;
+    color:white;
+    position:absolute;
+    text-align: center;
+    top: 200px;
+    left:450px;
+
+
+}
+
+h1{
+    font-size: 80px;
+}
+
+.contMateriales{
+    display: grid;
+    margin: auto;
+    background-color: rgba(104, 86, 52, 0.6);
+    width: 70%;
+    height: 200px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+   
+}
+
+#tejidos{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+       
+}
+
+.textoTejidos{
+    color:white;
+    margin-left: 15px;
+
+}
+
+#tituloTejidos{
+    text-align: center;
+}
+
+
+
+/* Ajustes para pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+    .contMateriales {
+        flex-direction: column; /* Cambia de fila a columna */
+        align-items: center;
+        height: auto;
+        width: 90%; /* Reduce el ancho */
+        padding: 15px;
+    }
+
+    #tejidos {
+        width: 150px; /* Ajusta el tamaño de la imagen */
+        height: 150px;
+        margin-bottom: 15px;
+    }
+
+    .textoTejidos {
+        margin-left: 0; /* Centra el texto debajo de la imagen */
+        text-align: center;
+    }
+
+    .texto1 {
+        top: 150px;
+        left: 50%; /* Centra el texto en pantallas medianas */
+        transform: translateX(-50%);
+    }
+
+    h1 {
+        font-size: 60px; /* Ajusta el tamaño del encabezado */
+    }
+}
+
+/* Ajustes para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    
+    .logo {
+        width: 150px; /* Reduce el tamaño del logo */
+        height: 150px;
+        top: -25px;
+    }
+
+    .imgFondo1 {
+        height: 300px; /* Reduce la altura de la imagen de fondo */
+    }
+
+    .texto1 {
+        top: 120px;
+        font-size: 20px;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .contMateriales {
+        width: 100%; /* Ocupa todo el ancho */
+        padding: 10px;
+    }
+
+    #tejidos {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 10px;
+    }
+
+    .textoTejidos {
+        font-size: 14px;
+        text-align: center;
+    }
+}
