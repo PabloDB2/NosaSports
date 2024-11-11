@@ -1,6 +1,6 @@
 <?php
-
-require "../../app/model/Producto.php";
+require_once(__DIR__ . '/../../rutas.php'); 
+require_once(CONFIG . 'dbConnection.php'); // ruta de config definido en rutas.php
 
 class ProductoController{
     public function getAllProducts(){
