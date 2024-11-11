@@ -1,7 +1,7 @@
 <?php
-require_once(__DIR__ . '/../../../rutas.php'); // Retrocede tres niveles desde opcionesProducto hasta Codigo
-require_once(CONTROLLER . 'ProductoController.php'); // Usa la constante para incluir el controlador
-require_once(MODEL . 'Producto.php'); // Usa la constante para incluir el modelo
+require_once(__DIR__ . '/../../../rutas.php'); 
+require_once(CONTROLLER . 'ProductoController.php'); 
+require_once(MODEL . 'Producto.php');
 
 session_start();
 ?>
@@ -28,7 +28,7 @@ session_start();
 
 <br>
 <h3>Actualizar producto</h3>
-<form action="index.php" method="POST">
+<form action="opcionesProductos.php" method="POST">
     <input type="hidden" name="formUpdate" value="updateProducto">
 
     ID: <input type="number" name="id_producto" required><br>
@@ -42,7 +42,7 @@ session_start();
 
 <br>
 <h3>Eliminar producto</h3>
-<form action="index.php" method="POST">
+<form action="opcionesProductos.php" method="POST">
     <input type="hidden" name="formDelete" value="eliminarProducto">
     ID: <input type="number" name="id_producto" required><br>
     <input type="submit" value="Eliminar producto">
