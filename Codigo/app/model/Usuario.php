@@ -79,13 +79,25 @@ class Usuario
             $sentencia = $conn->prepare("SELECT * FROM usuario WHERE nombre_usuario = ?");
             $sentencia->bindParam(1, $nombre_usuario);
             $sentencia->execute();
-            $result = $sentencia->fetchAll(PDO::FETCH_ASSOC);
-            return $result;
+            $result = $sentencia->fetch(PDO::FETCH_ASSOC);
+            
+            // si el usuario existe, crea un objeto usuario
+            if ($result == true) {
+                $usuario = new Usuario();
+                $usuario->setNombreUsuario($result['nombre_usuario']);
+                $usuario->setCorreo($result['correo']);
+                $usuario->setContraseña($result['contraseña']);
+                $usuario->setNombreApellidos($result['nombreapellidos']);
+                $usuario->setDireccion($result['direccion']);
+
+                
+                return $usuario; 
+            }
         } catch (PDOException $e) {
             echo "Error en la conexión a base de datos";
         }
     }
-
+    
     public function create()
     {
         try {

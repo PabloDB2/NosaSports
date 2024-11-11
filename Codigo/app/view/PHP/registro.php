@@ -14,6 +14,7 @@ session_start();
 
     Correo: <input type="text" name="correo" required><br>
     Contraseña: <input type="password" name="contraseña" required><br>
+    Repetir Contraseña: <input type="password" name="repetir_contraseña" required><br>
     Nombre de usuario: <input type="text" name="nombre_usuario" required><br>
     Nombre y apellidos: <input type="text" name="nombreapellidos" required><br>
     Direccion: <input type="textarea" name="direccion" required><br>
@@ -28,11 +29,15 @@ $usuarios = $usuarioController->getAllUsers();
 
 // Crear usuario
 if (isset($_POST['formCreate']) && $_POST['formCreate'] == 'crearUsuario') {
-    if (isset($_POST["correo"]) && isset($_POST["contraseña"]) && isset($_POST["nombre_usuario"]) && isset($_POST["nombreapellidos"]) && isset($_POST["direccion"])) {
+    if (isset($_POST["correo"], $_POST["contraseña"], $_POST["repetir_contraseña"], $_POST["nombre_usuario"], $_POST["nombreapellidos"], $_POST["direccion"])) {
+        if ($_POST["contraseña"] !== $_POST["repetir_contraseña"]) {
+            echo "<p>Las contraseñas no coinciden</p>";
+            exit();
+        }
         $usuarioController->crearUsuario($_POST["nombre_usuario"], $_POST["correo"], $_POST["nombreapellidos"], $_POST["contraseña"], $_POST["direccion"]);
         echo "<p>Se ha creado el usuario " . htmlspecialchars($_POST["nombre_usuario"]) . ".</p>";
     } else {
-        echo "<p>No has introducido un nombre de usuario válido.</p>";
+        echo "<p>Completa todos los campos.</p>";
     }
     exit();
 }
