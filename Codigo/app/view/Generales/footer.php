@@ -6,10 +6,19 @@
     <title>Document</title>
 </head>
 <style>
+
+
 footer{
-    text-align: center;
+    
     background-color: rgba(104, 86, 52);
     color:white;
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    text-align:center;
+    height: 5%;
+    
+    
 
 }
 
