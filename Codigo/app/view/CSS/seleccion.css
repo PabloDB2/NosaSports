@@ -2,10 +2,54 @@ body{
     margin: 0;
     display: flex;
     flex-direction: column;
+   
 }
 
 .content{
     flex-grow: 1;
    
     
+}
+
+.contGrande{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:10%;
+    
+    
+}
+
+.contTipo{
+    background-color: rgba(104, 86, 52, 0.6);
+    width: 20%;
+    flex-grow: 1;
+    margin: 7px;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    
+    
+    
+}
+
+.contTipo:hover{
+    background-color: rgba(104, 86, 52, 0.6);
+    width: 20%;
+    flex-grow: 1;
+    margin: 7px;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    border: black 4px solid;
+    
+    
+}
+
+.imgTipo{
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+   
 }
