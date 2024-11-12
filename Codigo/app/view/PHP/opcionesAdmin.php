@@ -5,11 +5,11 @@ require_once(MODEL . 'Producto.php');
 
 session_start();
 
-// solo se puede acceder a las opciones de admin si el usuario logeado es 123
-    // nombre_usuario: 123
-    // contraseña: 123
+// solo se puede acceder a las opciones de admin si el usuario logeado es admin
+    // nombre_usuario: admin
+    // contraseña: admin
     
-if (!isset($_SESSION['nombre_usuario']) || $_SESSION['nombre_usuario'] !== '123') {
+if (!isset($_SESSION['nombre_usuario']) || $_SESSION['nombre_usuario'] !== 'admin') {
     echo "<h3>Acceso denegado</h3>";
     echo "<p>No tienes permisos de admin.</p>";
     echo "<p><a href='inicio.php'><button>Volver a inicio</button></a></p>";

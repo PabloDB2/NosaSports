@@ -12,6 +12,7 @@ if (isset($_POST['cerrar_sesion'])) {
     header("Location: inicio.php");
     exit();
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -39,6 +40,13 @@ if (isset($_POST['cerrar_sesion'])) {
         ?>
             <form action="login.php" method="get">
                 <button type="submit">Iniciar sesión</button>
+            </form>
+        <?php 
+        } 
+        if ($nombre_usuario == "admin") { 
+        ?>
+        <form action="opcionesAdmin.php" method="get">
+                <button type="submit">Opciones de admin</button>
             </form>
         <?php 
         } 
