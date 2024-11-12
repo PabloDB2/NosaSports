@@ -7,9 +7,9 @@ class Usuario
     private $nombre_usuario;
     private $correo;
     private $nombreapellidos; // nombre y apellidos van juntos
-    private $direccion ;
+    private $direccion;
     private $contraseña;
-    
+
     public function getNombreUsuario()
     {
         return $this->nombre_usuario;
@@ -80,7 +80,7 @@ class Usuario
             $sentencia->bindParam(1, $nombre_usuario);
             $sentencia->execute();
             $result = $sentencia->fetch(PDO::FETCH_ASSOC);
-            
+
             // si el usuario existe, crea un objeto usuario
             if ($result == true) {
                 $usuario = new Usuario();
@@ -90,14 +90,14 @@ class Usuario
                 $usuario->setNombreApellidos($result['nombreapellidos']);
                 $usuario->setDireccion($result['direccion']);
 
-                
-                return $usuario; 
+
+                return $usuario;
             }
         } catch (PDOException $e) {
             echo "Error en la conexión a base de datos";
         }
     }
-    
+
     public function create()
     {
         try {
@@ -143,5 +143,61 @@ class Usuario
             echo "Error en la conexión a base de datos: " . $e->getMessage();
         }
     }
+
+    //metodos de update para modificar solo un campo específico
+    // (para no tener que modificar o teclear todos)
+    public function updateNombreUsuario($nuevoNombreUsuario)
+    {
+        try {
+            $conn = getDBConnection();
+            $sentencia = $conn->prepare("UPDATE usuario SET nombre_usuario = ? WHERE nombre_usuario = ?");
+            $sentencia->bindParam(1, $nuevoNombreUsuario);
+            $sentencia->bindParam(2, $this->nombre_usuario);
+            $sentencia->execute();
+            $this->nombre_usuario = $nuevoNombreUsuario;
+        } catch (PDOException $e) {
+            echo "Error al actualizar el nombre de usuario: " . $e->getMessage();
+        }
+    }
+
+    public function updateContraseña($nuevaContraseña)
+    {
+        try {
+            $conn = getDBConnection();
+            $sentencia = $conn->prepare("UPDATE usuario SET contraseña = ? WHERE nombre_usuario = ?");
+            $sentencia->bindParam(1, $nuevaContraseña);
+            $sentencia->bindParam(2, $this->nombre_usuario);
+            $sentencia->execute();
+            $this->contraseña = $nuevaContraseña;
+        } catch (PDOException $e) {
+            echo "Error al actualizar la contraseña: " . $e->getMessage();
+        }
+    }
+    public function updateNombreApellidos($nuevoNombreApellidos)
+    {
+        try {
+            $conn = getDBConnection();
+            $sentencia = $conn->prepare("UPDATE usuario SET nombreapellidos = ? WHERE nombre_usuario = ?");
+            $sentencia->bindParam(1, $nuevoNombreApellidos);
+            $sentencia->bindParam(2, $this->nombre_usuario);
+            $sentencia->execute();
+            $this->nombreapellidos = $nuevoNombreApellidos;
+        } catch (PDOException $e) {
+            echo "Error al actualizar el nombre y apellidos: " . $e->getMessage();
+        }
+    }
+
+    public function updateDireccion($nuevaDireccion)
+    {
+        try {
+            $conn = getDBConnection();
+            $sentencia = $conn->prepare("UPDATE usuario SET direccion = ? WHERE nombre_usuario = ?");
+            $sentencia->bindParam(1, $nuevaDireccion);
+            $sentencia->bindParam(2, $this->nombre_usuario);
+            $sentencia->execute();
+            $this->direccion = $nuevaDireccion;
+        } catch (PDOException $e) {
+            echo "Error al actualizar la dirección: " . $e->getMessage();
+        }
+    }
 }
-?>

@@ -29,7 +29,7 @@ if (isset($_POST['cerrar_sesion'])) {
     <div style="position: absolute; top: 10px; right: 10px;">
         <?php 
         if ($nombre_usuario) { 
-            echo htmlspecialchars($nombre_usuario); 
+            echo '<a href="cuenta.php" style="color: rgb(104,86,52);">' . htmlspecialchars($nombre_usuario) . '</a>';
         ?>
             <form action="inicio.php" method="POST">
                 <button type="submit" name="cerrar_sesion">Cerrar sesión</button>
