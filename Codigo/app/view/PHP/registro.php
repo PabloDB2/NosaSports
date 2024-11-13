@@ -19,7 +19,7 @@ session_start();
 
 <h2>Registro</h2>
 
-<form action="login.php" method="POST">
+<form action="registro.php" method="POST">
     <input type="hidden" name="formCreate" value="crearUsuario">
 
     <div class="form-group">
@@ -76,6 +76,8 @@ if (isset($_POST['formCreate']) && $_POST['formCreate'] == 'crearUsuario') {
         }
         $usuarioController->crearUsuario($_POST["nombre_usuario"], $_POST["correo"], $_POST["nombreapellidos"], $_POST["contraseña"], $_POST["direccion"]);
         echo "<p>Se ha creado el usuario " . htmlspecialchars($_POST["nombre_usuario"]) . ".</p>";
+        header("Location: login.php");
+        exit();
     } else {
         echo "<p>Completa todos los campos.</p>";
     }
