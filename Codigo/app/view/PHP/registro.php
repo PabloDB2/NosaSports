@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/registro.css">
+</head>
+<body>
+    
 <?php
 require_once(__DIR__ . '/../../../rutas.php');
 require_once(CONTROLLER . 'UsuarioController.php'); 
@@ -5,23 +15,53 @@ require_once(MODEL . 'Usuario.php');
 
 session_start();
 ?>
+<div class="popup">
 
-<br>
-<h3>Registro</h3>
+<h2>Registro</h2>
 
-<form action="registro.php" method="POST">
+<form action="login.php" method="POST">
     <input type="hidden" name="formCreate" value="crearUsuario">
 
-    Correo: <input type="text" name="correo" required><br>
-    Contraseña: <input type="password" name="contraseña" required><br>
-    Repetir Contraseña: <input type="password" name="repetir_contraseña" required><br>
-    Nombre de usuario: <input type="text" name="nombre_usuario" required><br>
-    Nombre y apellidos: <input type="text" name="nombreapellidos" required><br>
-    Direccion: <input type="textarea" name="direccion" required><br>
+    <div class="form-group">
+        <p>Nombre y apellidos:</p>
+        <input type="text" name="nombreapellidos" required>
+    </div>
+   
+    <div class="form-group">
+        <p>Correo:</p> 
+        <input type="email" name="correo" required>
+    </div>
+    
+    <div class="form-group">
+        <p>Direccion: </p>
+        <input type="textarea" name="direccion" required>
+    </div>
 
-    <input type="submit" value="Crear Cuenta">
+    <div class="form-group">
+        <p>Nombre de usuario:</p>
+        <input type="text" name="nombre_usuario" required>
+    </div>
+
+    <div class="form-group">
+        <p>Contraseña:</p>
+        <input type="password" name="contraseña" required>    
+    </div>
+    
+    <div class="form-group">
+      <p>Repetir Contraseña: </p>    
+      <input type="password" name="repetir_contraseña" required>
+    </div>
+    
+  
+    <input type="submit" value="Crear Cuenta" >
 </form>
 
+    <p id="pregunta">¿Ya tienes cuenta?</p>
+    <a href="../PHP/registro.php">Iniciar Sesión</a>
+    <a href="../PHP/inicio.php">Volver al Inicio</a>
+
+
+</div>
 <?php
 
 $usuarioController = new UsuarioController();
@@ -43,3 +83,12 @@ if (isset($_POST['formCreate']) && $_POST['formCreate'] == 'crearUsuario') {
 }
 
 ?>
+
+
+
+
+
+</body>
+</html>
+
+
