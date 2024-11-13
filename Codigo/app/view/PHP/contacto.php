@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="Contactos.css">
+    <link rel="stylesheet" href="../CSS/contacto.css">
 </head>
 <body>
     
@@ -12,7 +12,7 @@
     <div class="content">
 
     
-        <form action="Contactos.php" method="POST">
+        <form action="contacto.php" method="POST">
             
             <div class="textos">
                 <h1>REDACTE SUS CONSULTAS:</h1>
@@ -24,9 +24,9 @@
         </form>
 
         <div class="content2">
-            <p class="parrafo">RÚA MONASTEIRO DE CAAVEIRO, 1, 15010, A CORUÑA</p>
-            <p>NOSASPORTS@STORE.COM</p>
-            <p>654475315</p>
+            <p>📍 RÚA MONASTEIRO DE CAAVEIRO, 1, 15010, A CORUÑA</p>
+            <p>✉ NOSASPORTS@STORE.COM</p>
+            <p>📞 654475315</p>
         </div>
         
 

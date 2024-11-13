@@ -24,6 +24,6 @@ footer{
 
 </style>
 <body>
-<footer>2024 COPYRIGHT - NOSAS PORTS</footer>
+<footer>2024 COPYRIGHT© - NOSA SPORTS</footer>
 </body>
 </html>
