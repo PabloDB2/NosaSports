@@ -79,7 +79,7 @@ class Producto
             $result = $query->fetchAll(PDO::FETCH_ASSOC); // El assoc devuelve cada fila como array asociativo
             return $result;
         } catch (PDOException $e) {
-            echo "Error al ejecutar la query";
+            echo "Error al ejecutar la query: " . $e->getMessage();
         }
     }
 
@@ -93,7 +93,7 @@ class Producto
             $result = $sentencia->fetchAll(PDO::FETCH_ASSOC);
             return $result;
         } catch (PDOException $e) {
-            echo "Error en la conexión a base de datos";
+            echo "Error al obtener el producto: " . $e->getMessage();
         }
     }
 
@@ -109,7 +109,7 @@ class Producto
             $sentencia->bindParam(5, $this->likes);
             $sentencia->execute();
         } catch (PDOException $e) {
-            echo "Error en la conexión a base de datos";
+            echo "Error en la conexión a base de datos: " . $e->getMessage();
         }
     }
 
@@ -123,10 +123,10 @@ class Producto
             $sentencia->bindParam(3, $this->descripcion);
             $sentencia->bindParam(4, $this->deporte);
             $sentencia->bindParam(5, $this->likes);
-            $sentencia->bindParam(6, $this->id_producto); 
+            $sentencia->bindParam(6, $this->id_producto);
             $sentencia->execute();
         } catch (PDOException $e) {
-            echo "Error en la conexión a base de datos";
+            echo "Error en la conexión a base de datos: " . $e->getMessage();
         }
     }
 
@@ -154,5 +154,17 @@ class Producto
             echo "No se pudo obtener el producto " . $e->getMessage();
         }
     }
+
+    public static function getTopLikedProducts()
+    {
+        try {
+            $conn = getDBConnection();
+            $query = $conn->query("SELECT * FROM producto ORDER BY likes DESC LIMIT 3");
+            $result = $query->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        } catch (PDOException $e) {
+            echo "Error al obtener los 3 productos con más likes: " . $e->getMessage();
+            return [];
+        }
+    }
 }
-?>

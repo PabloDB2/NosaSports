@@ -20,7 +20,7 @@ if (!isset($_SESSION['nombre_usuario']) || $_SESSION['nombre_usuario'] !== 'admi
 
 <h3>Crear producto</h3>
 
-<form action="opcionesProductos.php" method="POST">
+<form action="opcionesAdmin.php" method="POST">
     <input type="hidden" name="formCreate" value="crearProducto">
 
     Nombre: <input type="text" name="nombre_producto" required><br>
@@ -39,7 +39,7 @@ if (!isset($_SESSION['nombre_usuario']) || $_SESSION['nombre_usuario'] !== 'admi
 
 <br>
 <h3>Actualizar producto</h3>
-<form action="opcionesProductos.php" method="POST">
+<form action="opcionesAdmin.php" method="POST">
     <input type="hidden" name="formUpdate" value="updateProducto">
 
     ID: <input type="number" name="id_producto" required><br>
@@ -53,7 +53,7 @@ if (!isset($_SESSION['nombre_usuario']) || $_SESSION['nombre_usuario'] !== 'admi
 
 <br>
 <h3>Eliminar producto</h3>
-<form action="opcionesProductos.php" method="POST">
+<form action="opcionesAdmin.php" method="POST">
     <input type="hidden" name="formDelete" value="eliminarProducto">
     ID: <input type="number" name="id_producto" required><br>
     <input type="submit" value="Eliminar producto">

@@ -1,4 +1,9 @@
 <?php
+require_once(__DIR__ . '/../../../rutas.php'); 
+require_once(CONTROLLER . 'ProductoController.php'); 
+require_once(MODEL . 'Producto.php');
+$productController = new ProductoController();
+$productos = $productController->getAllProducts();
 session_start();
 
 if (isset($_SESSION['nombre_usuario'])) {
@@ -12,6 +17,7 @@ if (isset($_POST['cerrar_sesion'])) {
     header("Location: inicio.php");
     exit();
 }
+$mejoresProductos = $productController->productosConMasLikes();
 
 ?>
 
@@ -81,6 +87,22 @@ if (isset($_POST['cerrar_sesion'])) {
                 <img id="tejidos" src="/NosaSports/Codigo/app/view/Img/reciclado.jpg" alt="">
             </div>
 
+        </div>
+
+        <!-- productos mas populares -->
+
+        <h2 style="text-align: center">Productos más populares</h2>
+        <div class="topProductos">
+           
+                <?php foreach ($mejoresProductos as $producto) { ?>
+                    <div class="tarjetaProducto">
+                        <h3><?= htmlspecialchars($producto['nombre_producto']). "<br>" . htmlspecialchars($producto['likes']). " &#x2764;"  ?></h3>
+                        <p><?= htmlspecialchars($producto['descripcion']) ?></p>
+                        <p>Precio: <?= htmlspecialchars($producto['precio']) ?>€</p>
+
+                    </div>
+                <?php } ?>
+            <
         </div>
     </div>
 

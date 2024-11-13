@@ -40,5 +40,9 @@ class ProductoController{
         $producto->setIdProducto($id_producto);
         $producto->deleteProduct();
     }
+
+    public function productosConMasLikes() {
+        return Producto::getTopLikedProducts();
+    }
 }
 ?>

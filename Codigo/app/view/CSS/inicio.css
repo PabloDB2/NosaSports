@@ -85,7 +85,21 @@ h1{
     text-align: center;
 }
 
+.topProductos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
 
+.tarjetaProducto {
+    font-size: 20px;
+    background-color: rgba(104, 86, 52, 0.6);
+    border-radius: 10px;
+    width: 30%;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
 
 /* Ajustes para pantallas medianas (tabletas) */
 @media (max-width: 768px) {
