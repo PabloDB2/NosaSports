@@ -24,7 +24,7 @@ if (!isset($_SESSION['nombre_usuario']) || $_SESSION['nombre_usuario'] !== 'admi
     <input type="hidden" name="formCreate" value="crearProducto">
 
     Nombre: <input type="text" name="nombre_producto" required><br>
-    Precio: <input type="text" name="precio" required><br>
+    Precio: <input type="number" step="0.01" name="precio" required><br>
     Descripción: <textarea name="descripcion" required></textarea><br>
     Deporte: 
     <select id="deporte" name="deporte" required>
@@ -44,7 +44,7 @@ if (!isset($_SESSION['nombre_usuario']) || $_SESSION['nombre_usuario'] !== 'admi
 
     ID: <input type="number" name="id_producto" required><br>
     Nombre: <input type="text" name="nombre_producto" required><br>
-    Precio: <input type="text" name="precio" required><br>
+    Precio: <input type="number" step="0.01" name="precio" required><br> <!-- step=0.01 solo admite números máximo 2 decimales-->
     Descripción: <textarea name="descripcion" required></textarea><br>
     Deporte: <input type="text" name="deporte" required><br>
     Likes: <input type="number" name="likes" required><br>

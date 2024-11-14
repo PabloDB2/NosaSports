@@ -19,7 +19,7 @@ session_start();
 
 <h2>Registro</h2>
 
-<form action="login.php" method="POST">
+<form action="registro.php" method="POST">
     <input type="hidden" name="formCreate" value="crearUsuario">
 
     <div class="form-group">
@@ -51,7 +51,6 @@ session_start();
       <p>Repetir Contraseña: </p>    
       <input type="password" name="repetir_contraseña" required>
     </div>
-    
   
     <input type="submit" value="Crear Cuenta" >
 </form>
@@ -60,22 +59,36 @@ session_start();
     <a href="../PHP/registro.php">Iniciar Sesión</a>
     <a href="../PHP/inicio.php">Volver al Inicio</a>
 
-
-</div>
-<?php
-
-$usuarioController = new UsuarioController();
-$usuarios = $usuarioController->getAllUsers();
-
-// Crear usuario
+    <?php
+    // Crear usuario
 if (isset($_POST['formCreate']) && $_POST['formCreate'] == 'crearUsuario') {
     if (isset($_POST["correo"], $_POST["contraseña"], $_POST["repetir_contraseña"], $_POST["nombre_usuario"], $_POST["nombreapellidos"], $_POST["direccion"])) {
+        
         if ($_POST["contraseña"] !== $_POST["repetir_contraseña"]) {
             echo "<p>Las contraseñas no coinciden</p>";
             exit();
         }
-        $usuarioController->crearUsuario($_POST["nombre_usuario"], $_POST["correo"], $_POST["nombreapellidos"], $_POST["contraseña"], $_POST["direccion"]);
-        echo "<p>Se ha creado el usuario " . htmlspecialchars($_POST["nombre_usuario"]) . ".</p>";
+
+        $nombreUsuario = htmlspecialchars($_POST["nombre_usuario"]);
+        $correo = htmlspecialchars($_POST["correo"]);
+        $nombreApellidos = htmlspecialchars($_POST["nombreapellidos"]);
+        $direccion = htmlspecialchars($_POST["direccion"]);
+        $contraseña = $_POST["contraseña"];
+
+        if (strlen($contraseña) < 8 ){
+            echo "<p>La contraseña debe tener al menos 8 caracteres</p>";
+            exit();
+        }
+
+        if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
+            echo "<p>Correo electrónico no válido.</p>";
+            exit();
+        }
+
+        $usuarioController->crearUsuario($nombreUsuario, $correo, $nombreApellidos, $contraseña, $direccion);
+        echo "<p>Se ha creado el usuario " . $nombreUsuario . ".</p>";
+        header("Location: login.php");
+        exit();
     } else {
         echo "<p>Completa todos los campos.</p>";
     }
@@ -84,11 +97,15 @@ if (isset($_POST['formCreate']) && $_POST['formCreate'] == 'crearUsuario') {
 
 ?>
 
+</div>
+<?php
+
+$usuarioController = new UsuarioController();
+$usuarios = $usuarioController->getAllUsers();
 
 
 
+?>
 
 </body>
 </html>
-
-
