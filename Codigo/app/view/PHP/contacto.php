@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if (isset($_SESSION['nombre_usuario'])) {
+    $nombre_usuario = $_SESSION['nombre_usuario'];
+} else {
+    $nombre_usuario = null;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +18,7 @@
 </head>
 <body>
     
-    <?php include "../Generales/nav.html" ?>
+    <?php include "../Generales/nav.php" ?>
     <div class="content">
 
     
@@ -28,15 +38,8 @@
             <p>✉ NOSASPORTS@STORE.COM</p>
             <p>📞 654475315</p>
         </div>
-        
-
+    
     </div>
-
-    
-    
-
-    
-
 </body>
 
     <?php include "../Generales/footer.php" ?>

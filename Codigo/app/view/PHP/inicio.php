@@ -12,11 +12,6 @@ if (isset($_SESSION['nombre_usuario'])) {
     $nombre_usuario = null;
 }
 
-if (isset($_POST['cerrar_sesion'])) {
-    session_destroy();
-    header("Location: inicio.php");
-    exit();
-}
 $mejoresProductos = $productController->productosConMasLikes();
 
 ?>
@@ -34,33 +29,11 @@ $mejoresProductos = $productController->productosConMasLikes();
 <body>
 
     <div style="position: absolute; top: 10px; right: 10px;">
-        <?php 
-        if ($nombre_usuario) { 
-            echo '<a href="cuenta.php" style="color: rgb(104,86,52);">' . htmlspecialchars($nombre_usuario) . '</a>';
-        ?>
-            <form action="inicio.php" method="POST">
-                <button type="submit" name="cerrar_sesion">Cerrar sesión</button>
-            </form>
-        <?php 
-        } else { 
-        ?>
-            <form action="login.php" method="get">
-                <button type="submit">Iniciar sesión</button>
-            </form>
-        <?php 
-        } 
-        if ($nombre_usuario == "admin") { 
-        ?>
-        <form action="opcionesAdmin.php" method="get">
-                <button type="submit">Opciones de admin</button>
-            </form>
-        <?php 
-        } 
-        ?>
+        
     </div>
 
     <div class="content">
-        <?php include "../Generales/nav.html" ?>
+        <?php include "../Generales/nav.php" ?>
         <img class="imgFondo1" src="/NosaSports/Codigo/app/view/Img/bolas.avif" alt="">
 
         <div class="texto1">

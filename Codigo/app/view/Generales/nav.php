@@ -55,7 +55,30 @@ a:hover{
     top:0px;
 }
 
+.opcionesUsuario {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        z-index: 10; /* Asegura que esté por encima del nav */
+    }
 
+    .opcionesUsuario a,
+    .opcionesUsuario button {
+        text-decoration: none;
+        color: rgb(104, 86, 52);
+        font-size: 18px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .opcionesUsuario button:hover,
+    .opcionesUsuario a:hover {
+        color: black;
+    }
 
 @media (max-width: 480px) {
 nav {
@@ -66,17 +89,35 @@ nav {
 }
 </style>
 <body>
-    
+    <!-- Opciones de usuario -->
+<div class="opcionesUsuario">
+    <?php 
+    if ($nombre_usuario) { 
+        echo '<a href="cuenta.php">' . htmlspecialchars($nombre_usuario) . '</a>';
+ 
+        if ($nombre_usuario === "admin") { 
+        ?>
+            <a href="opcionesAdmin.php">Opciones de admin</a>
+        <?php 
+        } 
+    } else { 
+        ?>
+        <a href="login.php">Iniciar sesión</a>
+    <?php 
+    } 
+    ?>
+</div>
     
     <nav>
         <a href="../PHP/inicio.php">Inicio</a>
         <a href="../PHP/seleccion.php">Productos</a>
         <a href="../PHP/favoritos.php">Favoritos</a>
-        <a href="../PHP/contacto.php"">Contactanos</a>  
+        <a href="../PHP/contacto.php">Contactanos</a>  
     </nav>
 
     <img class="logo" src="/NosaSports/Codigo/app/view/Img/logo.png" alt="">
 
-    
+
+</nav>
 </body>
 </html>
