@@ -44,7 +44,6 @@ a{
     text-align: center;
     top: 200px;
     left:450px;
-    text-shadow:  black 15px 0px 20px;
 
 
 }
@@ -101,6 +100,21 @@ h1{
     padding: 15px;
     color: white;
     text-align: center;
+}
+
+.imgProductos{
+    width:30%;
+    border-radius: 20px;
+}
+
+#h2Populares{
+    background-color:rgba(104, 86, 52) ;
+    color:white;
+    border-radius: 20px;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
 }
 
 /* Ajustes para pantallas medianas (tabletas) */

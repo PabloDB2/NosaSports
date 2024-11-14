@@ -111,7 +111,7 @@ nav {
     <nav>
         <a href="../PHP/inicio.php">Inicio</a>
         <a href="../PHP/seleccion.php">Productos</a>
-        <a href="../PHP/favoritos.php">Favoritos</a>
+        <a href="../PHP/favoritos.php">Deseados</a>
         <a href="../PHP/contacto.php">Contactanos</a>  
     </nav>
 
