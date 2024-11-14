@@ -57,11 +57,13 @@ if (isset($_POST['cerrar_sesion'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta</title>
     <link rel="stylesheet" href="../CSS/cuenta.css">
 </head>
 
 <body>
-    <h2>Datos personales</h2>
+    <?php include "../Generales/nav.php" ?>
+    <h1>Datos personales</h2>
     <div class="content">
         <form action="cuenta.php" method="POST">
             <div>
@@ -85,16 +87,16 @@ if (isset($_POST['cerrar_sesion'])) {
             </div>
             <br>
             <div>
-                <button type="submit" name="modificar">Modificar</button>
+                <button type="submit" name="modificar" style="background-color: rgb(104,86,52); color: white">Modificar</button>
             </div>
             <br>
             <div>
-                <button type="submit" name="cerrar_sesion" style="background-color: red;">Cerrar sesión</button>
-                <button type="submit" name="borrar_cuenta" style="background-color: red;">Borrar cuenta</button>
+                <button type="submit" name="cerrar_sesion" style="background-color: red;  color: white">Cerrar sesión</button>
+                <button type="submit" name="borrar_cuenta" style="background-color: red;  color: white">Borrar cuenta</button>
             </div>
         </form>
     </div>
 
 </body>
-
+    <?php include "../Generales/footer.php" ?>
 </html>
