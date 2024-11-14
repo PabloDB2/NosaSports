@@ -20,6 +20,8 @@ if (!isset($_SESSION['nombre_usuario']) || $_SESSION['nombre_usuario'] !== 'admi
 
 <h3>Crear producto</h3>
 
+<!--Formato de la ruta desde /NosaSports/Codigo/app/view/Img/imagenEjemplo.jpg -->
+
 <form action="opcionesAdmin.php" method="POST">
     <input type="hidden" name="formCreate" value="crearProducto">
 
@@ -34,6 +36,7 @@ if (!isset($_SESSION['nombre_usuario']) || $_SESSION['nombre_usuario'] !== 'admi
         <option value="boxeo">Boxeo</option>
     </select><br>
     Likes: <input type="number" name="likes" required><br>
+    Imagen:<input type="text" name="imagen" required><br>
     <input type="submit" value="Crear Producto">
 </form>
 
@@ -48,6 +51,7 @@ if (!isset($_SESSION['nombre_usuario']) || $_SESSION['nombre_usuario'] !== 'admi
     Descripción: <textarea name="descripcion" required></textarea><br>
     Deporte: <input type="text" name="deporte" required><br>
     Likes: <input type="number" name="likes" required><br>
+    Imagen:<input type="text" name="imagen" required><br>
     <input type="submit" value="Actualizar producto">
 </form>
 
@@ -75,7 +79,7 @@ if (isset($_POST['formCreate']) && $_POST['formCreate'] == 'crearProducto') {
 
         // validar precio
         if (filter_var($precio, FILTER_VALIDATE_FLOAT)) {
-            $productController->crearProducto($nombreProducto, $precio, $descripcion, $deporte, $likes);
+            $productController->crearProducto($nombreProducto, $precio, $descripcion, $deporte, $likes,$imagen);
             echo "<p>Se ha creado el producto " . $nombreProducto . ".</p>";
         } else {
             echo "<p>Precio no válido.</p>";
@@ -98,7 +102,7 @@ if (isset($_POST['formUpdate']) && $_POST['formUpdate'] == 'updateProducto') {
 
         // validar precio
         if (filter_var($precio, FILTER_VALIDATE_FLOAT)) {
-            $productController->modificarProducto($idProducto, $nombreProducto, $precio, $descripcion, $deporte, $likes);
+            $productController->modificarProducto($idProducto, $nombreProducto, $precio, $descripcion, $deporte, $likes,$imagen);
             echo "<p>Se ha modificado el producto " . $nombreProducto . ".</p>";
         } else {
             echo "<p>Precio no válido.</p>";
