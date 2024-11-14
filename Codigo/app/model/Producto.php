@@ -10,7 +10,9 @@ class Producto
     private $likes;
     private $deporte;
     private $descripcion;
+    private $imagen; 
 
+    // Getters
     public function getNombre()
     {
         return $this->nombre_producto;
@@ -41,6 +43,12 @@ class Producto
         return $this->deporte;
     }
 
+    public function getImagen()
+    {
+        return $this->imagen;
+    }
+
+    // Setters
     public function setNombre($nombre_producto)
     {
         $this->nombre_producto = $nombre_producto;
@@ -71,12 +79,18 @@ class Producto
         $this->deporte = $deporte;
     }
 
+    public function setImagen($imagen)
+    {
+        $this->imagen = $imagen;
+    }
+
+    // Métodos 
     public static function getAllProducts()
     {
         try {
             $conn = getDBConnection();
             $query = $conn->query("SELECT * FROM producto");
-            $result = $query->fetchAll(PDO::FETCH_ASSOC); // El assoc devuelve cada fila como array asociativo
+            $result = $query->fetchAll(PDO::FETCH_ASSOC);
             return $result;
         } catch (PDOException $e) {
             echo "Error al ejecutar la query: " . $e->getMessage();
@@ -101,12 +115,13 @@ class Producto
     {
         try {
             $conn = getDBConnection();
-            $sentencia = $conn->prepare("INSERT INTO producto (nombre_producto, precio, descripcion, deporte, likes) VALUES (?,?,?,?,?)");
+            $sentencia = $conn->prepare("INSERT INTO producto (nombre_producto, precio, descripcion, deporte, likes, imagen) VALUES (?,?,?,?,?,?)");
             $sentencia->bindParam(1, $this->nombre_producto);
             $sentencia->bindParam(2, $this->precio);
             $sentencia->bindParam(3, $this->descripcion);
             $sentencia->bindParam(4, $this->deporte);
             $sentencia->bindParam(5, $this->likes);
+            $sentencia->bindParam(6, $this->imagen);
             $sentencia->execute();
         } catch (PDOException $e) {
             echo "Error en la conexión a base de datos: " . $e->getMessage();
@@ -117,13 +132,14 @@ class Producto
     {
         try {
             $conn = getDBConnection();
-            $sentencia = $conn->prepare("UPDATE producto SET nombre_producto = ?, precio = ?, descripcion = ?, deporte = ?, likes = ? WHERE id_producto = ?");
+            $sentencia = $conn->prepare("UPDATE producto SET nombre_producto = ?, precio = ?, descripcion = ?, deporte = ?, likes = ?, imagen = ? WHERE id_producto = ?");
             $sentencia->bindParam(1, $this->nombre_producto);
             $sentencia->bindParam(2, $this->precio);
             $sentencia->bindParam(3, $this->descripcion);
             $sentencia->bindParam(4, $this->deporte);
             $sentencia->bindParam(5, $this->likes);
-            $sentencia->bindParam(6, $this->id_producto);
+            $sentencia->bindParam(6, $this->imagen);
+            $sentencia->bindParam(7, $this->id_producto);
             $sentencia->execute();
         } catch (PDOException $e) {
             echo "Error en la conexión a base de datos: " . $e->getMessage();
@@ -165,6 +181,20 @@ class Producto
         } catch (PDOException $e) {
             echo "Error al obtener los 3 productos con más likes: " . $e->getMessage();
             return [];
+        }
+    }
+
+    public static function getProductBySport($deporte)
+    {
+        try {
+            $conn = getDBConnection();
+            $sentencia = $conn->prepare("SELECT * FROM producto WHERE deporte = ?");
+            $sentencia->bindParam(1, $deporte);
+            $sentencia->execute();
+            $result = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        } catch (PDOException $e) {
+            echo "Error al obtener el producto: " . $e->getMessage();
         }
     }
 }
