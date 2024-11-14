@@ -64,12 +64,12 @@ $mejoresProductos = $productController->productosConMasLikes();
 
         <!-- productos mas populares -->
 
-        <h2 style="text-align: center">Productos más populares</h2>
+        <h2 id="h2Populares">Productos más populares</h2>
         <div class="topProductos">
            
                 <?php foreach ($mejoresProductos as $producto) { ?>
                     <div class="tarjetaProducto">
-                        <img src="<?=htmlspecialchars($producto['imagen'])?>" alt="">
+                        <img class="imgProductos" src="<?=htmlspecialchars($producto['imagen'])?>" alt="">
                         <h3><?= htmlspecialchars($producto['nombre_producto']). "<br>" . htmlspecialchars($producto['likes']). " &#x2764;"  ?></h3>
                         <p><?= htmlspecialchars($producto['descripcion']) ?></p>
                         <p>Precio: <?= htmlspecialchars($producto['precio']) ?>€</p>
