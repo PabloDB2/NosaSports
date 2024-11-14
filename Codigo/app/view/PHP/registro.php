@@ -14,6 +14,8 @@ require_once(CONTROLLER . 'UsuarioController.php');
 require_once(MODEL . 'Usuario.php'); 
 
 session_start();
+$usuarioController = new UsuarioController();
+$usuarios = $usuarioController->getAllUsers();
 ?>
 <div class="popup">
 
