@@ -61,7 +61,7 @@ $mejoresProductos = $productController->productosConMasLikes();
 
     <div class="content">
         <?php include "../Generales/nav.html" ?>
-        <img class="imgFondo1" src="/NosaSports/Codigo/app/view/Img/bolas2.avif" alt="">
+        <img class="imgFondo1" src="/NosaSports/Codigo/app/view/Img/bolas.avif" alt="">
 
         <div class="texto1">
             <h1>NOSA SPORTS</h1>
