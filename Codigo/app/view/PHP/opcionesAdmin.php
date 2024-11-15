@@ -76,6 +76,7 @@ if (isset($_POST['formCreate']) && $_POST['formCreate'] == 'crearProducto') {
         $deporte = htmlspecialchars($_POST["deporte"]);
         $likes = htmlspecialchars($_POST["likes"]);
         $precio = htmlspecialchars($_POST["precio"]);
+        $imagen = htmlspecialchars($_POST["imagen"]);
 
         // validar precio
         if (filter_var($precio, FILTER_VALIDATE_FLOAT)) {
@@ -99,6 +100,7 @@ if (isset($_POST['formUpdate']) && $_POST['formUpdate'] == 'updateProducto') {
         $descripcion = htmlspecialchars($_POST["descripcion"]);
         $deporte = htmlspecialchars($_POST["deporte"]);
         $likes = htmlspecialchars($_POST["likes"]);
+        $imagen = htmlspecialchars($_POST["imagen"]);
 
         // validar precio
         if (filter_var($precio, FILTER_VALIDATE_FLOAT)) {

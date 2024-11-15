@@ -12,11 +12,11 @@ footer{
     
     background-color: rgba(104, 86, 52);
     color:white;
-    position:absolute;
-    bottom: 0;
     width: 100%;
     text-align:center;
+    margin-top: 20px;
     height: 5%;
+    
     
     
 

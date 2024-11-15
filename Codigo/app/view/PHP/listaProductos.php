@@ -30,6 +30,7 @@ $productosPorDeporte = $productController->getProductsBySport($deporte);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../CSS/listaProductos.css">
 </head>
 <body>
    
@@ -37,10 +38,11 @@ $productosPorDeporte = $productController->getProductsBySport($deporte);
            
                 <?php foreach ($productosPorDeporte as $producto) { ?>
                     <div >
+                       <img class="imgProducto" src="<?=htmlspecialchars($producto['imagen'])?>" alt="">
                         <h3><?= htmlspecialchars($producto['nombre_producto']). "<br>" . htmlspecialchars($producto['likes']). " &#x2764;"  ?></h3>
                         <p><?= htmlspecialchars($producto['descripcion']) ?></p>
                         <p>Precio: <?= htmlspecialchars($producto['precio']) ?>€</p>
-                        <img src="<?=htmlspecialchars($producto['imagen'])?>" alt="">
+                        
 
                     </div>
                 <?php } ?>
