@@ -86,11 +86,11 @@
     <div class="opcionesUsuario">
         <?php
         if ($nombre_usuario) {
-            echo '<a href="cuenta.php"><img src="../Img/icons8-usuario-masculino-en-círculo-60.png" alt="Usuario" style="width: 40px; height: 40px; margin-right: 8px;">' . htmlspecialchars($nombre_usuario) . '</a>';
+            echo '<a href="cuenta.php"><img src="../Img/icons8-usuario-masculino-en-círculo-60.png" style="width: 40px; height: 40px; margin-right: 8px;">' . htmlspecialchars($nombre_usuario) . '</a>';
 
             if ($nombre_usuario === "admin") {
         ?>
-                <a href="opcionesAdmin.php"><img src="../Img/icons8-llave-50.png" alt="Admin" style="width: 25px; height: 25px; margin-right: 8px;">Opciones de admin</a>
+                <a href="opcionesAdmin.php"><img src="../Img/icons8-llave-de-boca-50.png" style="width: 30px; height: 30px; margin-right: 8px;">Opciones de admin</a>
                 <?php
             }
         } else {
