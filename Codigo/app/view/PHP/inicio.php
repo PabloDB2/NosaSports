@@ -26,11 +26,20 @@ $mejoresProductos = $productController->productosConMasLikes();
     <link rel="stylesheet" href="../CSS/inicio.css">
 </head>
 
-<body>
+<body onload="setInterval('Blink()',600)">
+    <!-- Script para que parpadee el texto -->
+    <script>
+    function Blink()
+    {
+    var ElemsBlink = document.getElementsByTagName('blink');
+    for(var i=0;i<ElemsBlink.length;i++)
+    ElemsBlink[i].style.visibility = ElemsBlink[i].style.visibility
+    =='visible' ?'hidden':'visible';
+    }
+    </script>
 
-        
-    </div>
-
+    
+ <div class="distribuidor">      
     <div class="content">
         <?php include "../Generales/nav.php" ?>
         <img class="imgFondo1" src="/NosaSports/Codigo/app/view/Img/bolas.avif" alt="">
@@ -63,7 +72,7 @@ $mejoresProductos = $productController->productosConMasLikes();
 
         <!-- productos mas populares -->
 
-        <h2 id="h2Populares">Productos más populares</h2>
+        <h2 id="h2Populares"><blink>Productos más populares</blink></h2>
         <div class="topProductos">
            
                 <?php foreach ($mejoresProductos as $producto) { ?>
@@ -77,9 +86,10 @@ $mejoresProductos = $productController->productosConMasLikes();
                 <?php } ?>
             
         </div>
+        <?php include "../Generales/footer.php" ?>
     </div>
 
-    <?php include "../Generales/footer.php" ?>
+ </div>    
 
 </body>
 

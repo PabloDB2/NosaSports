@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 14-11-2024 a las 12:50:40
+-- Tiempo de generación: 15-11-2024 a las 14:12:09
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.0.28
 
@@ -71,8 +71,12 @@ CREATE TABLE `producto` (
 
 INSERT INTO `producto` (`id_producto`, `nombre_producto`, `likes`, `precio`, `descripcion`, `deporte`, `imagen`) VALUES
 (24, 'Balón de fútbol', 9868, 46, 'Balón de fútbol de muy buena calidad.', 'fútbol', '/NosaSports/Codigo/app/view/Img/futbol.webp'),
-(25, 'Camiseta de fútbol', 10456, 110, 'Camiseta de alta calidad con posibilidad de elegir número de dorsal y nombre.', 'fútbol', NULL),
-(26, 'Guantes de boxeo', 5876, 31, 'Guantes de boxeo fabricados con espuma de látex.', 'boxeo', NULL);
+(25, 'Camiseta de fútbol', 10456, 110, 'Camiseta de alta calidad con posibilidad de elegir número de dorsal y nombre.', 'fútbol', '/NosaSports/Codigo/app/view/Img/Camiseta.webp'),
+(26, 'Guantes de boxeo', 5876, 31, 'Guantes de boxeo fabricados con espuma de látex.', 'boxeo', '/NosaSports/Codigo/app/view/Img/guatesBoxeo.jpg'),
+(27, 'Guantes de Portero', 0, 50, 'Guantes de portero diseñados para ofrecer un rendimiento excepcional en el campo. Su material transpirable asegura comodidad y ventilación, mientras que el cierre ajustable en la muñeca brinda soporte adicional.', 'fútbol', '/NosaSports/Codigo/app/view/Img/guantes.jpg'),
+(28, 'Porteria Desmontable', 0, 46, 'Portería desmontable de fácil montaje y  desmontaje, se puede instalar en minutos, lo que la hace ideal para el jardín, la playa o cualquier espacio abierto. Fabricada con materiales duraderos y resistentes a la intemperie, garantiza estabilidad y seguridad durante el juego.', 'fútbol', '/NosaSports/Codigo/app/view/Img/porteria.webp'),
+(29, 'Rodillera', 0, 19, 'Rodilleras de fútbol están diseñadas para ofrecer máxima protección y comodidad durante el juego. Fabricadas con materiales acolchados y resistentes, proporcionan un excelente soporte para las rodillas, reduciendo el riesgo de lesiones.', 'fútbol', '/NosaSports/Codigo/app/view/Img/rodilleras.webp'),
+(30, 'Botas de Futbol', 0, 150, 'Botas de fútbol ofrecen un ajuste perfecto y un diseño ligero, ideales para maximizar tu rendimiento. Con una parte superior transpirable y una suela con tacos para un excelente agarre, son perfectas para cualquier tipo de terreno.', 'fútbol', '/NosaSports/Codigo/app/view/Img/botas.avif');
 
 -- --------------------------------------------------------
 
@@ -195,7 +199,7 @@ ALTER TABLE `pedido`
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT de la tabla `reseña`
