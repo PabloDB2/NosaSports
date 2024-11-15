@@ -65,6 +65,7 @@ h1{
     padding: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
+    border: 6px solid rgba(104, 86, 52) ;
     
    
 }
@@ -96,10 +97,16 @@ h1{
     font-size: 20px;
     background-color: rgba(104, 86, 52, 0.6);
     border-radius: 10px;
-    width: 30%;
+    width: 25%;
     padding: 15px;
     color: white;
     text-align: center;
+    border: 6px solid rgba(104, 86, 52) ;
+    
+}
+
+.tarjetaProducto:hover{
+    background-color: rgba(31, 26, 16, 0.647);
 }
 
 .imgProductos{
