@@ -7,7 +7,6 @@ session_start();
 
 // comprobamos si el usuario no está logeado
 if (!isset($_SESSION['nombre_usuario'])) {
-
     echo "<h3>No has iniciado sesión.</h3>";
     echo '<form action="login.php" method="get">
             <button type="submit">Iniciar sesión</button>
@@ -19,21 +18,32 @@ $usuarioController = new UsuarioController();
 $nombre_usuario = $_SESSION['nombre_usuario'];
 $usuario = $usuarioController->getUserByName($nombre_usuario);
 
+// Variable para el mensaje de error
+$mensaje_error = '';
+
 if (isset($_POST['modificar'])) {
+    $contraseña_actual = $_POST['contraseña_actual'];
     $nuevo_nombre_usuario = $_POST['nombre_usuario'];
     $correo = $_POST['correo'];
     $contraseña = $_POST['contraseña'];
     $direccion = $_POST['direccion'];
 
-    $usuarioController->modificarUsuario($nombre_usuario, $correo, $usuario->getNombreApellidos(), $contraseña, $direccion);
+    // Comparar la contraseña actual con la almacenada (en texto plano)
+    if ($contraseña_actual === $usuario->getContraseña()) {
+        // Contraseña correcta, proceder con la modificación
+        $usuarioController->modificarUsuario($nombre_usuario, $correo, $usuario->getNombreApellidos(), $contraseña, $direccion);
 
-    if ($nuevo_nombre_usuario !== $nombre_usuario) {
-        $_SESSION['nombre_usuario'] = $nuevo_nombre_usuario;
-        $usuarioController->modificarNombreUsuario($nombre_usuario, $nuevo_nombre_usuario);
+        if ($nuevo_nombre_usuario !== $nombre_usuario) {
+            $_SESSION['nombre_usuario'] = $nuevo_nombre_usuario;
+            $usuarioController->modificarNombreUsuario($nombre_usuario, $nuevo_nombre_usuario);
+        }
+
+        header("Location: cuenta.php");
+        exit();
+    } else {
+        // Si la contraseña es incorrecta, definir el mensaje de error
+        $mensaje_error = "La contraseña actual es incorrecta.";
     }
-
-    header("Location: cuenta.php");
-    exit();
 }
 
 // borrar cuenta
@@ -51,6 +61,7 @@ if (isset($_POST['cerrar_sesion'])) {
 }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -63,7 +74,7 @@ if (isset($_POST['cerrar_sesion'])) {
 
 <body>
     <?php include "../Generales/nav.php" ?>
-    <h1>Datos personales</h2>
+    <h1>Datos personales</h1>
     <div class="content">
         <form action="cuenta.php" method="POST">
             <div>
@@ -85,6 +96,18 @@ if (isset($_POST['cerrar_sesion'])) {
                 <b>Dirección:</b><br>
                 <input type="text" name="direccion" value="<?= htmlspecialchars($usuario->getDireccion()) ?>">
             </div>
+
+            <br>
+            <div>
+                <b>Contraseña actual:</b><br>
+                <input type="password" name="contraseña_actual" required>
+            </div>
+            
+            <!-- Mostrar el mensaje de error solo si hay uno -->
+            <?php if ($mensaje_error): ?>
+                <p style="color:red;"><?= htmlspecialchars($mensaje_error) ?></p>
+            <?php endif; ?>
+
             <br>
             <div>
                 <button type="submit" name="modificar" style="background-color: rgb(104,86,52); color: white">Modificar</button>
@@ -96,7 +119,8 @@ if (isset($_POST['cerrar_sesion'])) {
             </div>
         </form>
     </div>
-
 </body>
-    <?php include "../Generales/footer.php" ?>
+
+<?php include "../Generales/footer.php"; ?>
+
 </html>
