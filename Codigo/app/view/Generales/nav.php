@@ -22,10 +22,10 @@
     a {
         text-decoration: none;
         color: white;
-        display: flex;
-        align-items: center; 
+        display: flex; 
+        align-items: center;
         justify-content: flex-start;
-        margin-right: 15px; 
+        margin-right: 15px;
         margin-left: 10px;
         font-size: 22px;
     }
@@ -57,7 +57,7 @@
     .opcionesUsuario button {
         text-decoration: none;
         color: rgb(104, 86, 52);
-        font-size: 18px;
+        font-size: 20px;
         background: none;
         border: none;
         cursor: pointer;
@@ -66,6 +66,11 @@
     .opcionesUsuario button:hover,
     .opcionesUsuario a:hover {
         color: black;
+    }
+
+    .opcionesUsuario img {
+        width: 20px;
+        height: 20px;
     }
 
     @media (max-width: 480px) {
@@ -81,12 +86,12 @@
     <div class="opcionesUsuario">
         <?php
         if ($nombre_usuario) {
-            echo '<a href="cuenta.php">' . htmlspecialchars($nombre_usuario) . '</a>';
+            echo '<a href="cuenta.php"><img src="../Img/icons8-usuario-masculino-en-círculo-60.png" alt="Usuario" style="width: 40px; height: 40px; margin-right: 8px;">' . htmlspecialchars($nombre_usuario) . '</a>';
 
             if ($nombre_usuario === "admin") {
         ?>
-                <a href="opcionesAdmin.php">Opciones de admin</a>
-            <?php
+                <a href="opcionesAdmin.php"><img src="../Img/icons8-llave-50.png" alt="Admin" style="width: 25px; height: 25px; margin-right: 8px;">Opciones de admin</a>
+                <?php
             }
         } else {
             ?>
