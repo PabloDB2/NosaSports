@@ -7,10 +7,12 @@ require_once(MODEL . 'Producto.php');
 
 session_start();
 
-// Verificar si el usuario está logueado
 if (!isset($_SESSION['nombre_usuario'])) {
-    echo "No has iniciado sesión.";
-    exit;
+    echo "<h3>No has iniciado sesión.</h3>";
+    echo '<form action="login.php" method="get">
+            <button type="submit">Iniciar sesión</button>
+          </form>';
+    exit();
 }
 
 $nombre_usuario = $_SESSION['nombre_usuario'];
@@ -27,28 +29,34 @@ $wishlistItems = $wishlistController->getWishlistByUser($nombre_usuario);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Wishlist</title>
-    <link rel="stylesheet" href="../CSS/wishlist.css">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="../CSS/paginaWishlist.css">
 </head>
 <body>
     <div class="content">
         <?php include "../Generales/nav.php"; ?>
-        <h1>Mi Wishlist</h1>
+        <h1>Mi wishlist</h1>
 
         <?php if (!empty($wishlistItems)) { ?>
             <div class="topProductos">
                 <?php foreach ($wishlistItems as $item) { 
-                    // Obtener detalles del producto a partir de su ID
                     $producto = $productController->getProductsById($item['id_producto']);
                 ?>
                     <div class="tarjetaProducto">
                         <img class="imgProductos" src="<?= htmlspecialchars($producto['imagen']) ?>" alt="">
-                        <h3>
-                            <?= htmlspecialchars($producto['nombre_producto']) ?><br>
-                            <?= htmlspecialchars($producto['likes']) ?> &#x2764;
-                        </h3>
-                        <p><?= htmlspecialchars($producto['descripcion']) ?></p>
-                        <p>Precio: <?= htmlspecialchars($producto['precio']) ?>€</p>
+
+                        <div class="productoInfo">
+                            <h3>
+                                <?= htmlspecialchars($producto['nombre_producto']) ?><br>
+                                <?= htmlspecialchars($producto['likes']) ?> &#x2764;
+                            </h3>
+                            <p><?= htmlspecialchars($producto['precio']) ?>€</p>
+                        </div>
+
+                        <div class="accionesProducto">
+                            <button class="btnEliminar">Eliminar</button>
+                            <button class="btnGuardar">Guardar</button>
+                        </div>
                     </div>
                 <?php } ?>
             </div>
