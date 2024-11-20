@@ -49,5 +49,9 @@ class ProductoController {
     public function getProductsBySport($deporte) {
         return Producto::getProductBySport($deporte);
     }
+
+    public function getProductsById($id_producto) {
+        return Producto::getProductById($id_producto);
+    }
 }
 ?>

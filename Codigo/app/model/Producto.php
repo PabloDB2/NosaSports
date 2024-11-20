@@ -158,7 +158,7 @@ class Producto
         }
     }
 
-    public function getProductById($id_producto)
+    public static function getProductById($id_producto)
     {
         try {
             $conn = getDBConnection();
