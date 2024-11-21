@@ -1,5 +1,86 @@
-.imgProducto{
 
-    width: 20%;
+.contProductos{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.productos{
+   
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 2 columnas */
+        grid-template-rows: repeat(auto, 1fr); /* 3 filas (ajustable según el contenido) */
+        gap: 20px; /* Espaciado entre elementos */
+        width: 90%;
+        
+        column-gap: 100px;
+        
+        
+    
+    
+}
+
+.divProduc{
+    /* display: flex; */
+    padding: 10px;
+    background-color: rgba(104, 86, 52, 0.6);
+    border-radius: 20px;
+    border: 6px solid rgba(104, 86, 52) ;
+    max-width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 10px  grey;
+   
+    
+    
+}
+
+
+.divProduc:hover{
+    background-color:rgba(26, 21, 13, 0.63) ;
+    border-color: white;
+}
+
+
+
+
+.imgProducto{
+    display: block;
+    margin: auto;
+    width: 190px;
+    height: 190px;
+    border-radius: 30px;
+   
 
 }
+
+#likes{
+    
+    border-radius: 30px;
+    color: rgb(171, 31, 31);
+    width:80px;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+#precio{
+    margin-top:0ch; 
+    font-weight:bold;
+    font-size:22px;
+    border: 3px solid  rgba(104, 86, 52);
+    margin: auto;
+    width: 60px;
+    text-align: center;
+    background-color: white;
+    border-radius: 30px;
+    
+}
+
+#nombre{ 
+    text-align: center;
+    font-size: 25px;
+    align-items: center;
+    
+    
+}
+

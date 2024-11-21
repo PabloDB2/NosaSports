@@ -33,22 +33,23 @@ $productosPorDeporte = $productController->getProductsBySport($deporte);
     <link rel="stylesheet" href="../CSS/listaProductos.css">
 </head>
 <body>
-   
-   <div class="topProductos">
-           
-                <?php foreach ($productosPorDeporte as $producto) { ?>
-                    <div >
-                       <img class="imgProducto" src="<?=htmlspecialchars($producto['imagen'])?>" alt="">
-                        <h3><?= htmlspecialchars($producto['nombre_producto']). "<br>" . htmlspecialchars($producto['likes']). " &#x2764;"  ?></h3>
-                        <p><?= htmlspecialchars($producto['descripcion']) ?></p>
-                        <p>Precio: <?= htmlspecialchars($producto['precio']) ?>€</p>
-                        
 
-                    </div>
-                <?php } ?>
+<?php include "../Generales/nav.php" ?>
+   <div class="contProductos">
+    <div class="productos">
             
-    </div>
+                    <?php foreach ($productosPorDeporte as $producto) { ?>
+                    
+                        <div class="divProduc" > 
+                        <h3 id="likes"><?=htmlspecialchars($producto['likes']). " &#x2764;"?></h3>     
+                        <img class="imgProducto" src="<?=htmlspecialchars($producto['imagen'])?>" alt="">    
+                        <h3 id="nombre"><?= htmlspecialchars($producto['nombre_producto'])?></h3> 
+                         <p id="precio"><?= htmlspecialchars($producto['precio']) ?>€</p>
+                        </div>
+                    <?php } ?>
+                
+        </div>
    
-    
+    </div>
 </body>
 </html>
