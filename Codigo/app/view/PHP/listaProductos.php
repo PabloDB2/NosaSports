@@ -4,9 +4,12 @@ require_once(CONTROLLER . 'ProductoController.php');
 require_once(MODEL . 'Producto.php');
 $productController = new ProductoController();
 $productos = $productController->getAllProducts();
-
 session_start();
-
+if (isset($_SESSION['nombre_usuario'])) {
+    $nombre_usuario = $_SESSION['nombre_usuario'];
+} else {
+    $nombre_usuario = null;
+}
 
 
 
