@@ -51,7 +51,12 @@ a {
 
 h1 {
     font-size: 80px;
-    text-shadow: black 15px 0px 20px;
+    text-shadow: black 10px 0px 10px;
+}
+
+h2 {
+    font-size: 24px;
+    text-shadow: black 10px 0px 10px;
 }
 
 .contMateriales {

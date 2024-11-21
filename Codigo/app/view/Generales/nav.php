@@ -43,7 +43,7 @@ a img {
 
 .logo {
     width: 20vw; 
-    height: auto; 
+    height: 20vw; 
     position: absolute;
     z-index: 10;
     top: 0px;
