@@ -25,7 +25,7 @@ body{
 .contTipo{
     background-color: rgba(104, 86, 52, 0.6);
     width: 20%;
-    height: 50%;
+    height: 25vh;
     flex-grow: 1;
     margin: 7px;
     border-radius: 20px;
@@ -40,12 +40,6 @@ body{
 .contTipo:hover{
     background-color: rgba(104, 86, 52, 0.6);
     width: 20%;
-    /*flex-grow: 1;*/
-    margin: 7px;
-    border-radius: 20px;
-    text-align: center;
-    align-items: center;
-    padding: 20px;
     border: black 4px solid;
     
     
