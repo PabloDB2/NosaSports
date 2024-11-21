@@ -51,12 +51,7 @@ a {
 
 h1 {
     font-size: 80px;
-    text-shadow: black 10px 0px 10px;
-}
-
-h2 {
-    font-size: 24px;
-    text-shadow: black 10px 0px 10px;
+    text-shadow: black 15px 0px 20px;
 }
 
 .contMateriales {
@@ -108,7 +103,7 @@ h2 {
     color: white;
     text-align: center;
     border: 6px solid rgba(104, 86, 52);
-
+    text-shadow: 0 0 2px black;
 }
 
 .tarjetaProducto:hover {
