@@ -18,20 +18,23 @@ $nombre_usuario = $_SESSION['nombre_usuario'] ?? null;
     <?php include "../Generales/nav.php"; ?>
 
     <div class="content">
-        <div class="textos">
-            <h1>REDACTE SUS CONSULTAS:</h1>
-            <form action="contacto.php" method="POST">
-                <textarea class="texto1" maxlength="50" name="texto1" placeholder="Introduzca su correo electrónico..." required></textarea>
-                <textarea class="texto2" maxlength="204" name="texto2" placeholder="Introduzca el texto..." required></textarea>
-                <input class="boton" type="submit" value="ENVIAR">
-            </form>
-        </div>
-
         <div class="content2">
-            <p>📍 RÚA MONASTEIRO DE CAAVEIRO, 1, 15010, A CORUÑA</p>
-            <p>✉ NOSASPORTS@STORE.COM</p>
-            <p>📞 654475315</p>
+            <div class="textos">
+                <h1>REDACTE SUS CONSULTAS:</h1>
+                <form action="contacto.php" method="POST">
+                    <textarea class="texto1" maxlength="50" name="texto1" placeholder="Introduzca su correo electrónico..." required></textarea>
+                    <textarea class="texto2" maxlength="204" name="texto2" placeholder="Introduzca el texto..." required></textarea>
+                    <input class="boton" type="submit" value="ENVIAR">
+                </form>
+            </div>
+
+            <div class="info">
+                <p>📍 RÚA MONASTEIRO DE CAAVEIRO, 1, 15010, A CORUÑA</p>
+                <p>✉ NOSASPORTS@STORE.COM</p>
+                <p>📞 654475315</p>
+            </div>
         </div>
+        
     </div>
 
 
