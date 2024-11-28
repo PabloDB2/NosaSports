@@ -21,7 +21,7 @@ if( isset($_POST['deporte'])){
    //En caso de que no haya nos lleva otra vez a la selección
 }else{
     $deporte = null;
-    echo "no lo pilla ";
+    echo "No se ha seleccionado un deporte válido.";
    
 }
 $productosPorDeporte = $productController->getProductsBySport($deporte);
@@ -38,21 +38,24 @@ $productosPorDeporte = $productController->getProductsBySport($deporte);
 <body>
 
 <?php include "../Generales/nav.php" ?>
+
    <div class="contProductos">
-    <div class="productos">
-            
-                    <?php foreach ($productosPorDeporte as $producto) { ?>
-                    
-                        <div class="divProduc" > 
-                        <h3 id="likes"><?=htmlspecialchars($producto['likes']). " &#x2764;"?></h3>     
-                        <img class="imgProducto" src="<?=htmlspecialchars($producto['imagen'])?>" alt="">    
-                        <h3 id="nombre"><?= htmlspecialchars($producto['nombre_producto'])?></h3> 
-                         <p id="precio"><?= htmlspecialchars($producto['precio']) ?>€</p>
-                        </div>
-                    <?php } ?>
-                
-        </div>
+   <div class="productos">
+    <?php foreach ($productosPorDeporte as $producto) { ?>
+        <form class="formProducto" action="productodetalle.php" method="POST">
+            <div class="divProduc" onclick="this.closest('form').submit()">
+                <input type="hidden" name="id" value="<?= htmlspecialchars($producto['id_producto']) ?>">
+                <h3 id="likes"><?= htmlspecialchars($producto['likes']) . " &#x2764;" ?></h3>     
+                <img class="imgProducto" src="<?= htmlspecialchars($producto['imagen']) ?>" alt="">    
+                <h3 id="nombre"><?= htmlspecialchars($producto['nombre_producto']) ?></h3> 
+                <p id="precio"><?= htmlspecialchars($producto['precio']) ?>€</p>
+            </div>
+        </form>
+    <?php } ?>
+</div>
    
     </div>
+    <?php include "../Generales/footer.php" ?>
+
 </body>
 </html>
