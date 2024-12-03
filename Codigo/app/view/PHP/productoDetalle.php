@@ -5,22 +5,21 @@ require_once(MODEL . 'Producto.php');
 
 $productController = new ProductoController();
 session_start();
+if (isset($_SESSION['nombre_usuario'])) {
+    $nombre_usuario = $_SESSION['nombre_usuario'];
+} else {
+    $nombre_usuario = null;
+}
 
-// Obtener el nombre del usuario desde la sesión
-$nombre_usuario = $_SESSION['nombre_usuario'] ?? null;
-
-// Verificar que se ha recibido un ID de producto válido
-if (!isset($_POST['id']) || !filter_var($_POST['id'], FILTER_VALIDATE_INT)) {
+if (!isset($_POST['id'])) {
     echo "Producto no encontrado.";
     exit;
 }
 
 $id_producto = $_POST['id'];
 
-// Obtener el producto por su ID
 $producto = $productController->getProductsById($id_producto);
 
-// Verificar si el producto existe
 if (!$producto) {
     echo "Producto no encontrado.";
     exit;
