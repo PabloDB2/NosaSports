@@ -90,12 +90,12 @@ class Wishlist
         }
     }
 
-    public function removeProductFromWishlist()
-    {
+    public function removeProductFromWishlist() {
         try {
             $conn = getDBConnection();
-            $sentencia = $conn->prepare("DELETE FROM wishlist WHERE id_wishlist = ?");
-            $sentencia->bindParam(1, $this->id_wishlist);
+            $sentencia = $conn->prepare("DELETE FROM wishlist WHERE nombre_usuario = ? AND id_producto = ?");
+            $sentencia->bindParam(1, $this->nombre_usuario);
+            $sentencia->bindParam(2, $this->id_producto);
             $sentencia->execute();
         } catch (PDOException $e) {
             echo "Error al eliminar el producto de la wishlist: " . $e->getMessage();

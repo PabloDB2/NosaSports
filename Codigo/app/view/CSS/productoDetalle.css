@@ -1,9 +1,7 @@
-    
 body {
     margin: 0;
     padding: 0;
 }
-
 
 .main-container {
     display: flex;
@@ -12,17 +10,17 @@ body {
     min-height: 100vh;
 }
 
-
 .detalleProducto {
     display: flex;
     max-width: 1100px;
     background: white;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: relative; 
 }
 
+.imagenProducto {
+    position: relative; /* Asegúrate de que este contenedor tenga position: relative */
+}
 
 .imagenProducto img {
     width: 100%;
@@ -31,6 +29,24 @@ body {
     border-right: 1px solid #ddd;
 }
 
+.likeContainer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10; 
+}
+
+.botonLike {
+    background-color: transparent;
+    color: black;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+.botonLike.dadoLike {
+    color: red;
+}
 
 .infoProducto {
     padding: 20px;
@@ -40,13 +56,11 @@ body {
     justify-content: flex-start;
 }
 
-
 .infoProducto h1 {
     margin: 0;
-    font-size: 35px; 
+    font-size: 35px;
     color: #333;
 }
-
 
 .categoria {
     display: inline-block;
@@ -55,26 +69,19 @@ body {
     padding: 5px 10px;
     border-radius: 5px;
     margin-top: 10px;
-    font-size: 14px; 
+    font-size: 14px;
 }
 
-
 .precio {
-    font-size: 29px; 
+    font-size: 29px;
     margin: 20px 0;
     color: #2e7d32;
 }
 
-
 .descripcion {
-    font-size: 18px;  
+    font-size: 18px;
     margin: 10px 0;
     color: #666;
-}
-
-
-.acciones {
-    margin-top: 20px;
 }
 
 .acciones .botonComprar,
@@ -88,8 +95,6 @@ body {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .acciones .botonComprar {
@@ -97,25 +102,7 @@ body {
     color: white;
 }
 
-.acciones .botonComprar:hover {
-    background-color: #388e3c;
-    transform: translateY(-2px); 
-}
-
 .acciones .botonDeseados {
     background-color: #616161;
     color: white;
-}
-
-.acciones .botonDeseados:hover {
-    background-color: #757575;
-    transform: translateY(-2px); 
-}
-
-.imagenProducto img {
-    width: 100%;
-    max-width: 500px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

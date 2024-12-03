@@ -23,11 +23,21 @@ class WishlistController {
         $wishlist->addProductToWishlist();
     }
 
-    public function removeProductFromWishlist($id_wishlist) {
+    public function removeProductFromWishlist($nombre_usuario, $id_producto) {
+        // Elimina de la base de datos
         $wishlist = new Wishlist();
-        $wishlist->setIdWishlist($id_wishlist);
-
-        $wishlist->removeProductFromWishlist();
+        $wishlist->setNombreUsuario($nombre_usuario);
+        $wishlist->setIdProducto($id_producto);
+        $wishlist->removeProductFromWishlist();  
+    
+        // Elimina de la sesión
+        if (($key = array_search($id_producto, $_SESSION['wishlist'])) !== false) {
+            unset($_SESSION['wishlist'][$key]);  
+            $_SESSION['wishlist'] = array_values($_SESSION['wishlist']);
+        }
+    
+        $mensaje = "Producto eliminado de la wishlist.";
     }
+    
 }
 ?>
