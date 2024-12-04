@@ -35,7 +35,7 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+    box-sizing: border-box;
     text-shadow: 0 0 2px black;
 
 }
@@ -73,6 +73,7 @@ h1 {
 .accionesProducto .btnGuardar {
     background-color: #41b145;
 }
+
 
 @media (max-width: 768px) {
     .topProductos {

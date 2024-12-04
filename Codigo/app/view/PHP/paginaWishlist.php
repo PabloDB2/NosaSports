@@ -29,9 +29,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Añadir a la wishlist en la sesión
     if (isset($_POST['accion']) && $_POST['accion'] == 'añadirAWishlist') {
-        $id_producto = (int) $_POST['id_producto']; // Aseguramos que el id sea un número entero
+        $id_producto = (int) $_POST['id_producto'];
 
-        // Para evitar duplicados en la sesión
+        // para que no haya duplicados
         if (!in_array($id_producto, $_SESSION['wishlist'], true)) {
             $_SESSION['wishlist'][] = $id_producto;
         }
@@ -39,8 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Eliminar de la sesión y base de datos
     if (isset($_POST['accion']) && $_POST['accion'] == 'eliminarDeWishlist') {
-        $id_producto = (int) $_POST['id_producto']; // Aseguramos que el id sea un número entero
-
+        $id_producto = (int) $_POST['id_producto']; 
         // Eliminar de la sesión
         if (($key = array_search($id_producto, $_SESSION['wishlist'], true)) !== false) {
             unset($_SESSION['wishlist'][$key]);
@@ -62,7 +61,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     exit();
 }
 
-// Obtener los productos en la wishlist
 $productos_wishlist = [];
 foreach ($_SESSION['wishlist'] as $id) {
     $producto = $productController->getProductsById($id);
@@ -89,15 +87,19 @@ foreach ($_SESSION['wishlist'] as $id) {
             <div class="topProductos">
                 <?php foreach ($productos_wishlist as $producto) { ?>
                     <div class="tarjetaProducto">
-                        <img class="imgProductos" src="<?= htmlspecialchars($producto['imagen']) ?>" alt="Imagen de <?= htmlspecialchars($producto['nombre_producto']) ?>">
-
-                        <div class="productoInfo">
-                            <h3>
-                                <?= htmlspecialchars($producto['nombre_producto']) ?><br>
-                                <?= htmlspecialchars($producto['likes']) ?> &#x2764;
-                            </h3>
-                            <p><?= htmlspecialchars($producto['precio']) ?>€</p>
-                        </div>
+                        <form action="productodetalle.php" method="POST" class="tarjetaProductoInterior">
+                            <input type="hidden" name="id" value="<?= htmlspecialchars($producto['id_producto']) ?>">
+                            <div class="tarjetaProductoInterior" onclick="this.closest('form').submit()">
+                                <img class="imgProductos" src="<?= htmlspecialchars($producto['imagen']) ?>" alt="Imagen de <?= htmlspecialchars($producto['nombre_producto']) ?>">
+                                <div class="productoInfo">
+                                    <h3>
+                                        <?= htmlspecialchars($producto['nombre_producto']) ?><br>
+                                        <?= htmlspecialchars($producto['likes']) ?> &#x2764;
+                                    </h3>
+                                    <p><?= htmlspecialchars($producto['precio']) ?>€</p>
+                                </div>
+                            </div>
+                        </form>
 
                         <div class="accionesProducto">
                             <!-- Eliminar de la wishlist -->
@@ -116,13 +118,10 @@ foreach ($_SESSION['wishlist'] as $id) {
                     </div>
                 <?php } ?>
             </div>
-
         <?php } else { ?>
             <h1>No tienes productos en tu wishlist.</h1>
         <?php } ?>
-
     </div>
-
     <?php include "../Generales/footer.php"; ?>
 </body>
 </html>
