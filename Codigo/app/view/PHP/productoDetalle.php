@@ -1,9 +1,11 @@
 <?php
 require_once(__DIR__ . '/../../../rutas.php');
 require_once(CONTROLLER . 'ProductoController.php');
+require_once(CONTROLLER . 'PedidoController.php');
 require_once(MODEL . 'Producto.php');
 
 $productController = new ProductoController();
+$pedidoController = new PedidoController(); // Incluir PedidoController
 session_start();
 
 if (isset($_SESSION['nombre_usuario'])) {
@@ -40,7 +42,7 @@ if (isset($_POST['accion']) && $_POST['accion'] === 'añadirAWishlist') {
     }
 }
 
-// dar like
+// Dar like
 if (isset($_POST['accion']) && $_POST['accion'] === 'darLike') {
     if (!isset($_SESSION['likes'][$id_producto])) {
         $_SESSION['likes'][$id_producto] = true;
@@ -54,6 +56,16 @@ if (isset($_POST['accion']) && $_POST['accion'] === 'darLike') {
     $productController->modificarProducto($producto['id_producto'], $producto['nombre_producto'], $producto['precio'], $producto['descripcion'], $producto['deporte'], $producto['likes'], $producto['imagen']);
 }
 
+// Verificar si el usuario está logueado antes de permitir la compra
+if (isset($_POST['accion']) && $_POST['accion'] === 'comprar') {
+    if ($nombre_usuario) {
+        // Crear un pedido
+        $pedidoController->crearPedido($id_producto, $nombre_usuario);
+        $mensajeCompra = "Pedido realizado con éxito";
+    } else {
+        $mensajeCompra = "Debes iniciar sesión para realizar la compra.";
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -89,21 +101,22 @@ if (isset($_POST['accion']) && $_POST['accion'] === 'darLike') {
                 <p class="precio"><?= htmlspecialchars($producto['precio']) ?>€</p>
                 <p class="descripcion"><?= htmlspecialchars($producto['descripcion']) ?></p>
 
-                <!-- Mensaje de añadir a wishlist -->
                 <?php if (isset($mensaje)) { ?>
                     <p class="mensajeAñadido"><?= $mensaje ?></p>
-                <?php }
-                ?>
+                <?php } ?>
+
+                <?php if (isset($mensajeCompra)) { ?>
+                    <p class="mensajeCompra"><?= $mensajeCompra ?></p>
+                <?php } ?>
 
                 <div class="acciones">
-                    <!-- Formulario de compra -->
-                    <form action="compra.php" method="POST">
-                        <input type="hidden" name="id_producto" value="<?= htmlspecialchars($producto['id_producto']) ?>">
-                        <button type="submit" class="botonComprar">Comprar</button>
+                    <form id="form-comprar" action="" method="POST" style="display:none;">
+                        <input type="hidden" name="id" value="<?= htmlspecialchars($producto['id_producto']) ?>">
+                        <input type="hidden" name="accion" value="comprar">
                     </form>
+                    <button type="button" class="botonComprar" onclick="confirmarCompra(event)">Comprar</button>
 
                     <div class="accionesBotones">
-                        <!-- Formulario para añadir a wishlist -->
                         <form action="" method="POST">
                             <input type="hidden" name="accion" value="añadirAWishlist">
                             <input type="hidden" name="id" value="<?= htmlspecialchars($producto['id_producto']) ?>">
@@ -115,8 +128,37 @@ if (isset($_POST['accion']) && $_POST['accion'] === 'darLike') {
         </div>
     </div>
 
+    <div id="popup-confirmacion" class="popup">
+        <div class="popup-contenido">
+            <h2>¿Deseas comprar este producto?</h2>
+            <div class="popup-botones">
+                <button onclick="cancelarCompra()">Cancelar</button>
+                <button onclick="confirmarYComprar()">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
     <?php include "../Generales/footer.php" ?>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('popup-confirmacion').style.display = 'none';
+        }); // necesario para que no salga visible por defecto
+
+        function confirmarCompra(event) {
+            event.preventDefault();
+
+            document.getElementById('popup-confirmacion').style.display = 'flex'; // lo muestra
+        }
+
+        function cancelarCompra() {
+            document.getElementById('popup-confirmacion').style.display = 'none'; // lo oculta
+        }
+
+        function confirmarYComprar() {
+            document.getElementById('form-comprar').submit(); // envia formualario
+        }
+    </script>
 </body>
 
 </html>

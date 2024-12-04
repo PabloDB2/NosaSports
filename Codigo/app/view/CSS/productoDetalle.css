@@ -4,11 +4,15 @@ body {
 }
 
 .main-container {
+    font-family: Arial, Helvetica, sans-serif;
+
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    flex-direction: column; 
 }
+
 
 .detalleProducto {
     display: flex;
@@ -16,10 +20,11 @@ body {
     background: white;
     border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .imagenProducto {
-    position: relative; /* Asegúrate de que este contenedor tenga position: relative */
+    position: relative;
 }
 
 .imagenProducto img {
@@ -27,13 +32,14 @@ body {
     max-width: 500px;
     object-fit: cover;
     border-right: 1px solid #ddd;
+    border-radius: 10px 0 0 10px; 
 }
 
 .likeContainer {
     position: absolute;
     top: 10px;
     right: 10px;
-    z-index: 10; 
+    z-index: 10;
 }
 
 .botonLike {
@@ -42,6 +48,7 @@ body {
     font-size: 24px;
     border: none;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .botonLike.dadoLike {
@@ -69,7 +76,7 @@ body {
     padding: 5px 10px;
     border-radius: 5px;
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .precio {
@@ -95,6 +102,7 @@ body {
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .acciones .botonComprar {
@@ -102,7 +110,77 @@ body {
     color: white;
 }
 
+.acciones .botonComprar:hover {
+    background-color: #388e3c; 
+}
+
 .acciones .botonDeseados {
     background-color: #616161;
     color: white;
 }
+
+.acciones .botonDeseados:hover {
+    background-color: #757575; 
+}
+
+.popup {
+    font-family: Arial, Helvetica, sans-serif;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-contenido {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    width: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.popup-botones {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.popup-botones button {
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 45%;
+}
+
+.popup-botones button:first-child {
+    background: #f44336;
+    color: white;
+}
+
+.popup-botones button:last-child {
+    background: #4CAF50;
+    color: white;
+}
+
