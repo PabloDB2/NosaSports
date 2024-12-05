@@ -3,9 +3,11 @@ require_once(__DIR__ . '/../../../rutas.php');
 require_once(CONTROLLER . 'ProductoController.php');
 require_once(CONTROLLER . 'PedidoController.php');
 require_once(MODEL . 'Producto.php');
+require_once(CONTROLLER . 'ReseñaController.php');
 
 $productController = new ProductoController();
-$pedidoController = new PedidoController(); // Incluir PedidoController
+$pedidoController = new PedidoController();
+$resenaController = new ReseñaController();
 session_start();
 
 if (isset($_SESSION['nombre_usuario'])) {
@@ -14,22 +16,23 @@ if (isset($_SESSION['nombre_usuario'])) {
     $nombre_usuario = null;
 }
 
-if (!isset($_POST['id'])) {
+// Usamos $_GET para obtener el ID del producto
+if (isset($_GET['id'])) {
+    $id_producto = $_GET['id'];
+} else {
     echo "Producto no encontrado.";
     exit;
 }
-
-if (!isset($_SESSION['wishlist'])) {
-    $_SESSION['wishlist'] = [];
-}
-
-$id_producto = $_POST['id'];
 
 $producto = $productController->getProductsById($id_producto);
 
 if (!$producto) {
     echo "Producto no encontrado.";
     exit;
+}
+
+if (!isset($_SESSION['wishlist'])) {
+    $_SESSION['wishlist'] = [];
 }
 
 // Añadir a wishlist
@@ -66,7 +69,29 @@ if (isset($_POST['accion']) && $_POST['accion'] === 'comprar') {
         $mensajeCompra = "Debes iniciar sesión para realizar la compra.";
     }
 }
+
+// Publicar reseña
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['accion']) && $_POST['accion'] === 'publicarReseña') {
+    if ($nombre_usuario) {
+        $texto = $_POST['texto'] ?? '';
+        $puntuacion = $_POST['puntuacion'] ?? 0;
+
+        if ($texto && $puntuacion) {
+            $resenaController->crearReseña($texto, $puntuacion, $nombre_usuario, $id_producto);
+            $mensajeReseña = "¡Reseña publicada con éxito!";
+            header("Location: " . $_SERVER['PHP_SELF'] . "?id=" . $id_producto); // Redirigir con id
+            exit; // Es importante llamar a exit después de la redirección
+        } else {
+            $mensajeReseña = "Por favor, completa todos los campos para publicar tu reseña.";
+        }
+    } else {
+        $mensajeReseña = "Debes iniciar sesión para publicar una reseña.";
+    }
+}
+
+$resenas = $resenaController->getReseñasByProducto($id_producto);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -135,6 +160,65 @@ if (isset($_POST['accion']) && $_POST['accion'] === 'comprar') {
                 <button onclick="cancelarCompra()">Cancelar</button>
                 <button onclick="confirmarYComprar()">Confirmar</button>
             </div>
+        </div>
+    </div>
+
+    <div class="reseñas">
+        <h2>Reseñas del producto</h2>
+
+        <!-- Formulario para publicar reseña -->
+        <?php 
+        if ($nombre_usuario) { 
+        ?>
+           <form action="" method="POST" class="formReseña">
+        <input type="hidden" name="accion" value="publicarReseña">
+        <input type="hidden" name="id" value="<?= htmlspecialchars($producto['id_producto']) ?>">
+        <textarea name="texto" placeholder="Escribe tu reseña aquí..." required></textarea>
+        <label for="puntuacion">Puntuación:</label>
+        <select name="puntuacion" id="puntuacion" required>
+            <option value="1">1 estrella</option>
+            <option value="2">2 estrellas</option>
+            <option value="3">3 estrellas</option>
+            <option value="4">4 estrellas</option>
+            <option value="5">5 estrellas</option>
+        </select>
+        <button type="submit" class="botonPublicar">Publicar reseña</button>
+    </form>
+        <?php 
+        } else { 
+        ?>
+            <p>Inicia sesión para dejar una reseña.</p>
+        <?php 
+        } 
+        ?>
+
+        <?php 
+        if (isset($mensajeReseña)) { 
+        ?>
+            <p class="mensajeReseña"><?= htmlspecialchars($mensajeReseña) ?></p>
+        <?php 
+        } 
+        ?>
+
+        <!-- Listado de reseñas -->
+        <div class="listaReseñas">
+            <?php 
+            if ($resenas) { 
+                foreach ($resenas as $resena) { 
+            ?>
+                    <div class="reseña">
+                        <h3><?= htmlspecialchars($resena['nombre_usuario_reseña']) ?></h3>
+                        <p class="puntuacion"><?= str_repeat('★', $resena['puntuacion']) ?></p>
+                        <p><?= htmlspecialchars($resena['texto']) ?></p>
+                    </div>
+            <?php 
+                } 
+            } else { 
+            ?>
+                <p>No hay reseñas para este producto.</p>
+            <?php 
+            } 
+            ?>
         </div>
     </div>
 
