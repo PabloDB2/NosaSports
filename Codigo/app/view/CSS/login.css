@@ -82,4 +82,37 @@ a:hover{
     font-size: 20px;
 }
 
+@media (max-width: 768px) {
+
+    .popup{
+        
+        width: 400px;
+        padding: 22px;     
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .popup{
+        
+        width: 300px;
+        margin-top: 24%;   
+    } 
+    
+    input[type="submit"] {
+        
+        font-size: 16px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+    
+    a{
+
+        margin-left: 30px;
+        
+    }
+}  
+
 
