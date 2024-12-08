@@ -1,8 +1,14 @@
 body{
     margin: 0;
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    
+    
     height: 100vh;
+    /* Aseguramos un correcto ancho y que no desborde */
+    box-sizing: border-box; 
+    overflow-x: hidden;
+    
+    
     
    
 }
@@ -15,17 +21,21 @@ body{
 }
 
 .contGrande{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top:10%;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+  
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-content: center;
+
     
     
 }
 
 .contTipo{
-    background-color: rgba(104, 86, 52, 0.6);
-    width: 20%;
-    height: 25vh;
+    /* background-color: rgba(104, 86, 52, 0.6); */
+    
+    height: min-content;
     flex-grow: 1;
     margin: 7px;
     border-radius: 20px;
@@ -38,20 +48,114 @@ body{
 }
 
 .contTipo:hover{
-    background-color: rgba(104, 86, 52, 0.6);
-    width: 20%;
-    border: black 4px solid;
+    
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+   
     
     
 }
 
 .imgTipo{
-    width: 200px;
-    height: 150px;
+    
+    width: 300px;
+    height: 250px;
     border-radius: 10px;
    
 }
 
+
+
 .divProduc {
     cursor: pointer;
+}
+
+/* Ajustes para pantallas medianas (tabletas) */
+@media (max-width: 900px) {
+
+    .contGrande {
+        
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows:repeat(2,min-content);
+        align-items: center !important;
+        margin-top: 5% !important;
+        padding: 0px;
+        box-sizing: border-box;  
+        
+    }
+    
+    .contTipo{
+        display: grid;
+        align-items: center !important;
+        margin-top: 5% !important;
+        padding: 0px;
+        box-sizing: border-box;
+       
+    }
+
+    .imgTipo {
+        display: block;
+        width: 20vh !important;
+        height: 18vh !important;
+        object-fit: cover;
+        margin: auto;
+    }
+
+
+
+
+  
+}
+
+
+/* Ajustes para tamañas pequeñas: móviles  */
+@media (max-width: 480px) {
+
+    
+    /* Con ek important nos aseguramos que lo pille si o si  */
+    
+    .contGrande {
+        
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows:repeat(2,min-content);
+        gap: 10%;
+        align-items: center ;
+        margin: 5% ;
+        padding: 0px;
+        box-sizing: border-box;
+        align-items: center;
+        
+        
+        
+        
+        
+    }
+
+    .contTipo {
+       
+        font-size: 12px !important;
+        
+        width: 100%;
+        height: fit-content;
+        box-sizing: border-box;
+        justify-content: center;
+        padding: 5%;
+      
+    }
+
+    .imgTipo {
+        display: block;
+        width: 14vh !important;
+        height: 10vh !important;
+        object-fit: cover;
+        margin: auto;
+        
+    }
+
+    
+    
+
+   
 }
