@@ -44,9 +44,9 @@ $productosPorDeporte = $productController->getProductsBySport($deporte);
     <?php foreach ($productosPorDeporte as $producto) { ?>
         <form class="formProducto" action="productodetalle.php" method="GET">
             <div class="divProduc" onclick="this.closest('form').submit()">
-                <input type="hidden" name="id" value="<?= htmlspecialchars($producto['id_producto']) ?>">
+                <input type="hidden" name="id" value="<?= htmlspecialchars($producto['id_producto']) ?>">  
+                <img class="imgProducto" src="<?= htmlspecialchars($producto['imagen']) ?>" alt="">
                 <h3 id="likes"><?= htmlspecialchars($producto['likes']) . " &#x2764;" ?></h3>     
-                <img class="imgProducto" src="<?= htmlspecialchars($producto['imagen']) ?>" alt="">    
                 <h3 id="nombre"><?= htmlspecialchars($producto['nombre_producto']) ?></h3> 
                 <p id="precio"><?= htmlspecialchars($producto['precio']) ?>€</p>
             </div>

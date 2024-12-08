@@ -42,8 +42,8 @@ a img {
 }
 
 .logo {
-    width: 20vw; 
-    height: 20vw; 
+    width: 10vw; 
+    height: 10vw; 
     position: absolute;
     z-index: 10;
     top: 0px;
