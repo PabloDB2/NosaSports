@@ -97,4 +97,47 @@ a:hover{
     display: block;
 }
 
+@media (max-width: 768px) {
+
+    .popup{
+
+        width: 65%;
+        margin-top:12%;  
+        
+      
+    }
+    
+    a{
+        
+        
+        margin-left: 30px;
+        
+    }
+
+    input[type="submit"] {
+        
+        margin-top: 50px;
+        margin-bottom: 30px;
+        
+    }
+
+   
+
+}
+
+
+@media (max-width: 480px) {
+
+    .popup{
+
+        width: 90%;
+        margin-top:1%;  
+        padding: 10px;
+        
+      
+    }
+    
+    
+}  
+
 
