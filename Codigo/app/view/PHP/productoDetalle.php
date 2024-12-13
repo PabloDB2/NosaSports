@@ -147,6 +147,7 @@ $resenas = $resenaController->getReseñasByProducto($id_producto);
                         <input type="hidden" name="id" value="<?= htmlspecialchars($producto['id_producto']) ?>">
                         <input type="hidden" name="accion" value="comprar">
                     </form>
+                    <!-- Te lleva al script del pop up -->
                     <button type="button" class="botonComprar" onclick="confirmarCompra(event)">Comprar</button>
 
                     <div class="accionesBotones">
@@ -224,7 +225,69 @@ $resenas = $resenaController->getReseñasByProducto($id_producto);
         </div>
     </div>
 
-    <?php include "../Generales/footer.php" ?>
+   
+
+
+    <!-- <div id="popup-confirmacion" class="popup">
+        <div class="popup-contenido">
+            <h2>¿Deseas comprar este producto?</h2>
+            <div class="popup-botones">
+                <button onclick="cancelarCompra()">Cancelar</button>
+                <button onclick="confirmarYComprar()">Confirmar</button>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- /* From Uiverse.io by mi-series */  -->
+    /* From Uiverse.io by mi-series */ 
+<div class="container">
+  <div class="card cart">
+    <label class="title">CHECKOUT</label>
+    <div class="steps">
+      <div class="step">
+        <div>
+          <span>SHIPPING</span>
+          <p>221B Baker Street, W1U 8ED</p>
+          <p>London, United Kingdom</p>
+        </div>
+        <hr>
+        <div>
+          <span>PAYMENT METHOD</span>
+          <p>Visa</p>
+          <p>**** **** **** 4243</p>
+        </div>
+        <hr>
+        <div class="promo">
+          <span>HAVE A PROMO CODE?</span>
+          <form class="form">
+            <input class="input_field" placeholder="Enter a Promo Code" type="text">
+            <button>Apply</button>
+          </form>
+        </div>
+        <hr>
+        <div class="payments">
+          <span>PAYMENT</span>
+          <div class="details">
+            <span>Subtotal:</span>
+            <span>$240.00</span>
+            <span>Shipping:</span>
+            <span>$10.00</span>
+            <span>Tax:</span>
+            <span>$30.40</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card checkout">
+    <div class="footer">
+      <label class="price">$280.40</label>
+      <button class="checkout-btn">Checkout</button>
+    </div>
+  </div>
+</div>
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -252,12 +315,9 @@ function cancelarCompra() {
     document.querySelector('.popup-overlay').style.display = 'none';
 }
 
-function confirmarYComprar() {
-    // Enviar el formulario de compra y cerrar el popup
-    document.getElementById('form-comprar').submit();
-    cancelarCompra(); // Cerrar el popup y el overlay
-}
-
+        function confirmarYComprar() {
+            document.getElementById('form-comprar').submit(); // envia formualario
+        }
     </script>
 </body>
 

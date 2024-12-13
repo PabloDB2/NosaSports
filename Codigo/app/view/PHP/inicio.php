@@ -25,6 +25,64 @@ $mejoresProductos = $productController->productosConMasLikes();
     <title>Inicio</title>
     <link rel="stylesheet" href="../CSS/inicio.css">
 </head>
+<style>
+        /* Animación para los textos */
+        @keyframes fadeInUp {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .contMateriales {
+            animation: fadeInUp 1.5s ease-out;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            transition: transform 0.8s ease, box-shadow 0.8s ease; /* Transición suave */
+            background: #f9f9f9; /* Fondo claro para destacar los elementos */
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+
+        }
+
+        .contMateriales:hover {
+            transform: scale(1.02); /* Efecto de zoom suave */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más destacada al pasar el ratón */
+        }
+
+        .textoTejidos {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #333;
+            padding: 20px;
+            flex: 1; /* Ajusta el tamaño del texto para equilibrarlo con la imagen */
+        }
+
+        #imagenTejidos img {
+            width: 100%;
+            max-width: 300px; /* Limita el tamaño máximo de la imagen */
+            height: auto;
+            object-fit: cover; /* Asegura que la imagen mantenga proporción */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.8s ease; /* Transición suave para la imagen */
+        }
+
+        #imagenTejidos img:hover {
+            transform: scale(1.05); /* Efecto de zoom en la imagen al pasar el ratón */
+        }
+    </style>
+    
 
 <body onload="setInterval('Blink()',600)">
     <!-- Script para que parpadee el texto -->
@@ -54,7 +112,7 @@ $mejoresProductos = $productController->productosConMasLikes();
                 <img id="tejidos" src="/NosaSports/Codigo/app/view/Img/tejidos.png" alt="">
             </div>
             <div class="textoTejidos">
-                <P>Siempre miramos de cuidaros, sabemos que la calidad marca la diferencia cuando se trata de rendimiento y confort. Por eso, todos nuestros tejidos son de alta calidad, diseñados para ofrecerte máxima durabilidad, transpirabilidad y comodidad. Ya sea que estés entrenando en el gimnasio, compitiendo en la pista o explorando la naturaleza, nuestras prendas te acompañan con tecnología avanzada y materiales que cuidan de tu piel, se adaptan a tu cuerpo y te ayudan a alcanzar tu mejor versión.
+                <P>Siempre miramos de cuidaros, sabemos que la calidad marca la diferencia cuando se trata de rendimiento y confort . Ya sea que estés entrenando en el gimnasio, compitiendo en la pista o explorando la naturaleza, nuestras prendas te acompañan con tecnología avanzada y materiales que cuidan de tu piel, se adaptan a tu cuerpo y te ayudan a alcanzar tu mejor versión.
                     ¡Ven y siente la calidad que respalda cada uno de tus movimientos!</P>
             </div>
 
@@ -86,6 +144,7 @@ $mejoresProductos = $productController->productosConMasLikes();
                 <?php } ?>
             
         </div>
+        <?php include "ideaInicio.php" ?>
         <?php include "../Generales/footer.php" ?>
     </div>
 

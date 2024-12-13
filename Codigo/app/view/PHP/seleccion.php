@@ -60,7 +60,10 @@ if (isset($_SESSION['nombre_usuario'])) {
 
     </div>
 
-
+    <a href="inicio.php">
+     <?php  include "botonAtras.php" ?>   
+    </a>
+    
 
     <?php  include "../Generales/footer.php" ?>
 
