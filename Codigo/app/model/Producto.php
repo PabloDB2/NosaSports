@@ -96,13 +96,13 @@ class Producto
             echo "Error al ejecutar la query: " . $e->getMessage();
         }
     }
-
     public static function getProductByName($nombre_producto)
     {
         try {
             $conn = getDBConnection();
-            $sentencia = $conn->prepare("SELECT * FROM producto WHERE nombre_producto = ?");
-            $sentencia->bindParam(1, $nombre_producto);
+            $sentencia = $conn->prepare("SELECT * FROM producto WHERE nombre_producto LIKE ?");
+            $searchTerm = "%" . $nombre_producto . "%"; // para que no busque la palabra literal y sirva con cualquier letra
+            $sentencia->bindParam(1, $searchTerm);
             $sentencia->execute();
             $result = $sentencia->fetchAll(PDO::FETCH_ASSOC);
             return $result;
@@ -195,6 +195,21 @@ class Producto
             return $result;
         } catch (PDOException $e) {
             echo "Error al obtener el producto: " . $e->getMessage();
+        }
+    }
+
+    public static function searchProducts($search, $deporte = null)
+    {
+        try {
+            $conn = getDBConnection();
+            $sql = "SELECT * FROM producto WHERE nombre_producto LIKE ?";
+            $params = ["% $search %"]; 
+            $sentencia = $conn->prepare($sql);
+            $sentencia->execute($params);
+            $result = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        } catch (PDOException $e) {
+            echo "Error al realizar la búsqueda: " . $e->getMessage();
         }
     }
 }
