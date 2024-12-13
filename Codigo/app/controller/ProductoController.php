@@ -53,5 +53,10 @@ class ProductoController {
     public function getProductsById($id_producto) {
         return Producto::getProductById($id_producto);
     }
+
+    public function searchProducts($search, $deporte = null)
+{
+    return Producto::searchProducts($search, $deporte);
+}
 }
 ?>
