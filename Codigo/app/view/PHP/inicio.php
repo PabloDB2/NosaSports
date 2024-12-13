@@ -144,7 +144,7 @@ $mejoresProductos = $productController->productosConMasLikes();
                 <?php } ?>
             
         </div>
-        <?php include "ideaInicio.php" ?>
+        
         <?php include "../Generales/footer.php" ?>
     </div>
 

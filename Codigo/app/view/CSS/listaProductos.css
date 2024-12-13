@@ -5,11 +5,12 @@
     /* background-color: #f9f4ef;  */
     /* NUEVO: Fondo claro para destacar los productos */
     border-radius: 10px; /* NUEVO: Bordes redondeados */
+   
 }
 
 .productos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* NUEVO: Ajustable según pantalla */
+    grid-template-columns: repeat(5, minmax(250px, 1fr)); /* NUEVO: Ajustable según pantalla */
     gap: 2%; /* MODIFICADO: Más separación entre tarjetas */
     width: 100%; /* MODIFICADO: Ancho total */
     padding: 20px; /* NUEVO: Espaciado interno */
