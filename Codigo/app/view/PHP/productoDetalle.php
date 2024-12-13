@@ -4,10 +4,14 @@ require_once(CONTROLLER . 'ProductoController.php');
 require_once(CONTROLLER . 'PedidoController.php');
 require_once(MODEL . 'Producto.php');
 require_once(CONTROLLER . 'ReseñaController.php');
+require_once(CONTROLLER . 'UsuarioController.php');
+require_once(MODEL . 'Usuario.php');
 
 $productController = new ProductoController();
 $pedidoController = new PedidoController();
 $resenaController = new ReseñaController();
+$usuarioController = new UsuarioController();
+
 session_start();
 
 if (isset($_SESSION['nombre_usuario'])) {
@@ -15,6 +19,10 @@ if (isset($_SESSION['nombre_usuario'])) {
 } else {
     $nombre_usuario = null;
 }
+
+$nombre_usuario = $_SESSION['nombre_usuario'];
+
+$usuario = $usuarioController->getUserByName($nombre_usuario);
 
 // Usamos $_GET para obtener el ID del producto
 if (isset($_GET['id'])) {
@@ -152,72 +160,66 @@ $resenas = $resenaController->getReseñasByProducto($id_producto);
             </div>
         </div>
     </div>
-
-    <div id="popup-confirmacion" class="popup">
-        <div class="popup-contenido">
-            <h2>¿Deseas comprar este producto?</h2>
-            <div class="popup-botones">
-                <button onclick="cancelarCompra()">Cancelar</button>
-                <button onclick="confirmarYComprar()">Confirmar</button>
-            </div>
-        </div>
+    <div class="popup-overlay"></div>
+    <div class="popup">
+    <?php include "ticket.php" ?>
     </div>
 
     <div class="reseñas">
         <h2>Reseñas del producto</h2>
 
         <!-- Formulario para publicar reseña -->
-        <?php 
-        if ($nombre_usuario) { 
+        <?php
+        if ($nombre_usuario) {
         ?>
-           <form action="" method="POST" class="formReseña">
-        <input type="hidden" name="accion" value="publicarReseña">
-        <input type="hidden" name="id" value="<?= htmlspecialchars($producto['id_producto']) ?>">
-        <textarea name="texto" placeholder="Escribe tu reseña aquí..." required></textarea>
-        <label for="puntuacion">Puntuación:</label>
-        <select name="puntuacion" id="puntuacion" required>
-            <option value="1">1 estrella</option>
-            <option value="2">2 estrellas</option>
-            <option value="3">3 estrellas</option>
-            <option value="4">4 estrellas</option>
-            <option value="5">5 estrellas</option>
-        </select>
-        <button type="submit" class="botonPublicar">Publicar reseña</button>
-    </form>
-        <?php 
-        } else { 
+            <form action="" method="POST" class="formReseña">
+                <input type="hidden" name="accion" value="publicarReseña">
+                <input type="hidden" name="id" value="<?= htmlspecialchars($producto['id_producto']) ?>">
+                <textarea name="texto" placeholder="Escribe tu reseña aquí..." required></textarea>
+                <label for="puntuacion">Puntuación:</label>
+                <select name="puntuacion" id="puntuacion" required>
+                    <option value="1">1 estrella</option>
+                    <option value="2">2 estrellas</option>
+                    <option value="3">3 estrellas</option>
+                    <option value="4">4 estrellas</option>
+                    <option value="5">5 estrellas</option>
+                </select>
+                <button type="submit" class="botonPublicar">Publicar reseña</button>
+            </form>
+        <?php
+        } else {
         ?>
             <p>Inicia sesión para dejar una reseña.</p>
-        <?php 
-        } 
+        <?php
+        }
         ?>
 
-        <?php 
-        if (isset($mensajeReseña)) { 
+        <?php
+        if (isset($mensajeReseña)) {
         ?>
             <p class="mensajeReseña"><?= htmlspecialchars($mensajeReseña) ?></p>
-        <?php 
-        } 
+        <?php
+        }
         ?>
 
         <!-- Listado de reseñas -->
         <div class="listaReseñas">
-            <?php 
-            if ($resenas) { 
-                foreach ($resenas as $resena) { 
+            <?php
+            if ($resenas) {
+                foreach ($resenas as $resena) {
             ?>
                     <div class="reseña">
                         <h3><?= htmlspecialchars($resena['nombre_usuario_reseña']) ?></h3>
                         <p class="puntuacion"><?= str_repeat('★', $resena['puntuacion']) ?></p>
                         <p><?= htmlspecialchars($resena['texto']) ?></p>
                     </div>
-            <?php 
-                } 
-            } else { 
-            ?>
+                <?php
+                }
+            } else {
+                ?>
                 <p>No hay reseñas para este producto.</p>
-            <?php 
-            } 
+            <?php
+            }
             ?>
         </div>
     </div>
@@ -226,22 +228,36 @@ $resenas = $resenaController->getReseñasByProducto($id_producto);
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById('popup-confirmacion').style.display = 'none';
-        }); // necesario para que no salga visible por defecto
+    // Ocultar el popup y el overlay al cargar la página
+    document.querySelector('.popup').style.display = 'none';
+    document.querySelector('.popup-overlay').style.display = 'none';
 
-        function confirmarCompra(event) {
-            event.preventDefault();
+    // Agregar un evento para cerrar el popup si se hace clic en el overlay
+    document.querySelector('.popup-overlay').addEventListener('click', function() {
+        cancelarCompra();
+    });
+});
 
-            document.getElementById('popup-confirmacion').style.display = 'flex'; // lo muestra
-        }
+function confirmarCompra(event) {
+    event.preventDefault();
+    
+    // Mostrar el popup y el fondo oscuro (overlay)
+    document.querySelector('.popup').style.display = 'flex';
+    document.querySelector('.popup-overlay').style.display = 'block';
+}
 
-        function cancelarCompra() {
-            document.getElementById('popup-confirmacion').style.display = 'none'; // lo oculta
-        }
+function cancelarCompra() {
+    // Ocultar el popup y el fondo oscuro (overlay)
+    document.querySelector('.popup').style.display = 'none';
+    document.querySelector('.popup-overlay').style.display = 'none';
+}
 
-        function confirmarYComprar() {
-            document.getElementById('form-comprar').submit(); // envia formualario
-        }
+function confirmarYComprar() {
+    // Enviar el formulario de compra y cerrar el popup
+    document.getElementById('form-comprar').submit();
+    cancelarCompra(); // Cerrar el popup y el overlay
+}
+
     </script>
 </body>
 
