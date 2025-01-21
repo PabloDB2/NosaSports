@@ -1,267 +1,229 @@
 body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
+  display: flex;
+  flex-direction: column;
+  /* min-height: 100vh; */
+  /* width: 100vw; */
 }
 
 .content {
-    flex-grow: 1;
-    /*height: 95%;*/
+  flex-grow: 1;
+  /*height: 95%;*/
 }
 
-
 .logo {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    z-index: 10;
-    top: 0px;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  z-index: 10;
+  top: 0px;
 }
 
 .imgFondo1 {
-    width: 100%;
-    height: 450px;
-    position: relative;
-    z-index: 2;
-    object-fit: cover; /* para que la imagen no se estire*/
+  width: 100%;
+  height: 450px;
+  position: relative;
+  z-index: 2;
+  object-fit: cover; /* para que la imagen no se estire*/
 }
 
-
-
 a {
-    text-decoration: none;
-    color: white;
-    margin-right: 15px;
-    margin-left: 10px;
-    font-size: 22px;
+  text-decoration: none;
+  color: white;
+  margin-right: 15px;
+  margin-left: 10px;
+  font-size: 22px;
 }
 
 .texto1 {
-
-    z-index: 3;
-    color: white;
-    position: absolute;
-    text-align: center;
-    top: 200px;
-    left: 450px;
-
-
+  z-index: 3;
+  color: white;
+  position: absolute;
+  text-align: center;
+  top: 200px;
+  left: 450px;
 }
 
 h1 {
-    font-size: 80px;
-    text-shadow: black 15px 0px 20px;
+  font-size: 80px;
+  text-shadow: black 15px 0px 20px;
 }
 
 .contMateriales {
-    display: grid;
-    margin: auto;
-    background-color: rgba(104, 86, 52, 0.6);
-    width: 70%;
-    height: 200px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: 6px solid rgba(104, 86, 52);
-
-
+  display: grid;
+  margin: auto;
+  background-color: rgba(104, 86, 52, 0.6);
+  width: 70%;
+  height: 200px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 6px solid rgb(104, 86, 52);
 }
 
 #tejidos {
-    width: 200px;
-    height: 200px;
-    border-radius: 20px;
-
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
 }
 
 .textoTejidos {
-    color: white;
-    margin-left: 15px;
-
+  color: white;
+  margin-left: 15px;
 }
 
 #tituloTejidos {
-    text-align: center;
+  text-align: center;
 }
 
 .topProductos {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-    
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
 }
 
 .divProduc {
-    padding: 15px; 
-    border-radius: 15px; 
-    height: 50vh; 
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column; 
-    text-align: center; 
-    background-color:rgba(104, 86, 52, 0.6); ;
+  padding: 15px;
+  border-radius: 15px;
+  height: 50vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgba(104, 86, 52, 0.6);
 }
 
 .divProduc:hover {
-    border-color: white;
-    transform: translateY(-10px); 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+  border-color: white;
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .imgProducto {
-    display: block;
-    margin: 0 auto;
-    width: 90%; 
-    height: 60%; 
-    border-radius: 15px; 
-    object-fit: cover; 
-    object-position: center; 
-    border: 3px solid rgba(255, 255, 255, 0.7);
-    box-sizing: border-box; 
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  height: 60%;
+  border-radius: 15px;
+  object-fit: cover;
+  object-position: center;
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  box-sizing: border-box;
 }
 
 #h2Populares {
-    background-color: rgba(104, 86, 52);
-    color: white;
-    border-radius: 20px;
-    width: 50%;
-    text-align: center;
-    margin: auto;
-    margin-top: 30px;
+  background-color: rgb(104, 86, 52);
+  color: white;
+  border-radius: 20px;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  margin-top: 30px;
 }
 
 #precio {
-    margin-top: 5px; 
-    font-weight: bold;
-    font-size: 20px; 
-    border: 2px solid rgba(104, 86, 52); 
-    margin: auto;
-    width: 70px; 
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.9); 
-    border-radius: 20px; 
-    padding: 5px; 
-    color: #333; 
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  border: 2px solid rgb(104, 86, 52);
+  margin: auto;
+  width: 70px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 5px;
+  color: #333;
 }
 
 #nombre {
-    margin-top: 5%;
-    text-align: center;
-    /* margin-top:10%; */
-    font-size: 22px; 
-    font-weight: bold;
-    color: rgba(104, 86, 52); 
-    
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); 
+  margin-top: 5%;
+  text-align: center;
+  /* margin-top:10%; */
+  font-size: 22px;
+  font-weight: bold;
+  color: rgb(104, 86, 52);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 #likes {
-    border-radius: 30px;
-    color: rgb(171, 31, 31);
-    width: 80px;
-    text-align: center;
-    font-size: 18px; 
-    background-color: rgba(255, 235, 235, 0.8); 
-    padding: 5px; 
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); 
+  border-radius: 30px;
+  color: rgb(171, 31, 31);
+  width: 80px;
+  text-align: center;
+  font-size: 18px;
+  background-color: rgba(255, 235, 235, 0.8);
+  padding: 5px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Ajustes para pantallas medianas (tabletas) */
 @media (max-width: 768px) {
-    .contMateriales {
-        flex-direction: column;
-        /* Cambia de fila a columna */
-        align-items: center;
-        height: auto;
-        width: 80%;
-        /* Reduce el ancho */
-        padding: 15px;
-    }
-
-    #tejidos {
-        width: 150px;
-        /* Ajusta el tamaño de la imagen */
-        height: 150px;
-        margin-bottom: 15px;
-    }
-
-    .textoTejidos {
-        margin-left: 0;
-        /* Centra el texto debajo de la imagen */
-        text-align: center;
-    }
-
-    .texto1 {
-        top: 150px;
-        left: 50%;
-        /* Centra el texto en pantallas medianas */
-        transform: translateX(-50%);
-    }
-
-    h1 {
-        font-size: 60px;
-        /* Ajusta el tamaño del encabezado */
-    }
-
+  .contMateriales {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 80%;
+    padding: 15px;
+  }
+  #tejidos {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+  }
+  .textoTejidos {
+    margin-left: 0;
+    text-align: center;
+  }
+  .texto1 {
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  h1 {
+    font-size: 60px;
+  }
 }
-
-
 @media (max-width: 480px) {
-
-    .logo {
-        width: 150px;
-        height: 150px;
-        top: -25px;
-    }
-
-    .imgFondo1 {
-        height: 300px;
-    }
-
-    .texto1 {
-        top: 120px;
-        font-size: 20px;
-        text-align: center;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    h1 {
-        font-size: 40px;
-    }
-
-    .contMateriales {
-        width: 80%;
-        padding: 10px;
-    }
-
-    #tejidos {
-        width: 120px;
-        height: 120px;
-        margin-bottom: 10px;
-    }
-
-    .textoTejidos {
-        font-size: 14px;
-        text-align: center;
-    }
-
-    .topProductos{
-        display: block;
-       
-        
-    }
-
-    .divProduc{
-        width: 60%;
-        margin: auto;
-        margin-bottom: 10%;
-    }
-
-
+  .logo {
+    width: 150px;
+    height: 150px;
+    top: -25px;
+  }
+  .imgFondo1 {
+    height: 300px;
+  }
+  .texto1 {
+    top: 120px;
+    font-size: 20px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  h1 {
+    font-size: 40px;
+  }
+  .contMateriales {
+    width: 80%;
+    padding: 10px;
+  }
+  #tejidos {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+  }
+  .textoTejidos {
+    font-size: 14px;
+    text-align: center;
+  }
+  .topProductos {
+    display: block;
+  }
+  .divProduc {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 10%;
+  }
 }
+
+/*# sourceMappingURL=inicio.css.map */

@@ -1,20 +1,18 @@
 .contProductos {
     display: flex;
     justify-content: center;
-    padding: 30px; /* MODIFICADO: Más espaciado */
-    /* background-color: #f9f4ef;  */
-    /* NUEVO: Fondo claro para destacar los productos */
-    border-radius: 10px; /* NUEVO: Bordes redondeados */
+    padding: 30px; 
+    border-radius: 10px; 
    
 }
 
 .productos {
     display: grid;
-    grid-template-columns: repeat(5, minmax(250px, 1fr)); /* NUEVO: Ajustable según pantalla */
-    gap: 2%; /* MODIFICADO: Más separación entre tarjetas */
-    width: 100%; /* MODIFICADO: Ancho total */
-    padding: 20px; /* NUEVO: Espaciado interno */
-    justify-items: center; /* NUEVO: Centrar productos */
+    grid-template-columns: repeat(5, minmax(250px, 1fr));
+    gap: 2%;
+    width: 100%; 
+    padding: 20px; 
+    justify-items: center;
 }
 
 .divProduc {
@@ -42,7 +40,6 @@
     border-radius: 10px; 
     object-fit: cover; 
     object-position: center; 
-    /* border: 3px solid rgba(255, 255, 255, 0.7); */
     box-sizing: border-box; 
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
@@ -52,10 +49,7 @@
     border-radius: 30px;
     color: rgb(171, 31, 31);
     text-align: left;
-    font-size: 15px; 
-    /* background-color: rgba(255, 235, 235, 0.8);   */
-    /* box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);  */
-    
+    font-size: 15px;     
 }
 
 #precio {
@@ -75,7 +69,6 @@
 #nombre {
     margin-top: 5%;
     text-align: center;
-    /* margin-top:10%; */
     font-size: 22px; 
     font-weight: bold;
     color: rgba(104, 86, 52); 

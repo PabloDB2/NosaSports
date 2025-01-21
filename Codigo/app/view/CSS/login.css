@@ -1,22 +1,22 @@
-body{
+body {
     background-image: url("/NosaSports/Codigo/app/view/Img/fondoLogin.webp");
 }
 
-.popup{
-      margin: auto;
-      text-align: center;
-      border: 4px rgba(104, 86, 52) solid;
-      background-color: rgba(104, 86, 52,0.9);
-      width: 40%;
-      margin-top:5%;
-      border-radius: 20px;
-      padding: 20px;
-      
-    
+.popup {
+    margin: auto;
+    text-align: center;
+    border: 4px rgba(104, 86, 52) solid;
+    background-color: rgba(104, 86, 52, 0.9);
+    width: 40%;
+    margin-top: 5%;
+    border-radius: 20px;
+    padding: 20px;
+
+
 }
 
-input{
-    
+input {
+
     display: block;
     width: 35%;
     height: 50px;
@@ -24,70 +24,70 @@ input{
     text-align: center;
     margin: auto;
     font-size: 20px;
-    
-    
-    
+
+
+
 
 }
 
-h2{
+h2 {
     color: white;
-    font-size:50px;
+    font-size: 50px;
 }
 
-p{
+p {
     font-size: 30px;
     margin: 15px;
-    color:white;
-    
+    color: white;
+
 }
 
 input[type="submit"] {
-    background-color: black; /* Cambia el color de fondo del botón */
-    color: white; /* Color de texto blanco */
+    background-color: black;
+    color: white;
     font-size: 18px;
     cursor: pointer;
-    border: none; /* Elimina el borde para una apariencia más limpia */
-    transition: background-color 0.3s; /* Añade una transición para el hover */
+    border: none;
+    transition: background-color 0.3s;
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
 input[type="submit"]:hover {
-    background-color: #544529; /* Cambia el color al pasar el mouse */
+    background-color: #544529;
 }
 
-a{
+a {
     font-size: 22px;
     text-decoration: none;
     color: white;
     margin-left: 40px;
-    
-}
-
-a:hover{
-    color:red;
 
 }
 
-#cierre{
-    color:white;
+a:hover {
+    color: red;
+
+}
+
+#cierre {
+    color: white;
     margin-right: 0;
-    
-    
+
+
 }
 
-#pregunta{
-    color:black;
+#pregunta {
+    color: black;
     font-size: 20px;
 }
 
 @media (max-width: 768px) {
 
-    .popup{
-        
+    .popup {
+
         width: 400px;
-        padding: 22px;     
+        padding: 22px;
     }
 
 }
@@ -95,24 +95,22 @@ a:hover{
 
 @media (max-width: 480px) {
 
-    .popup{
-        
+    .popup {
+
         width: 300px;
-        margin-top: 24%;   
-    } 
-    
+        margin-top: 24%;
+    }
+
     input[type="submit"] {
-        
+
         font-size: 16px;
         margin-top: 50px;
         margin-bottom: 20px;
     }
-    
-    a{
+
+    a {
 
         margin-left: 30px;
-        
+
     }
-}  
-
-
+}
