@@ -25,67 +25,7 @@ $mejoresProductos = $productController->productosConMasLikes();
     <title>Inicio</title>
     <link rel="stylesheet" href="../CSS/inicio.css">
 </head>
-<style>
-    @keyframes fadeInUp {
-        0% {
-            transform: translateY(50px);
-            opacity: 0;
-        }
 
-        100% {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
-
-    .contMateriales {
-        animation: fadeInUp 1.5s ease-out;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 30px;
-        transition: transform 0.8s ease, box-shadow 0.8s ease;
-        background: #f9f9f9;
-        border-radius: 10px;
-        overflow: hidden;
-        padding: 40px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-
-    }
-
-    .contMateriales:hover {
-        transform: scale(1.02);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    .textoTejidos {
-        font-size: 1.2rem;
-        line-height: 1.8;
-        color: #333;
-        padding: 20px;
-        flex: 1;
-    }
-
-    #imagenTejidos img {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-        object-fit: cover;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.8s ease;
-    }
-
-    #imagenTejidos img:hover {
-        transform: scale(1.05);
-    }
-    .divProduc:hover {
-    cursor: pointer;
-
-}
-</style>
 
 
 <body onload="setInterval('Blink()',600)">
