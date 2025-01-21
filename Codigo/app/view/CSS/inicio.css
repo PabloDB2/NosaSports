@@ -1,3 +1,19 @@
+
+@keyframes fadeInUp {
+  0% {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+
+
+
 body {
   display: flex;
   flex-direction: column;
@@ -51,16 +67,31 @@ h1 {
 .contMateriales {
   display: grid;
   margin: auto;
-  background-color: rgba(104, 86, 52, 0.6);
-  width: 70%;
+  width: 60vw;
   height: 200px;
   border-radius: 20px;
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 2%; 
+  animation: fadeInUp 1.5s ease-out;
+  overflow: hidden;
   margin-top: 10px;
   margin-bottom: 10px;
   border: 6px solid rgb(104, 86, 52);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contMateriales:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.textoTejidos {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+  flex: 1;
+   
 }
 
 #tejidos {
@@ -69,10 +100,21 @@ h1 {
   border-radius: 20px;
 }
 
-.textoTejidos {
-  color: white;
-  margin-left: 15px;
+
+
+#imagenTejidos img {
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.8s ease;
 }
+
+#imagenTejidos img:hover {
+  transform: scale(1.05);
+}
+
+
 
 #tituloTejidos {
   text-align: center;
@@ -164,7 +206,7 @@ h1 {
     align-items: center;
     height: auto;
     width: 80%;
-    padding: 15px;
+    
   }
   #tejidos {
     width: 150px;
@@ -204,8 +246,10 @@ h1 {
     font-size: 40px;
   }
   .contMateriales {
-    width: 80%;
-    padding: 10px;
+    width: 95%;
+    padding: 5px;
+    border: 2px solid rgb(104, 86, 52);
+    
   }
   #tejidos {
     width: 120px;
@@ -213,8 +257,8 @@ h1 {
     margin-bottom: 10px;
   }
   .textoTejidos {
-    font-size: 14px;
-    text-align: center;
+    font-size: 12px;
+    text-align: justify;
   }
   .topProductos {
     display: block;
@@ -224,6 +268,22 @@ h1 {
     margin: auto;
     margin-bottom: 10%;
   }
+
+  h1{
+    font-size: 30px;
+  }
+
+
 }
 
-/*# sourceMappingURL=inicio.css.map */
+
+
+#imagenTejidos img:hover {
+  transform: scale(1.05);
+}
+.divProduc:hover {
+cursor: pointer;
+
+}
+
+
