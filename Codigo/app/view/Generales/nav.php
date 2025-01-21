@@ -1,23 +1,21 @@
 <style>
-body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
 
 nav {
     background-color: rgb(104, 86, 52);
     color: white;
     width: 100vw;
     max-width: 100%;
-    height: 60px;  /* Altura original */
+    height: 60px;
     margin-top: 70px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     z-index: 1;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 60px;
+    min-height: 60px;
 }
+
 
 a {
     text-decoration: none;
@@ -131,5 +129,7 @@ a img {
 </nav>
 
 
-    <img class="logo" src="/NosaSports/Codigo/app/view/Img/logo.png" alt="">
+<a href="../PHP/inicio.php">
+        <img class="logo" src="/NosaSports/Codigo/app/view/Img/logo.png" alt="Logo">
+    </a>
 </body>

@@ -1,9 +1,8 @@
 body {
-    margin: 0;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    width: 100vw;
+    /* min-height: 100vh; */
+    /* width: 100vw; */
 }
 
 .content {
@@ -171,41 +170,34 @@ h1 {
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); 
 }
 
-/* Ajustes para pantallas medianas (tabletas) */
 @media (max-width: 768px) {
     .contMateriales {
         flex-direction: column;
-        /* Cambia de fila a columna */
         align-items: center;
         height: auto;
         width: 80%;
-        /* Reduce el ancho */
         padding: 15px;
     }
 
     #tejidos {
         width: 150px;
-        /* Ajusta el tamaño de la imagen */
         height: 150px;
         margin-bottom: 15px;
     }
 
     .textoTejidos {
         margin-left: 0;
-        /* Centra el texto debajo de la imagen */
         text-align: center;
     }
 
     .texto1 {
         top: 150px;
         left: 50%;
-        /* Centra el texto en pantallas medianas */
         transform: translateX(-50%);
     }
 
     h1 {
         font-size: 60px;
-        /* Ajusta el tamaño del encabezado */
     }
 
 }

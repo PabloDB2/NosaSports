@@ -1,16 +1,9 @@
 body{
     margin: 0;
     /* display: flex; */
-    
-    
     height: 100vh;
-    /* Aseguramos un correcto ancho y que no desborde */
     box-sizing: border-box; 
-    overflow-x: hidden;
-    
-    
-    
-   
+    overflow-x: hidden; 
 }
 
 .content{
@@ -70,7 +63,6 @@ body{
     cursor: pointer;
 }
 
-/* Ajustes para pantallas medianas (tabletas) */
 @media (max-width: 900px) {
 
     .contGrande {
@@ -109,7 +101,6 @@ body{
 }
 
 
-/* Ajustes para tamañas pequeñas: móviles  */
 @media (max-width: 480px) {
 
     
