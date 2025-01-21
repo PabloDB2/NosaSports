@@ -2,64 +2,140 @@
 require_once(__DIR__ . '/../../rutas.php');
 require_once(CONFIG . 'dbConnection.php'); // ruta de config definido en rutas.php
 
+/**
+ * Clase que representa a un usuario en el sistema
+ *
+ * @package Usuarios
+ * @author NosaSports <nosasports@store.com>
+ */
 class Usuario
 {
+    /** @var string Nombre de usuario (username) del usuario */
     private $nombre_usuario;
+
+    /** @var string Correo electrónico del usuario */
     private $correo;
+
+    /** @var string Nombre y apellidos del usuario */
     private $nombreapellidos; // nombre y apellidos van juntos
+
+    /** @var string Dirección del usuario */
     private $direccion;
+
+    /** @var string Contraseña del usuario */
     private $contraseña;
 
+
+    /**
+     * Obtiene el nombre de usuario
+     *
+     * @return string Nombre de usuario
+     */
     public function getNombreUsuario()
     {
         return $this->nombre_usuario;
     }
 
+    /**
+     * Obtiene el correo electrónico del usuario
+     *
+     * @return string Correo electrónico del usuario
+     */
     public function getCorreo()
     {
         return $this->correo;
     }
 
+    /**
+     * Obtiene el nombre y apellidos del usuario
+     *
+     * @return string Nombre y apellidos del usuario
+     */
     public function getNombreApellidos()
     {
         return $this->nombreapellidos;
     }
 
+    /**
+     * Obtiene la contraseña del usuario
+     *
+     * @return string Contraseña del usuario
+     */
     public function getContraseña()
     {
         return $this->contraseña;
     }
 
+     /**
+     * Obtiene la dirección del usuario
+     *
+     * @return string Dirección del usuario
+     */
     public function getDireccion()
     {
         return $this->direccion;
     }
 
+     /**
+     * Establece el nombre de usuario
+     *
+     * @param string $nombre_usuario Nombre de usuario
+     * @return void
+     */
     public function setNombreUsuario($nombre_usuario)
     {
         $this->nombre_usuario = $nombre_usuario;
     }
 
+     /**
+     * Establece el correo electrónico del usuario
+     *
+     * @param string $correo Correo electrónico del usuario
+     * @return void
+     */
     public function setCorreo($correo)
     {
         $this->correo = $correo;
     }
 
+    /**
+     * Establece el nombre y apellidos del usuario
+     *
+     * @param string $nombreapellidos Nombre y apellidos del usuario
+     * @return void
+     */
     public function setNombreApellidos($nombreapellidos)
     {
         $this->nombreapellidos = $nombreapellidos;
     }
 
+     /**
+     * Establece la dirección del usuario
+     *
+     * @param string $direccion Dirección del usuario
+     * @return void
+     */
     public function setDireccion($direccion)
     {
         $this->direccion = $direccion;
     }
 
+    /**
+     * Establece la contraseña del usuario
+     *
+     * @param string $contraseña Contraseña del usuario
+     * @return void
+     */
     public function setContraseña($contraseña)
     {
         $this->contraseña = $contraseña;
     }
 
+    /**
+     * Obtiene todos los usuarios de la base de datos
+     *
+     * @return array Lista de usuarios
+     */
     public static function getAllUsers()
     {
         try {
@@ -68,10 +144,17 @@ class Usuario
             $result = $query->fetchAll(PDO::FETCH_ASSOC); // El assoc devuelve cada fila como array asociativo
             return $result;
         } catch (PDOException $e) {
-            echo "Error al ejecutar la query";
+            echo "Error al ejecutar la query". $e->getMessage();
+            return []; 
         }
     }
 
+     /**
+     * Obtiene un usuario por su nombre de usuario
+     *
+     * @param string $nombre_usuario Nombre de usuario
+     * @return Usuario|null Objeto Usuario si existe, o null si no se encuentra
+     */
     public static function getUserByName($nombre_usuario)
     {
         try {
@@ -98,6 +181,11 @@ class Usuario
         }
     }
 
+      /**
+     * Crea un nuevo usuario
+     *
+     * @return void
+     */
     public function create()
     {
         try {
@@ -114,6 +202,11 @@ class Usuario
         }
     }
 
+     /**
+     * Actualiza los datos del usuario en la base de datos
+     *
+     * @return void
+     */
     public function updateUser()
     {
         try {
@@ -132,6 +225,11 @@ class Usuario
         }
     }
 
+    /**
+     * Elimina un usuario de la base de datos
+     *
+     * @return void
+     */
     public function deleteUser()
     {
         try {
@@ -143,6 +241,13 @@ class Usuario
             echo "Error en la conexión a base de datos: " . $e->getMessage();
         }
     }
+
+   /**
+     * Actualiza el nombre de usuario en la base de datos
+     *
+     * @param string $nuevoNombreUsuario Nuevo nombre de usuario
+     * @return void
+     */
 
     //metodos de update para modificar solo un campo específico
     // (para no tener que modificar o teclear todos)
@@ -160,6 +265,12 @@ class Usuario
         }
     }
 
+     /**
+     * Actualiza la contraseña del usuario en la base de datos
+     *
+     * @param string $nuevaContraseña Nueva contraseña del usuario
+     * @return void
+     */
     public function updateContraseña($nuevaContraseña)
     {
         try {
@@ -173,6 +284,13 @@ class Usuario
             echo "Error al actualizar la contraseña: " . $e->getMessage();
         }
     }
+
+    /**
+     * Actualiza el nombre y apellidos del usuario en la base de datos
+     *
+     * @param string $nuevoNombreApellidos Nuevo nombre y apellidos del usuario
+     * @return void
+     */
     public function updateNombreApellidos($nuevoNombreApellidos)
     {
         try {
@@ -187,6 +305,12 @@ class Usuario
         }
     }
 
+     /**
+     * Actualiza la dirección del usuario en la base de datos
+     *
+     * @param string $nuevaDireccion Nueva dirección del usuario
+     * @return void
+     */
     public function updateDireccion($nuevaDireccion)
     {
         try {
