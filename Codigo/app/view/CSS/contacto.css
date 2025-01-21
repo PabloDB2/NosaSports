@@ -1,4 +1,4 @@
-body{
+body {
     height: 100vh;
 }
 
@@ -7,11 +7,11 @@ body{
 
     display: flex;
     flex-grow: 1;
-    
+
 
 }
 
-.content2{
+.content2 {
 
     display: flex;
     margin: 0 auto;
@@ -42,7 +42,8 @@ h1 {
     font-size: 24px;
 }
 
-.texto1, .texto2 {
+.texto1,
+.texto2 {
     width: 100%;
     max-width: 380px;
     border: solid 2px black;
@@ -74,13 +75,13 @@ h1 {
 
 
 @media (max-width: 768px) {
-    
+
     .info {
 
         padding-left: 10px;
 
     }
-    
+
     .info p {
         margin: 20px 0;
     }
@@ -89,12 +90,11 @@ h1 {
 
 @media (max-width: 480px) {
 
-    .content2{
+    .content2 {
 
         display: block;
 
-    
+
     }
 
 }
-
