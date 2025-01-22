@@ -107,4 +107,16 @@ class Reseña
             echo "Error al eliminar la reseña: " . $e->getMessage();
         }
     }
+
+    public static function deleteReseñasByUsuario($nombre_usuario)
+{
+    try {
+        $conn = getDBConnection();
+        $sentencia = $conn->prepare("DELETE FROM reseña WHERE nombre_usuario_reseña = ?");
+        $sentencia->bindParam(1, $nombre_usuario, PDO::PARAM_STR);
+        $sentencia->execute();
+    } catch (PDOException $e) {
+        echo "Error al eliminar las reseñas del usuario: " . $e->getMessage();
+    }
+}
 }

@@ -21,4 +21,8 @@ class ReseñaController {
     public function eliminarReseña($id_reseña) {
         Reseña::deleteReseña($id_reseña);
     }
+
+    public function eliminarReseñasPorUsuario($nombre_usuario) {
+        Reseña::deleteReseñasByUsuario($nombre_usuario);
+    }
 }
