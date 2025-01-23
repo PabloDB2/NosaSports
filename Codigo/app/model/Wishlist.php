@@ -2,44 +2,93 @@
 require_once(__DIR__ . '/../../rutas.php');
 require_once(CONFIG . 'dbConnection.php'); // ruta de config definido en rutas.php
 
+/**
+ * Clase que representa un producto en el sistema
+ *
+ * @package Wishlist
+ * @author NosaSports <nosasports@store.com>
+ */
+
 class Wishlist
 {
+    /** @var int ID de wishlist */
     private $id_wishlist;
+
+    /** @var string Nombre de usuario */
     private $nombre_usuario;
+
+    /** @var string ID del producto */
     private $id_producto;
 
-    // Getters
+    /**
+     * Obtiene la Id de Wishlist
+     *
+     * @return int Id de Wishlist
+     */
+
     public function getIdWishlist()
     {
         return $this->id_wishlist;
     }
 
+    /**
+     * Obtiene el nombre de usuario
+     *
+     * @return string Nombre de usuario
+     */
     public function getNombreUsuario()
     {
         return $this->nombre_usuario;
     }
 
+    /**
+     * Obtiene el Id del producto
+     *
+     * @return int Id del producto
+     */
     public function getIdProducto()
     {
         return $this->id_producto;
     }
 
-    // Setters
+    /**
+     * Establece el ID de la wishlist
+     *
+     * @param int $id_wishlist ID de la wishlist
+     * @return void
+     */
     public function setIdWishlist($id_wishlist)
     {
         $this->id_wishlist = $id_wishlist;
     }
 
+    /**
+     * Establece el Nombre de usuario
+     *
+     * @param string $nombre_usuario nombre de usuario de la wishlist
+     * @return void
+     */
     public function setNombreUsuario($nombre_usuario)
     {
         $this->nombre_usuario = $nombre_usuario;
     }
 
+    /**
+     * Establece el Id del producto
+     *
+     * @param int $id_producto Id del producto de la wishlist
+     * @return void
+     */
     public function setIdProducto($id_producto)
     {
         $this->id_producto = $id_producto;
     }
 
+    /**
+     * Obtiene todas las Wishlist
+     *
+     * @return array Lista de wishlists
+     */
     public static function getAllWishlists()
     {
         try {
@@ -48,9 +97,16 @@ class Wishlist
             return $query->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             echo "Error al obtener las wishlists: " . $e->getMessage();
+            return [];
         }
     }
 
+    /**
+     * Obtiene la wishlist asociada a un usuario
+     *
+     * @param string $nombre_usuario nombre de usuario
+     * @return array Wishlist asociada a un usuario
+     */
     public static function getWishlistByUser($nombre_usuario)
     {
         try {
@@ -61,9 +117,16 @@ class Wishlist
             return $sentencia->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             echo "Error al obtener la wishlist del usuario: " . $e->getMessage();
+            return [];
         }
     }
 
+    /**
+     * Obtiene la Id asociada a una wishlist
+     *
+     * @param int $id_wishlist id de wishlist
+     * @return array Id asociada a una wishlist
+     */
     public static function getWishlistById($id_wishlist)
     {
         try {
@@ -74,9 +137,15 @@ class Wishlist
             return $sentencia->fetch(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             echo "Error al obtener la wishlist: " . $e->getMessage();
+            return [];
         }
     }
 
+    /**
+     * Añade un producto a la wishlist
+     *
+     * @return void
+     */
     public function addProductToWishlist()
     {
         try {
@@ -90,6 +159,11 @@ class Wishlist
         }
     }
 
+    /**
+     * Elimina un producto de la wishlist
+     *
+     * @return void
+     */
     public function removeProductFromWishlist() {
         try {
             $conn = getDBConnection();
