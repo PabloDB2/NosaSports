@@ -95,6 +95,5 @@ class ProductoController {
         $producto->updateDeporteProducto($nuevoDeporte);
     }
 
-
 }
 ?>
