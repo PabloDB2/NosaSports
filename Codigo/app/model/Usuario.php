@@ -245,12 +245,11 @@ class Usuario
    /**
      * Actualiza el nombre de usuario en la base de datos
      *
+     * 
      * @param string $nuevoNombreUsuario Nuevo nombre de usuario
      * @return void
      */
-
-    //metodos de update para modificar solo un campo específico
-    // (para no tener que modificar o teclear todos)
+    
     public function updateNombreUsuario($nuevoNombreUsuario)
     {
         try {

@@ -61,7 +61,23 @@
 </h4>
 
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Pedido.html" class="">Pedido</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Productos.html" class="">Productos</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Reseas.html" class="">Reseas</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
     <a href="packages/Usuarios.html" class="">Usuarios</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Wishlist.html" class="">Wishlist</a>
 </h4>
 
                         </section>
@@ -82,7 +98,7 @@
             <div class="phpdocumentor-column -nine phpdocumentor-content">
                                 <section>
                                         <ul class="phpdocumentor-breadcrumbs">
-            <li class="phpdocumentor-breadcrumb"><a href="packages/Application.html">Application</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="packages/Productos.html">Productos</a></li>
     </ul>
 
     <article class="phpdocumentor-element -class">
@@ -93,7 +109,7 @@
             <div class="phpdocumentor-element__package">
             in package
             <ul class="phpdocumentor-breadcrumbs">
-                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Application.html">Application</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Productos.html">Productos</a></li>
                             </ul>
         </div>
     
@@ -108,14 +124,31 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5</span>
+    <span class="phpdocumentor-element-found-in__line">11</span>
 
     </aside>
 
-        
+            <p class="phpdocumentor-summary">Clase que representa un producto en el sistema</p>
 
 
 
+
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/Producto.html#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">author</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>NosaSports <a href="mailto:nosasports@store.com">nosasports@store.com</a></p>
+</section>
+
+                                    </dd>
+                                            </dl>
 
 
 
@@ -144,43 +177,43 @@
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a class="" href="classes/Producto.html#property_deporte">$deporte</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: string            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a class="" href="classes/Producto.html#property_descripcion">$descripcion</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: string            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a class="" href="classes/Producto.html#property_id_producto">$id_producto</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: int            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a class="" href="classes/Producto.html#property_imagen">$imagen</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: string            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a class="" href="classes/Producto.html#property_likes">$likes</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: int            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a class="" href="classes/Producto.html#property_nombre_producto">$nombre_producto</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: string            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a class="" href="classes/Producto.html#property_precio">$precio</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: float            </span>
 </dt>
 
     </dl>
@@ -194,140 +227,163 @@
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Producto.html#method_create">create()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
+<dd>Crea un nuevo producto en la base de datos</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Producto.html#method_deleteProduct">deleteProduct()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
+<dd>Elimina un producto de la base de datos</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Producto.html#method_getAllProducts">getAllProducts()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
+<dd>Obtiene todos los productos de la base de datos</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Producto.html#method_getDeporte">getDeporte()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: string    </span>
 </dt>
+<dd>Obtiene el deporte al que pertenece el producto</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Producto.html#method_getDescripcion">getDescripcion()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: string    </span>
 </dt>
+<dd>Obtiene la descripción del producto</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Producto.html#method_getIdProducto">getIdProducto()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: int    </span>
 </dt>
+<dd>Obtiene el ID del producto</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Producto.html#method_getImagen">getImagen()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: string    </span>
 </dt>
+<dd>Obtiene la imagen del producto</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Producto.html#method_getLikes">getLikes()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: int    </span>
 </dt>
+<dd>Obtiene los likes del producto</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Producto.html#method_getNombre">getNombre()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: string    </span>
 </dt>
+<dd>Obtiene el nombre del producto</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Producto.html#method_getPrecio">getPrecio()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: float    </span>
 </dt>
+<dd>Obtiene el precio del producto</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Producto.html#method_getProductById">getProductById()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
+<dd>Obtiene un producto por su ID</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Producto.html#method_getProductByName">getProductByName()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
+<dd>Obtiene productos por nombre</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Producto.html#method_getProductBySport">getProductBySport()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
+<dd>Obtiene productos filtrados por deporte</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Producto.html#method_getTopLikedProducts">getTopLikedProducts()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
+<dd>Obtiene los productos más populares (los que tienen más likes)</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Producto.html#method_searchProducts">searchProducts()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
+<dd>Realiza una búsqueda de productos por nombre</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Producto.html#method_setDeporte">setDeporte()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
+<dd>Establece el deporte al que pertenece el producto</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Producto.html#method_setDescripcion">setDescripcion()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
+<dd>Establece la descripción del producto</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Producto.html#method_setIdProducto">setIdProducto()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
+<dd>Establece el ID del producto</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Producto.html#method_setImagen">setImagen()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
+<dd>Establece la imagen del producto</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Producto.html#method_setLikes">setLikes()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
+<dd>Establece los likes del producto</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Producto.html#method_setNombre">setNombre()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
+<dd>Establece el nombre del producto</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Producto.html#method_setPrecio">setPrecio()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
+<dd>Establece el precio del producto</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Producto.html#method_updateProduct">updateProduct()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
+<dd>Actualiza un producto existente en la base de datos</dd>
 
     </dl>
 
@@ -359,7 +415,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">11</span>
+    <span class="phpdocumentor-element-found-in__line">27</span>
 
     </aside>
 
@@ -367,12 +423,14 @@
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$deporte</span>
     </code>
 
     
-    
+        <section class="phpdocumentor-description"><p>Deporte al que pertenece el producto</p>
+</section>
+
     
 
     
@@ -395,7 +453,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">12</span>
+    <span class="phpdocumentor-element-found-in__line">30</span>
 
     </aside>
 
@@ -403,12 +461,14 @@
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$descripcion</span>
     </code>
 
     
-    
+        <section class="phpdocumentor-description"><p>Descripción del producto</p>
+</section>
+
     
 
     
@@ -431,7 +491,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">9</span>
+    <span class="phpdocumentor-element-found-in__line">21</span>
 
     </aside>
 
@@ -439,12 +499,14 @@
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type">int</span>
     <span class="phpdocumentor-signature__name">$id_producto</span>
     </code>
 
     
-    
+        <section class="phpdocumentor-description"><p>ID del producto</p>
+</section>
+
     
 
     
@@ -467,7 +529,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">33</span>
 
     </aside>
 
@@ -475,12 +537,14 @@
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$imagen</span>
     </code>
 
     
-    
+        <section class="phpdocumentor-description"><p>Ruta de la imagen del producto</p>
+</section>
+
     
 
     
@@ -503,7 +567,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">10</span>
+    <span class="phpdocumentor-element-found-in__line">24</span>
 
     </aside>
 
@@ -511,12 +575,14 @@
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type">int</span>
     <span class="phpdocumentor-signature__name">$likes</span>
     </code>
 
     
-    
+        <section class="phpdocumentor-description"><p>Número de likes del producto</p>
+</section>
+
     
 
     
@@ -539,7 +605,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7</span>
+    <span class="phpdocumentor-element-found-in__line">14</span>
 
     </aside>
 
@@ -547,12 +613,14 @@
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$nombre_producto</span>
     </code>
 
     
-    
+        <section class="phpdocumentor-description"><p>Nombre del producto</p>
+</section>
+
     
 
     
@@ -575,7 +643,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8</span>
+    <span class="phpdocumentor-element-found-in__line">18</span>
 
     </aside>
 
@@ -583,12 +651,14 @@
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type">float</span>
     <span class="phpdocumentor-signature__name">$precio</span>
     </code>
 
     
-    
+        <section class="phpdocumentor-description"><p>Precio del producto</p>
+</section>
+
     
 
     
@@ -616,14 +686,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">114</span>
+    <span class="phpdocumentor-element-found-in__line">229</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Crea un nuevo producto en la base de datos</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">create</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">create</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -650,14 +721,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">149</span>
+    <span class="phpdocumentor-element-found-in__line">274</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Elimina un producto de la base de datos</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">deleteProduct</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">deleteProduct</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -684,14 +756,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">88</span>
+    <span class="phpdocumentor-element-found-in__line">187</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Obtiene todos los productos de la base de datos</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">getAllProducts</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">getAllProducts</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -702,7 +775,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Lista de productos</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -718,14 +799,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">41</span>
+    <span class="phpdocumentor-element-found-in__line">90</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Obtiene el deporte al que pertenece el producto</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getDeporte</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">getDeporte</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -736,7 +818,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Deporte al que pertenece el producto</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -752,14 +842,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">31</span>
+    <span class="phpdocumentor-element-found-in__line">70</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Obtiene la descripción del producto</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getDescripcion</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">getDescripcion</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -770,7 +861,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Descripción del producto</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -786,14 +885,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">26</span>
+    <span class="phpdocumentor-element-found-in__line">60</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Obtiene el ID del producto</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getIdProducto</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">getIdProducto</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -804,7 +904,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">int</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>ID del producto</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -820,14 +928,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">46</span>
+    <span class="phpdocumentor-element-found-in__line">100</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Obtiene la imagen del producto</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getImagen</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">getImagen</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -838,7 +947,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Ruta de la imagen del producto</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -854,14 +971,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">36</span>
+    <span class="phpdocumentor-element-found-in__line">80</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Obtiene los likes del producto</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getLikes</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">getLikes</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -872,7 +990,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">int</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Número de likes del producto</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -888,14 +1014,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">16</span>
+    <span class="phpdocumentor-element-found-in__line">40</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Obtiene el nombre del producto</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getNombre</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">getNombre</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -906,7 +1033,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Nombre del producto</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -922,14 +1057,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">21</span>
+    <span class="phpdocumentor-element-found-in__line">50</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Obtiene el precio del producto</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getPrecio</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">getPrecio</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">float</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -940,7 +1076,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">float</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Precio del producto</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -956,14 +1100,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">161</span>
+    <span class="phpdocumentor-element-found-in__line">292</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Obtiene un producto por su ID</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">getProductById</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id_producto</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">getProductById</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id_producto</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -973,10 +1118,12 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$id_producto</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>ID del producto</p>
+</section>
+
             </dd>
             </dl>
 
@@ -984,7 +1131,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Datos del producto</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1000,14 +1155,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">99</span>
+    <span class="phpdocumentor-element-found-in__line">208</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Obtiene productos por nombre</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">getProductByName</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nombre_producto</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">getProductByName</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nombre_producto</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -1017,10 +1173,12 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$nombre_producto</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Nombre del producto</p>
+</section>
+
             </dd>
             </dl>
 
@@ -1028,7 +1186,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Lista de productos que coinciden con el nombre</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1044,14 +1210,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">187</span>
+    <span class="phpdocumentor-element-found-in__line">330</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Obtiene productos filtrados por deporte</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">getProductBySport</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$deporte</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">getProductBySport</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$deporte</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -1061,10 +1228,12 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$deporte</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Deporte asociado al producto</p>
+</section>
+
             </dd>
             </dl>
 
@@ -1072,7 +1241,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Lista de productos de ese deporte</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1088,14 +1265,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">174</span>
+    <span class="phpdocumentor-element-found-in__line">311</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Obtiene los productos más populares (los que tienen más likes)</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">getTopLikedProducts</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">getTopLikedProducts</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -1106,7 +1284,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Lista de los tres productos más populares</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1122,14 +1308,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">201</span>
+    <span class="phpdocumentor-element-found-in__line">352</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Realiza una búsqueda de productos por nombre</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">searchProducts</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$search</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$deporte</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">searchProducts</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$search</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$deporte</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -1139,17 +1326,21 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$search</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Término de búsqueda</p>
+</section>
+
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$deporte</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string|null</span>
                  = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Deporte opcional para filtrar</p>
+</section>
+
             </dd>
             </dl>
 
@@ -1157,7 +1348,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Lista de productos que coinciden con la búsqueda</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1173,14 +1372,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">77</span>
+    <span class="phpdocumentor-element-found-in__line">166</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Establece el deporte al que pertenece el producto</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">setDeporte</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$deporte</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">setDeporte</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$deporte</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -1190,10 +1390,12 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$deporte</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Deporte al que pertenece el producto</p>
+</section>
+
             </dd>
             </dl>
 
@@ -1217,14 +1419,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">67</span>
+    <span class="phpdocumentor-element-found-in__line">144</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Establece la descripción del producto</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">setDescripcion</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$descripcion</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">setDescripcion</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$descripcion</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -1234,10 +1437,12 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$descripcion</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Descripción del producto</p>
+</section>
+
             </dd>
             </dl>
 
@@ -1261,14 +1466,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">62</span>
+    <span class="phpdocumentor-element-found-in__line">133</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Establece el ID del producto</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">setIdProducto</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id_producto</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">setIdProducto</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id_producto</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -1278,10 +1484,12 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$id_producto</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>ID del producto</p>
+</section>
+
             </dd>
             </dl>
 
@@ -1305,14 +1513,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">82</span>
+    <span class="phpdocumentor-element-found-in__line">177</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Establece la imagen del producto</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">setImagen</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$imagen</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">setImagen</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$imagen</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -1322,10 +1531,12 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$imagen</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Ruta de la imagen del producto</p>
+</section>
+
             </dd>
             </dl>
 
@@ -1349,14 +1560,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">72</span>
+    <span class="phpdocumentor-element-found-in__line">155</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Establece los likes del producto</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">setLikes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$likes</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">setLikes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$likes</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -1366,10 +1578,12 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$likes</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Número de likes del producto</p>
+</section>
+
             </dd>
             </dl>
 
@@ -1393,14 +1607,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">52</span>
+    <span class="phpdocumentor-element-found-in__line">111</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Establece el nombre del producto</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">setNombre</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nombre_producto</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">setNombre</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nombre_producto</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -1410,10 +1625,12 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$nombre_producto</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Nombre del producto</p>
+</section>
+
             </dd>
             </dl>
 
@@ -1437,14 +1654,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">57</span>
+    <span class="phpdocumentor-element-found-in__line">122</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Establece el precio del producto</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">setPrecio</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$precio</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">setPrecio</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">float&nbsp;</span><span class="phpdocumentor-signature__argument__name">$precio</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -1454,10 +1672,12 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$precio</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">float</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Precio del producto</p>
+</section>
+
             </dd>
             </dl>
 
@@ -1481,14 +1701,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Producto.php"><a href="files/producto.html">Producto.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">131</span>
+    <span class="phpdocumentor-element-found-in__line">251</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Actualiza un producto existente en la base de datos</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">updateProduct</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">updateProduct</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>

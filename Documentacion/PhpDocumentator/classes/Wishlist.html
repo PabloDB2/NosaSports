@@ -61,7 +61,23 @@
 </h4>
 
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Pedido.html" class="">Pedido</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Productos.html" class="">Productos</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Reseas.html" class="">Reseas</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
     <a href="packages/Usuarios.html" class="">Usuarios</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Wishlist.html" class="">Wishlist</a>
 </h4>
 
                         </section>
@@ -82,7 +98,7 @@
             <div class="phpdocumentor-column -nine phpdocumentor-content">
                                 <section>
                                         <ul class="phpdocumentor-breadcrumbs">
-            <li class="phpdocumentor-breadcrumb"><a href="packages/Application.html">Application</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="packages/Wishlist.html">Wishlist</a></li>
     </ul>
 
     <article class="phpdocumentor-element -class">
@@ -93,7 +109,7 @@
             <div class="phpdocumentor-element__package">
             in package
             <ul class="phpdocumentor-breadcrumbs">
-                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Application.html">Application</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Wishlist.html">Wishlist</a></li>
                             </ul>
         </div>
     
@@ -108,14 +124,31 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Wishlist.php"><a href="files/wishlist.html">Wishlist.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5</span>
+    <span class="phpdocumentor-element-found-in__line">12</span>
 
     </aside>
 
-        
+            <p class="phpdocumentor-summary">Clase que representa un producto en el sistema</p>
 
 
 
+
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/Wishlist.html#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">author</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>NosaSports <a href="mailto:nosasports@store.com">nosasports@store.com</a></p>
+</section>
+
+                                    </dd>
+                                            </dl>
 
 
 
@@ -144,19 +177,19 @@
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a class="" href="classes/Wishlist.html#property_id_producto">$id_producto</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: string            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a class="" href="classes/Wishlist.html#property_id_wishlist">$id_wishlist</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: int            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a class="" href="classes/Wishlist.html#property_nombre_usuario">$nombre_usuario</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: string            </span>
 </dt>
 
     </dl>
@@ -170,68 +203,79 @@
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Wishlist.html#method_addProductToWishlist">addProductToWishlist()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
+<dd>Añade un producto a la wishlist</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Wishlist.html#method_getAllWishlists">getAllWishlists()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
+<dd>Obtiene todas las Wishlist</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Wishlist.html#method_getIdProducto">getIdProducto()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: int    </span>
 </dt>
+<dd>Obtiene el Id del producto</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Wishlist.html#method_getIdWishlist">getIdWishlist()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: int    </span>
 </dt>
+<dd>Obtiene la Id de Wishlist</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Wishlist.html#method_getNombreUsuario">getNombreUsuario()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: string    </span>
 </dt>
+<dd>Obtiene el nombre de usuario</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Wishlist.html#method_getWishlistById">getWishlistById()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
+<dd>Obtiene la Id asociada a una wishlist</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Wishlist.html#method_getWishlistByUser">getWishlistByUser()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
+<dd>Obtiene la wishlist asociada a un usuario</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Wishlist.html#method_removeProductFromWishlist">removeProductFromWishlist()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
+<dd>Elimina un producto de la wishlist</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Wishlist.html#method_setIdProducto">setIdProducto()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
+<dd>Establece el Id del producto</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Wishlist.html#method_setIdWishlist">setIdWishlist()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
+<dd>Establece el ID de la wishlist</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Wishlist.html#method_setNombreUsuario">setNombreUsuario()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
+<dd>Establece el Nombre de usuario</dd>
 
     </dl>
 
@@ -263,7 +307,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Wishlist.php"><a href="files/wishlist.html">Wishlist.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">9</span>
+    <span class="phpdocumentor-element-found-in__line">21</span>
 
     </aside>
 
@@ -271,12 +315,14 @@
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$id_producto</span>
     </code>
 
     
-    
+        <section class="phpdocumentor-description"><p>ID del producto</p>
+</section>
+
     
 
     
@@ -299,7 +345,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Wishlist.php"><a href="files/wishlist.html">Wishlist.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7</span>
+    <span class="phpdocumentor-element-found-in__line">15</span>
 
     </aside>
 
@@ -307,12 +353,14 @@
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type">int</span>
     <span class="phpdocumentor-signature__name">$id_wishlist</span>
     </code>
 
     
-    
+        <section class="phpdocumentor-description"><p>ID de wishlist</p>
+</section>
+
     
 
     
@@ -335,7 +383,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Wishlist.php"><a href="files/wishlist.html">Wishlist.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8</span>
+    <span class="phpdocumentor-element-found-in__line">18</span>
 
     </aside>
 
@@ -343,12 +391,14 @@
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$nombre_usuario</span>
     </code>
 
     
-    
+        <section class="phpdocumentor-description"><p>Nombre de usuario</p>
+</section>
+
     
 
     
@@ -376,14 +426,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Wishlist.php"><a href="files/wishlist.html">Wishlist.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">80</span>
+    <span class="phpdocumentor-element-found-in__line">149</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Añade un producto a la wishlist</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">addProductToWishlist</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">addProductToWishlist</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -410,14 +461,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Wishlist.php"><a href="files/wishlist.html">Wishlist.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">43</span>
+    <span class="phpdocumentor-element-found-in__line">92</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Obtiene todas las Wishlist</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">getAllWishlists</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">getAllWishlists</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -428,7 +480,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Lista de wishlists</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -444,14 +504,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Wishlist.php"><a href="files/wishlist.html">Wishlist.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">22</span>
+    <span class="phpdocumentor-element-found-in__line">49</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Obtiene el Id del producto</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getIdProducto</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">getIdProducto</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -462,7 +523,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">int</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Id del producto</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -478,14 +547,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Wishlist.php"><a href="files/wishlist.html">Wishlist.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">12</span>
+    <span class="phpdocumentor-element-found-in__line">29</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Obtiene la Id de Wishlist</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getIdWishlist</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">getIdWishlist</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -496,7 +566,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">int</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Id de Wishlist</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -512,14 +590,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Wishlist.php"><a href="files/wishlist.html">Wishlist.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">17</span>
+    <span class="phpdocumentor-element-found-in__line">39</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Obtiene el nombre de usuario</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getNombreUsuario</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">getNombreUsuario</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -530,7 +609,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Nombre de usuario</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -546,14 +633,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Wishlist.php"><a href="files/wishlist.html">Wishlist.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">67</span>
+    <span class="phpdocumentor-element-found-in__line">130</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Obtiene la Id asociada a una wishlist</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">getWishlistById</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id_wishlist</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">getWishlistById</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id_wishlist</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -563,10 +651,12 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$id_wishlist</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>id de wishlist</p>
+</section>
+
             </dd>
             </dl>
 
@@ -574,7 +664,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Id asociada a una wishlist</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -590,14 +688,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Wishlist.php"><a href="files/wishlist.html">Wishlist.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">54</span>
+    <span class="phpdocumentor-element-found-in__line">110</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Obtiene la wishlist asociada a un usuario</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">getWishlistByUser</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nombre_usuario</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">getWishlistByUser</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nombre_usuario</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -607,10 +706,12 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$nombre_usuario</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>nombre de usuario</p>
+</section>
+
             </dd>
             </dl>
 
@@ -618,7 +719,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Wishlist asociada a un usuario</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -634,14 +743,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Wishlist.php"><a href="files/wishlist.html">Wishlist.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">93</span>
+    <span class="phpdocumentor-element-found-in__line">167</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Elimina un producto de la wishlist</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">removeProductFromWishlist</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">removeProductFromWishlist</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -668,14 +778,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Wishlist.php"><a href="files/wishlist.html">Wishlist.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">38</span>
+    <span class="phpdocumentor-element-found-in__line">82</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Establece el Id del producto</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">setIdProducto</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id_producto</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">setIdProducto</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id_producto</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -685,10 +796,12 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$id_producto</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Id del producto de la wishlist</p>
+</section>
+
             </dd>
             </dl>
 
@@ -712,14 +825,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Wishlist.php"><a href="files/wishlist.html">Wishlist.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">28</span>
+    <span class="phpdocumentor-element-found-in__line">60</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Establece el ID de la wishlist</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">setIdWishlist</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id_wishlist</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">setIdWishlist</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id_wishlist</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -729,10 +843,12 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$id_wishlist</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>ID de la wishlist</p>
+</section>
+
             </dd>
             </dl>
 
@@ -756,14 +872,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Wishlist.php"><a href="files/wishlist.html">Wishlist.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">33</span>
+    <span class="phpdocumentor-element-found-in__line">71</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Establece el Nombre de usuario</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">setNombreUsuario</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nombre_usuario</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">setNombreUsuario</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nombre_usuario</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -773,10 +890,12 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$nombre_usuario</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>nombre de usuario de la wishlist</p>
+</section>
+
             </dd>
             </dl>
 

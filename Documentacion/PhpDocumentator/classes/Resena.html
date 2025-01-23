@@ -61,7 +61,23 @@
 </h4>
 
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Pedido.html" class="">Pedido</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Productos.html" class="">Productos</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Reseas.html" class="">Reseas</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
     <a href="packages/Usuarios.html" class="">Usuarios</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Wishlist.html" class="">Wishlist</a>
 </h4>
 
                         </section>
@@ -82,7 +98,7 @@
             <div class="phpdocumentor-column -nine phpdocumentor-content">
                                 <section>
                                         <ul class="phpdocumentor-breadcrumbs">
-            <li class="phpdocumentor-breadcrumb"><a href="packages/Application.html">Application</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="packages/Reseas.html">Reseas</a></li>
     </ul>
 
     <article class="phpdocumentor-element -class">
@@ -93,7 +109,7 @@
             <div class="phpdocumentor-element__package">
             in package
             <ul class="phpdocumentor-breadcrumbs">
-                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Application.html">Application</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Reseas.html">Reseas</a></li>
                             </ul>
         </div>
     
@@ -108,14 +124,31 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Reseña.php"><a href="files/resena.html">Reseña.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5</span>
+    <span class="phpdocumentor-element-found-in__line">11</span>
 
     </aside>
 
-        
+            <p class="phpdocumentor-summary">Clase que representa una reseña de un producto</p>
 
 
 
+
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/Resena.html#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">autor</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>NosaSports <a href="mailto:nosasports@store.com">nosasports@store.com</a></p>
+</section>
+
+                                    </dd>
+                                            </dl>
 
 
 
@@ -144,31 +177,31 @@
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a class="" href="classes/Resena.html#property_id_producto_rese%C3%B1a">$id_producto_reseña</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: int            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a class="" href="classes/Resena.html#property_id_rese%C3%B1a">$id_reseña</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: int            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a class="" href="classes/Resena.html#property_nombre_usuario_rese%C3%B1a">$nombre_usuario_reseña</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: string            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a class="" href="classes/Resena.html#property_puntuacion">$puntuacion</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: int            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a class="" href="classes/Resena.html#property_texto">$texto</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: string            </span>
 </dt>
 
     </dl>
@@ -182,80 +215,100 @@
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Resena.html#method_create">create()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
+<dd>Crea una nueva reseña en la base de datos</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Resena.html#method_deleteRese%C3%B1a">deleteReseña()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
+<dd>Elimina una reseña por su ID</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a class="" href="classes/Resena.html#method_deleteRese%C3%B1asByUsuario">deleteReseñasByUsuario()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>Elimina todas las reseñas de un usuario</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Resena.html#method_getAllRese%C3%B1as">getAllReseñas()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
+<dd>Obtiene todas las reseñas de la base de datos</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Resena.html#method_getIdProductorese%C3%B1a">getIdProductoreseña()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: int    </span>
 </dt>
+<dd>Obtiene el ID del producto asociado a la reseña</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Resena.html#method_getIdrese%C3%B1a">getIdreseña()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: int    </span>
 </dt>
+<dd>Obtiene el ID de la reseña</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Resena.html#method_getNombreUsuariorese%C3%B1a">getNombreUsuarioreseña()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: string    </span>
 </dt>
+<dd>Obtiene el nombre del usuario que escribió la reseña</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Resena.html#method_getPuntuacion">getPuntuacion()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: int    </span>
 </dt>
+<dd>Obtiene la puntuación de la reseña</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Resena.html#method_getRese%C3%B1asByProduct">getReseñasByProduct()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
+<dd>Obtiene reseñas asociadas a un producto</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Resena.html#method_getTexto">getTexto()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: string    </span>
 </dt>
+<dd>Obtiene el texto de la reseña</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Resena.html#method_setIdProductoRese%C3%B1a">setIdProductoReseña()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
+<dd>Establece el ID del producto asociado a la reseña</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Resena.html#method_setNombreUsuarioRese%C3%B1a">setNombreUsuarioReseña()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
+<dd>Establece el nombre del usuario que escribió la reseña</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Resena.html#method_setPuntuacion">setPuntuacion()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
+<dd>Establece la puntuación de la reseña</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Resena.html#method_setTexto">setTexto()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
+<dd>Establece el texto de la reseña</dd>
 
     </dl>
 
@@ -287,7 +340,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Reseña.php"><a href="files/resena.html">Reseña.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">11</span>
+    <span class="phpdocumentor-element-found-in__line">26</span>
 
     </aside>
 
@@ -295,12 +348,14 @@
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type">int</span>
     <span class="phpdocumentor-signature__name">$id_producto_reseña</span>
     </code>
 
     
-    
+        <section class="phpdocumentor-description"><p>ID del producto asociado a la reseña</p>
+</section>
+
     
 
     
@@ -323,7 +378,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Reseña.php"><a href="files/resena.html">Reseña.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7</span>
+    <span class="phpdocumentor-element-found-in__line">14</span>
 
     </aside>
 
@@ -331,12 +386,14 @@
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type">int</span>
     <span class="phpdocumentor-signature__name">$id_reseña</span>
     </code>
 
     
-    
+        <section class="phpdocumentor-description"><p>ID de la reseña</p>
+</section>
+
     
 
     
@@ -359,7 +416,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Reseña.php"><a href="files/resena.html">Reseña.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">10</span>
+    <span class="phpdocumentor-element-found-in__line">23</span>
 
     </aside>
 
@@ -367,12 +424,14 @@
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$nombre_usuario_reseña</span>
     </code>
 
     
-    
+        <section class="phpdocumentor-description"><p>Nombre del usuario que publicó la reseña</p>
+</section>
+
     
 
     
@@ -395,7 +454,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Reseña.php"><a href="files/resena.html">Reseña.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">9</span>
+    <span class="phpdocumentor-element-found-in__line">20</span>
 
     </aside>
 
@@ -403,12 +462,14 @@
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type">int</span>
     <span class="phpdocumentor-signature__name">$puntuacion</span>
     </code>
 
     
-    
+        <section class="phpdocumentor-description"><p>Puntuación de la reseña</p>
+</section>
+
     
 
     
@@ -431,7 +492,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Reseña.php"><a href="files/resena.html">Reseña.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8</span>
+    <span class="phpdocumentor-element-found-in__line">17</span>
 
     </aside>
 
@@ -439,12 +500,14 @@
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$texto</span>
     </code>
 
     
-    
+        <section class="phpdocumentor-description"><p>Texto de la reseña</p>
+</section>
+
     
 
     
@@ -472,14 +535,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Reseña.php"><a href="files/resena.html">Reseña.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">83</span>
+    <span class="phpdocumentor-element-found-in__line">164</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Crea una nueva reseña en la base de datos</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">create</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">create</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -506,14 +570,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Reseña.php"><a href="files/resena.html">Reseña.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">99</span>
+    <span class="phpdocumentor-element-found-in__line">185</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Elimina una reseña por su ID</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">deleteReseña</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id_reseña</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">deleteReseña</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id_reseña</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -523,10 +588,59 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$id_reseña</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>ID de la reseña</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_deleteReseñasByUsuario">
+        deleteReseñasByUsuario()
+        <a href="classes/Resena.html#method_deleteRese%C3%B1asByUsuario" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Reseña.php"><a href="files/resena.html">Reseña.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">203</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Elimina todas las reseñas de un usuario</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">deleteReseñasByUsuario</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nombre_usuario</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$nombre_usuario</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Nombre del usuario</p>
+</section>
+
             </dd>
             </dl>
 
@@ -550,14 +664,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Reseña.php"><a href="files/resena.html">Reseña.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">58</span>
+    <span class="phpdocumentor-element-found-in__line">127</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Obtiene todas las reseñas de la base de datos</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">getAllReseñas</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">getAllReseñas</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -568,7 +683,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Lista de reseñas</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -584,14 +707,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Reseña.php"><a href="files/resena.html">Reseña.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">33</span>
+    <span class="phpdocumentor-element-found-in__line">73</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Obtiene el ID del producto asociado a la reseña</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getIdProductoreseña</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">getIdProductoreseña</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -602,7 +726,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">int</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>ID del producto</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -618,14 +750,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Reseña.php"><a href="files/resena.html">Reseña.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">33</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Obtiene el ID de la reseña</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getIdreseña</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">getIdreseña</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -636,7 +769,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">int</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>ID de la reseña</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -652,14 +793,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Reseña.php"><a href="files/resena.html">Reseña.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">28</span>
+    <span class="phpdocumentor-element-found-in__line">63</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Obtiene el nombre del usuario que escribió la reseña</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getNombreUsuarioreseña</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">getNombreUsuarioreseña</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -670,7 +812,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Nombre del usuario</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -686,14 +836,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Reseña.php"><a href="files/resena.html">Reseña.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">23</span>
+    <span class="phpdocumentor-element-found-in__line">53</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Obtiene la puntuación de la reseña</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getPuntuacion</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">getPuntuacion</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -704,7 +855,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">int</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Puntuación de la reseña</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -720,14 +879,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Reseña.php"><a href="files/resena.html">Reseña.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">69</span>
+    <span class="phpdocumentor-element-found-in__line">145</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Obtiene reseñas asociadas a un producto</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">getReseñasByProduct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id_producto</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">getReseñasByProduct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id_producto</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -737,10 +897,12 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$id_producto</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>ID del producto</p>
+</section>
+
             </dd>
             </dl>
 
@@ -748,7 +910,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Lista de reseñas asociadas al producto</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -764,14 +934,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Reseña.php"><a href="files/resena.html">Reseña.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">43</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Obtiene el texto de la reseña</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getTexto</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">getTexto</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -782,7 +953,15 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Texto de la reseña</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -798,14 +977,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Reseña.php"><a href="files/resena.html">Reseña.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">53</span>
+    <span class="phpdocumentor-element-found-in__line">117</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Establece el ID del producto asociado a la reseña</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">setIdProductoReseña</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id_producto_reseña</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">setIdProductoReseña</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id_producto_reseña</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -815,10 +995,12 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$id_producto_reseña</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>ID del producto</p>
+</section>
+
             </dd>
             </dl>
 
@@ -842,14 +1024,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Reseña.php"><a href="files/resena.html">Reseña.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">48</span>
+    <span class="phpdocumentor-element-found-in__line">106</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Establece el nombre del usuario que escribió la reseña</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">setNombreUsuarioReseña</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nombre_usuario_reseña</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">setNombreUsuarioReseña</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nombre_usuario_reseña</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -859,10 +1042,12 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$nombre_usuario_reseña</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Nombre del usuario</p>
+</section>
+
             </dd>
             </dl>
 
@@ -886,14 +1071,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Reseña.php"><a href="files/resena.html">Reseña.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">43</span>
+    <span class="phpdocumentor-element-found-in__line">95</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Establece la puntuación de la reseña</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">setPuntuacion</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$puntuacion</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">setPuntuacion</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$puntuacion</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -903,10 +1089,12 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$puntuacion</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Puntuación de la reseña</p>
+</section>
+
             </dd>
             </dl>
 
@@ -930,14 +1118,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Reseña.php"><a href="files/resena.html">Reseña.php</a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">38</span>
+    <span class="phpdocumentor-element-found-in__line">84</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Establece el texto de la reseña</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">setTexto</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$texto</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">setTexto</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$texto</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -947,10 +1136,12 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$texto</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Texto de la reseña</p>
+</section>
+
             </dd>
             </dl>
 
@@ -1086,6 +1277,7 @@
                 <ul class="phpdocumentor-list -clean">
                                             <li class=""><a href="classes/Resena.html#method_create">create()</a></li>
                                             <li class=""><a href="classes/Resena.html#method_deleteRese%C3%B1a">deleteReseña()</a></li>
+                                            <li class=""><a href="classes/Resena.html#method_deleteRese%C3%B1asByUsuario">deleteReseñasByUsuario()</a></li>
                                             <li class=""><a href="classes/Resena.html#method_getAllRese%C3%B1as">getAllReseñas()</a></li>
                                             <li class=""><a href="classes/Resena.html#method_getIdProductorese%C3%B1a">getIdProductoreseña()</a></li>
                                             <li class=""><a href="classes/Resena.html#method_getIdrese%C3%B1a">getIdreseña()</a></li>

@@ -3,27 +3,27 @@ Search.appendIndex(
                 {
             "fqsen": "\\Pedido",
             "name": "Pedido",
-            "summary": "",
+            "summary": "Clase\u0020que\u0020representa\u0020un\u0020pedido\u0020en\u0020el\u0020sistema",
             "url": "classes/Pedido.html"
         },                {
             "fqsen": "\\Pedido\u003A\u003AsetIdPedido\u0028\u0029",
             "name": "setIdPedido",
-            "summary": "",
+            "summary": "Establece\u0020el\u0020ID\u0020del\u0020pedido",
             "url": "classes/Pedido.html#method_setIdPedido"
         },                {
             "fqsen": "\\Pedido\u003A\u003AsetIdProducto\u0028\u0029",
             "name": "setIdProducto",
-            "summary": "",
+            "summary": "Establece\u0020el\u0020ID\u0020del\u0020producto\u0020del\u0020pedido",
             "url": "classes/Pedido.html#method_setIdProducto"
         },                {
             "fqsen": "\\Pedido\u003A\u003AsetNombreUsuario\u0028\u0029",
             "name": "setNombreUsuario",
-            "summary": "",
+            "summary": "Establece\u0020el\u0020nombre\u0020de\u0020usuario\u0020del\u0020pedido",
             "url": "classes/Pedido.html#method_setNombreUsuario"
         },                {
             "fqsen": "\\Pedido\u003A\u003AcrearPedido\u0028\u0029",
             "name": "crearPedido",
-            "summary": "",
+            "summary": "Crea\u0020un\u0020nuevo\u0020pedido\u0020en\u0020la\u0020base\u0020de\u0020datos",
             "url": "classes/Pedido.html#method_crearPedido"
         },                {
             "fqsen": "\\Pedido\u003A\u003A\u0024id_pedido",
@@ -43,122 +43,122 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Producto",
             "name": "Producto",
-            "summary": "",
+            "summary": "Clase\u0020que\u0020representa\u0020un\u0020producto\u0020en\u0020el\u0020sistema",
             "url": "classes/Producto.html"
         },                {
             "fqsen": "\\Producto\u003A\u003AgetNombre\u0028\u0029",
             "name": "getNombre",
-            "summary": "",
+            "summary": "Obtiene\u0020el\u0020nombre\u0020del\u0020producto",
             "url": "classes/Producto.html#method_getNombre"
         },                {
             "fqsen": "\\Producto\u003A\u003AgetPrecio\u0028\u0029",
             "name": "getPrecio",
-            "summary": "",
+            "summary": "Obtiene\u0020el\u0020precio\u0020del\u0020producto",
             "url": "classes/Producto.html#method_getPrecio"
         },                {
             "fqsen": "\\Producto\u003A\u003AgetIdProducto\u0028\u0029",
             "name": "getIdProducto",
-            "summary": "",
+            "summary": "Obtiene\u0020el\u0020ID\u0020del\u0020producto",
             "url": "classes/Producto.html#method_getIdProducto"
         },                {
             "fqsen": "\\Producto\u003A\u003AgetDescripcion\u0028\u0029",
             "name": "getDescripcion",
-            "summary": "",
+            "summary": "Obtiene\u0020la\u0020descripci\u00F3n\u0020del\u0020producto",
             "url": "classes/Producto.html#method_getDescripcion"
         },                {
             "fqsen": "\\Producto\u003A\u003AgetLikes\u0028\u0029",
             "name": "getLikes",
-            "summary": "",
+            "summary": "Obtiene\u0020los\u0020likes\u0020del\u0020producto",
             "url": "classes/Producto.html#method_getLikes"
         },                {
             "fqsen": "\\Producto\u003A\u003AgetDeporte\u0028\u0029",
             "name": "getDeporte",
-            "summary": "",
+            "summary": "Obtiene\u0020el\u0020deporte\u0020al\u0020que\u0020pertenece\u0020el\u0020producto",
             "url": "classes/Producto.html#method_getDeporte"
         },                {
             "fqsen": "\\Producto\u003A\u003AgetImagen\u0028\u0029",
             "name": "getImagen",
-            "summary": "",
+            "summary": "Obtiene\u0020la\u0020imagen\u0020del\u0020producto",
             "url": "classes/Producto.html#method_getImagen"
         },                {
             "fqsen": "\\Producto\u003A\u003AsetNombre\u0028\u0029",
             "name": "setNombre",
-            "summary": "",
+            "summary": "Establece\u0020el\u0020nombre\u0020del\u0020producto",
             "url": "classes/Producto.html#method_setNombre"
         },                {
             "fqsen": "\\Producto\u003A\u003AsetPrecio\u0028\u0029",
             "name": "setPrecio",
-            "summary": "",
+            "summary": "Establece\u0020el\u0020precio\u0020del\u0020producto",
             "url": "classes/Producto.html#method_setPrecio"
         },                {
             "fqsen": "\\Producto\u003A\u003AsetIdProducto\u0028\u0029",
             "name": "setIdProducto",
-            "summary": "",
+            "summary": "Establece\u0020el\u0020ID\u0020del\u0020producto",
             "url": "classes/Producto.html#method_setIdProducto"
         },                {
             "fqsen": "\\Producto\u003A\u003AsetDescripcion\u0028\u0029",
             "name": "setDescripcion",
-            "summary": "",
+            "summary": "Establece\u0020la\u0020descripci\u00F3n\u0020del\u0020producto",
             "url": "classes/Producto.html#method_setDescripcion"
         },                {
             "fqsen": "\\Producto\u003A\u003AsetLikes\u0028\u0029",
             "name": "setLikes",
-            "summary": "",
+            "summary": "Establece\u0020los\u0020likes\u0020del\u0020producto",
             "url": "classes/Producto.html#method_setLikes"
         },                {
             "fqsen": "\\Producto\u003A\u003AsetDeporte\u0028\u0029",
             "name": "setDeporte",
-            "summary": "",
+            "summary": "Establece\u0020el\u0020deporte\u0020al\u0020que\u0020pertenece\u0020el\u0020producto",
             "url": "classes/Producto.html#method_setDeporte"
         },                {
             "fqsen": "\\Producto\u003A\u003AsetImagen\u0028\u0029",
             "name": "setImagen",
-            "summary": "",
+            "summary": "Establece\u0020la\u0020imagen\u0020del\u0020producto",
             "url": "classes/Producto.html#method_setImagen"
         },                {
             "fqsen": "\\Producto\u003A\u003AgetAllProducts\u0028\u0029",
             "name": "getAllProducts",
-            "summary": "",
+            "summary": "Obtiene\u0020todos\u0020los\u0020productos\u0020de\u0020la\u0020base\u0020de\u0020datos",
             "url": "classes/Producto.html#method_getAllProducts"
         },                {
             "fqsen": "\\Producto\u003A\u003AgetProductByName\u0028\u0029",
             "name": "getProductByName",
-            "summary": "",
+            "summary": "Obtiene\u0020productos\u0020por\u0020nombre",
             "url": "classes/Producto.html#method_getProductByName"
         },                {
             "fqsen": "\\Producto\u003A\u003Acreate\u0028\u0029",
             "name": "create",
-            "summary": "",
+            "summary": "Crea\u0020un\u0020nuevo\u0020producto\u0020en\u0020la\u0020base\u0020de\u0020datos",
             "url": "classes/Producto.html#method_create"
         },                {
             "fqsen": "\\Producto\u003A\u003AupdateProduct\u0028\u0029",
             "name": "updateProduct",
-            "summary": "",
+            "summary": "Actualiza\u0020un\u0020producto\u0020existente\u0020en\u0020la\u0020base\u0020de\u0020datos",
             "url": "classes/Producto.html#method_updateProduct"
         },                {
             "fqsen": "\\Producto\u003A\u003AdeleteProduct\u0028\u0029",
             "name": "deleteProduct",
-            "summary": "",
+            "summary": "Elimina\u0020un\u0020producto\u0020de\u0020la\u0020base\u0020de\u0020datos",
             "url": "classes/Producto.html#method_deleteProduct"
         },                {
             "fqsen": "\\Producto\u003A\u003AgetProductById\u0028\u0029",
             "name": "getProductById",
-            "summary": "",
+            "summary": "Obtiene\u0020un\u0020producto\u0020por\u0020su\u0020ID",
             "url": "classes/Producto.html#method_getProductById"
         },                {
             "fqsen": "\\Producto\u003A\u003AgetTopLikedProducts\u0028\u0029",
             "name": "getTopLikedProducts",
-            "summary": "",
+            "summary": "Obtiene\u0020los\u0020productos\u0020m\u00E1s\u0020populares\u0020\u0028los\u0020que\u0020tienen\u0020m\u00E1s\u0020likes\u0029",
             "url": "classes/Producto.html#method_getTopLikedProducts"
         },                {
             "fqsen": "\\Producto\u003A\u003AgetProductBySport\u0028\u0029",
             "name": "getProductBySport",
-            "summary": "",
+            "summary": "Obtiene\u0020productos\u0020filtrados\u0020por\u0020deporte",
             "url": "classes/Producto.html#method_getProductBySport"
         },                {
             "fqsen": "\\Producto\u003A\u003AsearchProducts\u0028\u0029",
             "name": "searchProducts",
-            "summary": "",
+            "summary": "Realiza\u0020una\u0020b\u00FAsqueda\u0020de\u0020productos\u0020por\u0020nombre",
             "url": "classes/Producto.html#method_searchProducts"
         },                {
             "fqsen": "\\Producto\u003A\u003A\u0024nombre_producto",
@@ -198,73 +198,78 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Rese\u00F1a",
             "name": "Rese\u00F1a",
-            "summary": "",
+            "summary": "Clase\u0020que\u0020representa\u0020una\u0020rese\u00F1a\u0020de\u0020un\u0020producto",
             "url": "classes/Resena.html"
         },                {
             "fqsen": "\\Rese\u00F1a\u003A\u003AgetIdrese\u00F1a\u0028\u0029",
             "name": "getIdrese\u00F1a",
-            "summary": "",
+            "summary": "Obtiene\u0020el\u0020ID\u0020de\u0020la\u0020rese\u00F1a",
             "url": "classes/Resena.html#method_getIdrese%C3%B1a"
         },                {
             "fqsen": "\\Rese\u00F1a\u003A\u003AgetTexto\u0028\u0029",
             "name": "getTexto",
-            "summary": "",
+            "summary": "Obtiene\u0020el\u0020texto\u0020de\u0020la\u0020rese\u00F1a",
             "url": "classes/Resena.html#method_getTexto"
         },                {
             "fqsen": "\\Rese\u00F1a\u003A\u003AgetPuntuacion\u0028\u0029",
             "name": "getPuntuacion",
-            "summary": "",
+            "summary": "Obtiene\u0020la\u0020puntuaci\u00F3n\u0020de\u0020la\u0020rese\u00F1a",
             "url": "classes/Resena.html#method_getPuntuacion"
         },                {
             "fqsen": "\\Rese\u00F1a\u003A\u003AgetNombreUsuariorese\u00F1a\u0028\u0029",
             "name": "getNombreUsuariorese\u00F1a",
-            "summary": "",
+            "summary": "Obtiene\u0020el\u0020nombre\u0020del\u0020usuario\u0020que\u0020escribi\u00F3\u0020la\u0020rese\u00F1a",
             "url": "classes/Resena.html#method_getNombreUsuariorese%C3%B1a"
         },                {
             "fqsen": "\\Rese\u00F1a\u003A\u003AgetIdProductorese\u00F1a\u0028\u0029",
             "name": "getIdProductorese\u00F1a",
-            "summary": "",
+            "summary": "Obtiene\u0020el\u0020ID\u0020del\u0020producto\u0020asociado\u0020a\u0020la\u0020rese\u00F1a",
             "url": "classes/Resena.html#method_getIdProductorese%C3%B1a"
         },                {
             "fqsen": "\\Rese\u00F1a\u003A\u003AsetTexto\u0028\u0029",
             "name": "setTexto",
-            "summary": "",
+            "summary": "Establece\u0020el\u0020texto\u0020de\u0020la\u0020rese\u00F1a",
             "url": "classes/Resena.html#method_setTexto"
         },                {
             "fqsen": "\\Rese\u00F1a\u003A\u003AsetPuntuacion\u0028\u0029",
             "name": "setPuntuacion",
-            "summary": "",
+            "summary": "Establece\u0020la\u0020puntuaci\u00F3n\u0020de\u0020la\u0020rese\u00F1a",
             "url": "classes/Resena.html#method_setPuntuacion"
         },                {
             "fqsen": "\\Rese\u00F1a\u003A\u003AsetNombreUsuarioRese\u00F1a\u0028\u0029",
             "name": "setNombreUsuarioRese\u00F1a",
-            "summary": "",
+            "summary": "Establece\u0020el\u0020nombre\u0020del\u0020usuario\u0020que\u0020escribi\u00F3\u0020la\u0020rese\u00F1a",
             "url": "classes/Resena.html#method_setNombreUsuarioRese%C3%B1a"
         },                {
             "fqsen": "\\Rese\u00F1a\u003A\u003AsetIdProductoRese\u00F1a\u0028\u0029",
             "name": "setIdProductoRese\u00F1a",
-            "summary": "",
+            "summary": "Establece\u0020el\u0020ID\u0020del\u0020producto\u0020asociado\u0020a\u0020la\u0020rese\u00F1a",
             "url": "classes/Resena.html#method_setIdProductoRese%C3%B1a"
         },                {
             "fqsen": "\\Rese\u00F1a\u003A\u003AgetAllRese\u00F1as\u0028\u0029",
             "name": "getAllRese\u00F1as",
-            "summary": "",
+            "summary": "Obtiene\u0020todas\u0020las\u0020rese\u00F1as\u0020de\u0020la\u0020base\u0020de\u0020datos",
             "url": "classes/Resena.html#method_getAllRese%C3%B1as"
         },                {
             "fqsen": "\\Rese\u00F1a\u003A\u003AgetRese\u00F1asByProduct\u0028\u0029",
             "name": "getRese\u00F1asByProduct",
-            "summary": "",
+            "summary": "Obtiene\u0020rese\u00F1as\u0020asociadas\u0020a\u0020un\u0020producto",
             "url": "classes/Resena.html#method_getRese%C3%B1asByProduct"
         },                {
             "fqsen": "\\Rese\u00F1a\u003A\u003Acreate\u0028\u0029",
             "name": "create",
-            "summary": "",
+            "summary": "Crea\u0020una\u0020nueva\u0020rese\u00F1a\u0020en\u0020la\u0020base\u0020de\u0020datos",
             "url": "classes/Resena.html#method_create"
         },                {
             "fqsen": "\\Rese\u00F1a\u003A\u003AdeleteRese\u00F1a\u0028\u0029",
             "name": "deleteRese\u00F1a",
-            "summary": "",
+            "summary": "Elimina\u0020una\u0020rese\u00F1a\u0020por\u0020su\u0020ID",
             "url": "classes/Resena.html#method_deleteRese%C3%B1a"
+        },                {
+            "fqsen": "\\Rese\u00F1a\u003A\u003AdeleteRese\u00F1asByUsuario\u0028\u0029",
+            "name": "deleteRese\u00F1asByUsuario",
+            "summary": "Elimina\u0020todas\u0020las\u0020rese\u00F1as\u0020de\u0020un\u0020usuario",
+            "url": "classes/Resena.html#method_deleteRese%C3%B1asByUsuario"
         },                {
             "fqsen": "\\Rese\u00F1a\u003A\u003A\u0024id_rese\u00F1a",
             "name": "id_rese\u00F1a",
@@ -418,62 +423,62 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Wishlist",
             "name": "Wishlist",
-            "summary": "",
+            "summary": "Clase\u0020que\u0020representa\u0020un\u0020producto\u0020en\u0020el\u0020sistema",
             "url": "classes/Wishlist.html"
         },                {
             "fqsen": "\\Wishlist\u003A\u003AgetIdWishlist\u0028\u0029",
             "name": "getIdWishlist",
-            "summary": "",
+            "summary": "Obtiene\u0020la\u0020Id\u0020de\u0020Wishlist",
             "url": "classes/Wishlist.html#method_getIdWishlist"
         },                {
             "fqsen": "\\Wishlist\u003A\u003AgetNombreUsuario\u0028\u0029",
             "name": "getNombreUsuario",
-            "summary": "",
+            "summary": "Obtiene\u0020el\u0020nombre\u0020de\u0020usuario",
             "url": "classes/Wishlist.html#method_getNombreUsuario"
         },                {
             "fqsen": "\\Wishlist\u003A\u003AgetIdProducto\u0028\u0029",
             "name": "getIdProducto",
-            "summary": "",
+            "summary": "Obtiene\u0020el\u0020Id\u0020del\u0020producto",
             "url": "classes/Wishlist.html#method_getIdProducto"
         },                {
             "fqsen": "\\Wishlist\u003A\u003AsetIdWishlist\u0028\u0029",
             "name": "setIdWishlist",
-            "summary": "",
+            "summary": "Establece\u0020el\u0020ID\u0020de\u0020la\u0020wishlist",
             "url": "classes/Wishlist.html#method_setIdWishlist"
         },                {
             "fqsen": "\\Wishlist\u003A\u003AsetNombreUsuario\u0028\u0029",
             "name": "setNombreUsuario",
-            "summary": "",
+            "summary": "Establece\u0020el\u0020Nombre\u0020de\u0020usuario",
             "url": "classes/Wishlist.html#method_setNombreUsuario"
         },                {
             "fqsen": "\\Wishlist\u003A\u003AsetIdProducto\u0028\u0029",
             "name": "setIdProducto",
-            "summary": "",
+            "summary": "Establece\u0020el\u0020Id\u0020del\u0020producto",
             "url": "classes/Wishlist.html#method_setIdProducto"
         },                {
             "fqsen": "\\Wishlist\u003A\u003AgetAllWishlists\u0028\u0029",
             "name": "getAllWishlists",
-            "summary": "",
+            "summary": "Obtiene\u0020todas\u0020las\u0020Wishlist",
             "url": "classes/Wishlist.html#method_getAllWishlists"
         },                {
             "fqsen": "\\Wishlist\u003A\u003AgetWishlistByUser\u0028\u0029",
             "name": "getWishlistByUser",
-            "summary": "",
+            "summary": "Obtiene\u0020la\u0020wishlist\u0020asociada\u0020a\u0020un\u0020usuario",
             "url": "classes/Wishlist.html#method_getWishlistByUser"
         },                {
             "fqsen": "\\Wishlist\u003A\u003AgetWishlistById\u0028\u0029",
             "name": "getWishlistById",
-            "summary": "",
+            "summary": "Obtiene\u0020la\u0020Id\u0020asociada\u0020a\u0020una\u0020wishlist",
             "url": "classes/Wishlist.html#method_getWishlistById"
         },                {
             "fqsen": "\\Wishlist\u003A\u003AaddProductToWishlist\u0028\u0029",
             "name": "addProductToWishlist",
-            "summary": "",
+            "summary": "A\u00F1ade\u0020un\u0020producto\u0020a\u0020la\u0020wishlist",
             "url": "classes/Wishlist.html#method_addProductToWishlist"
         },                {
             "fqsen": "\\Wishlist\u003A\u003AremoveProductFromWishlist\u0028\u0029",
             "name": "removeProductFromWishlist",
-            "summary": "",
+            "summary": "Elimina\u0020un\u0020producto\u0020de\u0020la\u0020wishlist",
             "url": "classes/Wishlist.html#method_removeProductFromWishlist"
         },                {
             "fqsen": "\\Wishlist\u003A\u003A\u0024id_wishlist",

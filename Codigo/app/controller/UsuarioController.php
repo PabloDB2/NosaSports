@@ -1,6 +1,7 @@
 <?php
 require_once(__DIR__ . '/../../rutas.php'); 
 require_once(CONFIG . 'dbConnection.php'); // ruta de config definido en rutas.php
+require_once(MODEL . 'Reseña.php');  // Agregar esta línea
 
 class UsuarioController {
     public function getAllUsers() {
@@ -33,10 +34,14 @@ class UsuarioController {
         $usuario->updateUser(); 
     }
 
-    public function eliminarUsuario($nombre_usuario) {
+    public function eliminarUsuario($nombre_usuario)
+    {
+        // debido a la foreign key de nombre_usuario_reseña hace falta 
+        // borrar las reseñas de un usuario antes de eliminarlo
+        Reseña::deleteReseñasByUsuario($nombre_usuario);
         $usuario = new Usuario();
         $usuario->setNombreUsuario($nombre_usuario);
-        $usuario->deleteUser();
+        $usuario->deleteUser(); 
     }
 
     public function modificarNombreUsuario($nombre_usuario, $nuevoNombreUsuario) {
