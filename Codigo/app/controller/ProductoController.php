@@ -65,8 +65,6 @@ class ProductoController {
         $producto->updateNombreProducto($nuevoNombreProducto);
     }
 
-    //hola
-
     public function modificarPrecio($id_producto, $nuevoPrecioProducto){
         $producto = new Producto();
         $producto->setIdProducto( $id_producto);
