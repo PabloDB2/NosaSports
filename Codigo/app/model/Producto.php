@@ -364,4 +364,92 @@ class Producto
             return [];
         }
     }
+
+    public function updateNombreProducto($nuevoNombreProducto)
+    {
+        try {
+            $conn = getDBConnection();
+            $sentencia = $conn->prepare("UPDATE producto SET nombre_producto = ? WHERE id_producto = ?");
+            $sentencia->bindParam(1, $nuevoNombreProducto);
+            $sentencia->bindParam(2, $this->id_producto); //de donde saca este id
+            $sentencia->execute();
+            $this->nombre_producto = $nuevoNombreProducto;
+        } catch (PDOException $e) {
+            echo "Error al actualizar el nombre de usuario: " . $e->getMessage();
+        }
+    }
+
+    public function updatePrecioProducto($nuevoPrecioProducto)
+    {
+        try {
+            $conn = getDBConnection();
+            $sentencia = $conn->prepare("UPDATE producto SET precio = ? WHERE id_producto = ?");
+            $sentencia->bindParam(1, $nuevoPrecioProducto);
+            $sentencia->bindParam(2, $this->id_producto);
+            $sentencia->execute();
+            $this->precio = $nuevoPrecioProducto ;
+        } catch (PDOException $e) {
+            echo "Error al actualizar el nombre de usuario: " . $e->getMessage();
+        }
+    }
+
+    public function updateLikesProducto($nuevoLikesProducto)
+    {
+        try {
+            $conn = getDBConnection();
+            $sentencia = $conn->prepare("UPDATE producto SET likes = ? WHERE id_producto = ?");
+            $sentencia->bindParam(1, $nuevoLikesProducto);
+            $sentencia->bindParam(2, $this->id_producto);
+            $sentencia->execute();
+            $this->likes = $nuevoLikesProducto ;
+        } catch (PDOException $e) {
+            echo "Error al actualizar el nombre de usuario: " . $e->getMessage();
+        }
+    }
+
+
+    public function updateDescripcionProducto($nuevaDescripcionProducto){
+        try {
+            $conn = getDBConnection();
+            $sentencia = $conn->prepare("UPDATE producto SET descripcion =? WHERE id_producto =?");
+            $sentencia->bindParam(1, $nuevaDescripcionProducto);
+            $sentencia->bindParam(2, $this->id_producto);
+            $sentencia->execute();
+            $this->descripcion = $nuevaDescripcionProducto ;
+        } catch (PDOException $e) {
+            echo "Error al actualizar el nombre de usuario: ". $e->getMessage();
+        }
+    }
+
+    public function updateDeporteProducto($nuevoDeporteProducto){
+        try {
+            $conn = getDBConnection();
+            $sentencia = $conn->prepare("UPDATE producto SET deporte =? WHERE id_producto =?");
+            $sentencia->bindParam(1, $nuevoDeporteProducto);
+            $sentencia->bindParam(2, $this->id_producto);
+            $sentencia->execute();
+            $this->deporte = $nuevoDeporteProducto ;
+        } catch (PDOException $e) {
+            echo "Error al actualizar el nombre de usuario: ". $e->getMessage();
+        }
+    }
+
+
+    public function updateImagenProducto($nuevaImagenProducto){
+        try {
+            $conn = getDBConnection();
+            $sentencia = $conn->prepare("UPDATE producto SET imagen =? WHERE id_producto =?");
+            $sentencia->bindParam(1, $nuevaImagenProducto);
+            $sentencia->bindParam(2, $this->id_producto);
+            $sentencia->execute();
+            $this->imagen = $nuevaImagenProducto ;
+        } catch (PDOException $e) {
+            echo "Error al actualizar el nombre de usuario: ". $e->getMessage();
+        }
+    }
+
+
+
 }
+
+    

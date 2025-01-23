@@ -50,7 +50,7 @@ $mejoresProductos = $productController->productosConMasLikes();
             </div>
 
             <div class="contMateriales">
-                <div id="imagenTejidos">
+                <div id="imagenTejidos1">
                     <img id="tejidos" src="/NosaSports/Codigo/app/view/Img/tejidos.png" alt="">
                 </div>
                 <div class="textoTejidos">
@@ -60,7 +60,7 @@ $mejoresProductos = $productController->productosConMasLikes();
 
             </div>
 
-            <div class="contMateriales">
+            <div class="contMateriales2">
                 <div class="textoTejidos">
                     <P>En NosaSports, nos comprometemos con el medio ambiente. La mayoría de nuestros productos deportivos están fabricados con materiales reciclados, combinando calidad y sostenibilidad. ¡Haz tu parte por el planeta mientras disfrutas de tus deportes favoritos!</P>
                 </div>

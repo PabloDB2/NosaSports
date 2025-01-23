@@ -322,5 +322,5 @@ class Usuario
         } catch (PDOException $e) {
             echo "Error al actualizar la dirección: " . $e->getMessage();
         }
-    }
+    }   
 }

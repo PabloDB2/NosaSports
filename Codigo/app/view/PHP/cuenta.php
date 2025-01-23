@@ -132,9 +132,9 @@
                 </div>
 
                 <!-- Mostrar el mensaje de error solo si hay uno -->
-                <?php if ($mensaje_error): ?>
+                <?php if ($mensaje_error){ ?>
                     <p style="color:red;"><?= htmlspecialchars($mensaje_error) ?></p>
-                <?php endif; ?>
+                <?php }?>
 
                 <br>
                 <div>

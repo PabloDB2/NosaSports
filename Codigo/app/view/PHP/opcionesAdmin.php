@@ -125,41 +125,56 @@ if (isset($_POST['formCreate']) && $_POST['formCreate'] == 'crearProducto') {
         echo "<p>No has introducido un producto válido.</p>";
     }
     exit();
+
+
+    
 }
 
-$producto = $productController->getProductsById($id_producto);
+if (isset($_POST['formUpdate']) && $_POST['formUpdate'] == 'updateProducto') {
+   //Defino todas la varibales
+    $id_producto = $_POST["id_producto"];
+   
+    // Validar si el ID del producto es válido
+    if (!empty($id_producto) && is_numeric($id_producto)) {
+        // Obtener el producto actual para asegurarse de que existe
+        $producto = $productController->getProductsById($id_producto);
+        
+         // Solo actualizar el nombre del producto si el campo no está vacío
+            if (!empty($_POST["nombre_producto"])) {
+                $nombreProducto = htmlspecialchars($_POST["nombre_producto"]);
+                // Validar que el nombre no sea NULL o vacío antes de intentar actualizar
+                    $productController->modificarNombreProducto($id_producto, $nombreProducto);
+            } 
 
-if (isset($_POST['formUpdate'])) {
-    $contraseña_actual= $_POST['contraseña_actual'];
-    $nuevo_nombre_usuario = $_POST['nombre_usuario'];
-    $correo = $_POST['correo'];
-    $contraseña = $_POST['contraseña'];
-    $direccion = $_POST['direccion'];
+            if (!empty($_POST["precio"])) {
+                $precio = htmlspecialchars($_POST["precio"]);               
+                    $productController->modificarPrecio($id_producto, $precio);      
+            } 
+            if (!empty($_POST["likes"])) {
+                $likes = htmlspecialchars($_POST["likes"]);               
+                    $productController->modificarLikes($id_producto, $likes);      
+            } 
 
+            if (!empty($_POST["deporte"])) {
+                $deporte = htmlspecialchars($_POST["deporte"]);               
+                    $productController->modificarDeporte($id_producto, $deporte);      
+            }
+            if (!empty($_POST["descripcion"])) {
+                $descripcion = htmlspecialchars($_POST["descripcion"]);               
+                    $productController->modificarDescripcion($id_producto, $descripcion);      
+            }
+
+            if (!empty($_POST["imagen"])) {
+                $imagen = htmlspecialchars($_POST["imagen"]);               
+                    $productController->modificarImagen($id_producto, $imagen);      
+            }
+
+          
+    } else {
+        echo "<p>ID de producto no válido.</p>";
+    }
+    exit();
 }
-// Actualizar producto
-// if (isset($_POST['formUpdate']) && $_POST['formUpdate'] == 'updateProducto') {
-//     if (isset($_POST["id_producto"]) && isset($_POST["nombre_producto"]) && isset($_POST["precio"]) && isset($_POST["descripcion"]) && isset($_POST["deporte"]) && isset($_POST["likes"])) {
-//         $idProducto = htmlspecialchars($_POST["id_producto"]);
-//         $nombreProducto = htmlspecialchars($_POST["nombre_producto"]);
-//         $precio = htmlspecialchars($_POST["precio"]);
-//         $descripcion = htmlspecialchars($_POST["descripcion"]);
-//         $deporte = htmlspecialchars($_POST["deporte"]);
-//         $likes = htmlspecialchars($_POST["likes"]);
-//         $imagen = htmlspecialchars($_POST["imagen"]);
-
-//         // validar precio
-//         if (filter_var($precio, FILTER_VALIDATE_FLOAT)) {
-//             $productController->modificarProducto($idProducto, $nombreProducto, $precio, $descripcion, $deporte, $likes, $imagen);
-//             echo "<p>Se ha modificado el producto " . $nombreProducto . ".</p>";
-//         } else {
-//             echo "<p>Precio no válido.</p>";
-//         }
-//     } else {
-//         echo "<p>Los datos no son válidos.</p>";
-//     }
-//     exit();
-// }
 
 
 // Eliminar producto

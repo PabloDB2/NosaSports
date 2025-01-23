@@ -59,35 +59,41 @@ class ProductoController {
     return Producto::searchProducts($search, $deporte);
 }
 
-    public function modificarNombreProducto($nombre_producto, $nuevoNombreProducto) {
+    public function modificarNombreProducto($id_producto, $nuevoNombreProducto) {
         $producto = new Producto();
-        $producto->setNombre($nombre_producto);
+        $producto->setIdProducto($id_producto);
         $producto->updateNombreProducto($nuevoNombreProducto);
     }
 
-    public function moficarPrecio($id_producto,$nuevoPrecioProducto){
+    public function modificarPrecio($id_producto, $nuevoPrecioProducto){
         $producto = new Producto();
-        $producto->setIdProducto($id_producto);
+        $producto->setIdProducto( $id_producto);
         $producto->updatePrecioProducto($nuevoPrecioProducto);
     }
 
-    // public function modificarDeporte($nombre_producto, $nuevoDeporte) {
-    //     $usuario = new Usuario();
-    //     $usuario->setNombreUsuario($nombre_producto);
-    //     $usuario->updateContraseña($nuevaContraseña);
-    // }
+    public function modificarLikes($id_producto, $nuevosLikesProductos){
+        $producto = new Producto();
+        $producto->setIdProducto( $id_producto);
+        $producto->updateLikesProducto($nuevosLikesProductos);
+    }
 
-    // public function modificarDescripcion($nombre_usuario, $nuevoNombreApellidos) {
-    //     $usuario = new Usuario();
-    //     $usuario->setNombreUsuario($nombre_usuario);
-    //     $usuario->updateNombreApellidos($nuevoNombreApellidos);
-    // }
+    public function modificarDescripcion($id_producto, $nuevaDescripcion) {
+        $producto = new Producto();
+        $producto->setIdProducto($id_producto);
+        $producto->updateDescripcionProducto($nuevaDescripcion);
+    }
 
-    // public function modificarImagen($nombre_usuario, $nuevaDireccion) {
-    //     $usuario = new Usuario();
-    //     $usuario->setNombreUsuario($nombre_usuario);
-    //     $usuario->updateDireccion($nuevaDireccion);
-    // }
+    public function modificarImagen($id_producto, $nuevaImagen) {
+        $producto = new Producto();
+        $producto->setIdProducto($id_producto);
+        $producto->updateImagenProducto($nuevaImagen);
+    }
+
+    public function modificarDeporte($id_producto, $nuevoDeporte) {
+        $producto = new Producto();
+        $producto->setIdProducto($id_producto);
+        $producto->updateDeporteProducto($nuevoDeporte);
+    }
 
 
 }
