@@ -58,5 +58,37 @@ class ProductoController {
 {
     return Producto::searchProducts($search, $deporte);
 }
+
+    public function modificarNombreProducto($nombre_producto, $nuevoNombreProducto) {
+        $producto = new Producto();
+        $producto->setNombre($nombre_producto);
+        $producto->updateNombreProducto($nuevoNombreProducto);
+    }
+
+    public function moficarPrecio($id_producto,$nuevoPrecioProducto){
+        $producto = new Producto();
+        $producto->setIdProducto($id_producto);
+        $producto->updatePrecioProducto($nuevoPrecioProducto);
+    }
+
+    // public function modificarDeporte($nombre_producto, $nuevoDeporte) {
+    //     $usuario = new Usuario();
+    //     $usuario->setNombreUsuario($nombre_producto);
+    //     $usuario->updateContraseña($nuevaContraseña);
+    // }
+
+    // public function modificarDescripcion($nombre_usuario, $nuevoNombreApellidos) {
+    //     $usuario = new Usuario();
+    //     $usuario->setNombreUsuario($nombre_usuario);
+    //     $usuario->updateNombreApellidos($nuevoNombreApellidos);
+    // }
+
+    // public function modificarImagen($nombre_usuario, $nuevaDireccion) {
+    //     $usuario = new Usuario();
+    //     $usuario->setNombreUsuario($nombre_usuario);
+    //     $usuario->updateDireccion($nuevaDireccion);
+    // }
+
+
 }
 ?>

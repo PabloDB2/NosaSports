@@ -74,12 +74,12 @@ if (!isset($_SESSION['nombre_usuario']) || $_SESSION['nombre_usuario'] !== 'admi
             <input type="hidden" name="formUpdate" value="updateProducto">
 
             <b>ID:</b><br> <input type="number" name="id_producto" required><br>
-            <b>Nombre:</b><br> <input type="text" name="nombre_producto" required><br>
-            <b>Precio:</b><br> <input type="number" step="0.01" name="precio" required><br> <!-- step=0.01 solo admite números máximo 2 decimales-->
-            <b>Descripcion:</b><br> <textarea name="descripcion" required></textarea><br>
-            <b>Deporte:</b><br> <input type="text" name="deporte" required><br>
-            <b>Likes:</b><br> <input type="number" name="likes" required><br>
-            <b>Imagen:</b><br><input type="text" name="imagen" required><br>
+            <b>Nombre:</b><br> <input type="text" name="nombre_producto" ><br>
+            <b>Precio:</b><br> <input type="number" step="0.01" name="precio" ><br> <!-- step=0.01 solo admite números máximo 2 decimales-->
+            <b>Descripcion:</b><br> <textarea name="descripcion"></textarea><br>
+            <b>Deporte:</b><br> <input type="text" name="deporte"><br>
+            <b>Likes:</b><br> <input type="number" name="likes"><br>
+            <b>Imagen:</b><br><input type="text" name="imagen"><br>
             <input type="submit" value="Actualizar producto" style="background-color: rgb(104,86,52); color: white">
         </form>
 
@@ -127,29 +127,39 @@ if (isset($_POST['formCreate']) && $_POST['formCreate'] == 'crearProducto') {
     exit();
 }
 
-// Actualizar producto
-if (isset($_POST['formUpdate']) && $_POST['formUpdate'] == 'updateProducto') {
-    if (isset($_POST["id_producto"]) && isset($_POST["nombre_producto"]) && isset($_POST["precio"]) && isset($_POST["descripcion"]) && isset($_POST["deporte"]) && isset($_POST["likes"])) {
-        $idProducto = htmlspecialchars($_POST["id_producto"]);
-        $nombreProducto = htmlspecialchars($_POST["nombre_producto"]);
-        $precio = htmlspecialchars($_POST["precio"]);
-        $descripcion = htmlspecialchars($_POST["descripcion"]);
-        $deporte = htmlspecialchars($_POST["deporte"]);
-        $likes = htmlspecialchars($_POST["likes"]);
-        $imagen = htmlspecialchars($_POST["imagen"]);
+$producto = $productController->getProductsById($id_producto);
 
-        // validar precio
-        if (filter_var($precio, FILTER_VALIDATE_FLOAT)) {
-            $productController->modificarProducto($idProducto, $nombreProducto, $precio, $descripcion, $deporte, $likes, $imagen);
-            echo "<p>Se ha modificado el producto " . $nombreProducto . ".</p>";
-        } else {
-            echo "<p>Precio no válido.</p>";
-        }
-    } else {
-        echo "<p>Los datos no son válidos.</p>";
-    }
-    exit();
+if (isset($_POST['formUpdate'])) {
+    $contraseña_actual= $_POST['contraseña_actual'];
+    $nuevo_nombre_usuario = $_POST['nombre_usuario'];
+    $correo = $_POST['correo'];
+    $contraseña = $_POST['contraseña'];
+    $direccion = $_POST['direccion'];
+
 }
+// Actualizar producto
+// if (isset($_POST['formUpdate']) && $_POST['formUpdate'] == 'updateProducto') {
+//     if (isset($_POST["id_producto"]) && isset($_POST["nombre_producto"]) && isset($_POST["precio"]) && isset($_POST["descripcion"]) && isset($_POST["deporte"]) && isset($_POST["likes"])) {
+//         $idProducto = htmlspecialchars($_POST["id_producto"]);
+//         $nombreProducto = htmlspecialchars($_POST["nombre_producto"]);
+//         $precio = htmlspecialchars($_POST["precio"]);
+//         $descripcion = htmlspecialchars($_POST["descripcion"]);
+//         $deporte = htmlspecialchars($_POST["deporte"]);
+//         $likes = htmlspecialchars($_POST["likes"]);
+//         $imagen = htmlspecialchars($_POST["imagen"]);
+
+//         // validar precio
+//         if (filter_var($precio, FILTER_VALIDATE_FLOAT)) {
+//             $productController->modificarProducto($idProducto, $nombreProducto, $precio, $descripcion, $deporte, $likes, $imagen);
+//             echo "<p>Se ha modificado el producto " . $nombreProducto . ".</p>";
+//         } else {
+//             echo "<p>Precio no válido.</p>";
+//         }
+//     } else {
+//         echo "<p>Los datos no son válidos.</p>";
+//     }
+//     exit();
+// }
 
 
 // Eliminar producto
