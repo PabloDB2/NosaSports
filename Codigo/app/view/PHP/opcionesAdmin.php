@@ -33,7 +33,13 @@ if (!isset($_SESSION['nombre_usuario']) || $_SESSION['nombre_usuario'] !== 'admi
 </head>
 
 <body>
-    <?php include "../Generales/nav.php"; ?>
+    <?php include "../Generales/nav.php"; 
+    
+    // Obtenemos los productos desde el controlador
+    $productController = new ProductoController();
+    $productos = $productController->getAllProducts();
+    
+    ?>
     <h1>Opciones Admin</h1>
 
     <!--Formato de la ruta desde /NosaSports/Codigo/app/view/Img/imagenEjemplo.jpg -->
@@ -69,11 +75,28 @@ if (!isset($_SESSION['nombre_usuario']) || $_SESSION['nombre_usuario'] !== 'admi
 
         <br>
 
+        
+
         <form action="opcionesAdmin.php" method="POST">
             <h3>Actualizar producto</h3>
             <input type="hidden" name="formUpdate" value="updateProducto">
+            <label for="productoSelector"><b>Selecciona un producto:</b></label><br>
+    <select name="id_producto" id="productoSelector" required>
+        <option value="">--Selecciona un producto--</option>
+        <?php
+        // Verificamos si hay productos disponibles
+        if (!empty($productos) && is_array($productos)) {
+        //Uso un for para que se vean todas las opciones  sobre los productos.
+            for ($i = 0; $i < count($productos); $i++) {
+                echo '<option value="' . $productos[$i]['id_producto'] . '">' . $productos[$i]['id_producto'] . ' - ' . $productos[$i]['nombre_producto'] . '</option>';
+            }
+        } else {
+            echo '<option value="">No hay productos disponibles</option>';
+        }
+    ?>
+    </select><br><br>
 
-            <b>ID:</b><br> <input type="number" name="id_producto" required><br>
+            <!-- <b>ID:</b><br> <input type="number" name="id_producto" required><br> -->
             <b>Nombre:</b><br> <input type="text" name="nombre_producto" ><br>
             <b>Precio:</b><br> <input type="number" step="0.01" name="precio" ><br> <!-- step=0.01 solo admite números máximo 2 decimales-->
             <b>Descripcion:</b><br> <textarea name="descripcion"></textarea><br>
@@ -89,7 +112,20 @@ if (!isset($_SESSION['nombre_usuario']) || $_SESSION['nombre_usuario'] !== 'admi
             <h3>Eliminar producto</h3>
             <input type="hidden" name="formDelete" value="eliminarProducto">
             <b>ID:</b><br>
-            <input type="number" name="id_producto" required><br>
+            <select name="id_producto" id="productoSelector" required>
+        <option value="">--Selecciona un producto--</option>
+        <?php
+        // Verificamos si hay productos disponibles
+        if (!empty($productos) && is_array($productos)) {
+        //Uso un for para que se vean todas las opciones  sobre los productos.
+            for ($i = 0; $i < count($productos); $i++) {
+                echo '<option value="' . $productos[$i]['id_producto'] . '">' . $productos[$i]['id_producto'] . ' - ' . $productos[$i]['nombre_producto'] . '</option>';
+            }
+        } else {
+            echo '<option value="">No hay productos disponibles</option>';
+        }
+    ?>
+    </select><br><br>
             <input type="submit" value="Eliminar producto" style="background-color: red;  color: white">
         </form>
     </div>

@@ -17,6 +17,7 @@
 body {
   display: flex;
   flex-direction: column;
+  align-items: center;
   /* min-height: 100vh; */
   /* width: 100vw; */
 }
@@ -79,6 +80,7 @@ h1 {
   margin-bottom: 10px;
   border: 6px solid rgb(104, 86, 52);
   font-family: Arial, Helvetica, sans-serif;
+  gap:5%;
 }
 
 .contMateriales:hover {
@@ -91,7 +93,8 @@ h1 {
   line-height: 1.8;
   color: #333;
   flex: 1;
-   
+  text-align: justify;
+  
 }
 
 #tejidos {
@@ -120,84 +123,80 @@ h1 {
   text-align: center;
 }
 
-.topProductos {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+.contProductos {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2%;
+  width: 60%;
+  justify-items: center;
+  margin: 0 auto;
 }
 
 .divProduc {
-  padding: 15px;
-  border-radius: 15px;
-  height: 50vh;
+  padding: 15px; 
+  border-radius: 15px;  
+  height: 50vh; 
   box-sizing: border-box;
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  background-color: rgba(104, 86, 52, 0.6);
+  flex-direction: column; 
+  text-align: center; 
+  align-items: center;
 }
 
 .divProduc:hover {
   border-color: white;
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-10px); 
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
 }
 
 .imgProducto {
   display: block;
   margin: 0 auto;
-  width: 90%;
-  height: 60%;
-  border-radius: 15px;
-  object-fit: cover;
-  object-position: center;
-  border: 3px solid rgba(255, 255, 255, 0.7);
-  box-sizing: border-box;
+  width: 180px; 
+  height: 180px; 
+  border-radius: 10px; 
+  object-fit: cover; 
+  object-position: center; 
+  box-sizing: border-box; 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-#h2Populares {
-  background-color: rgb(104, 86, 52);
-  color: white;
-  border-radius: 20px;
-  width: 50%;
-  text-align: center;
-  margin: auto;
-  margin-top: 30px;
+
+#likes {
+  border-radius: 30px;
+  color: rgb(171, 31, 31);
+  text-align: left;
+  font-size: 15px;     
 }
 
 #precio {
-  margin-top: 5px;
+  margin-top: 5%; 
   font-weight: bold;
-  font-size: 20px;
-  border: 2px solid rgb(104, 86, 52);
+  font-size: 20px; 
+  border: 2px solid rgba(104, 86, 52); 
   margin: auto;
-  width: 70px;
+  width: 70px; 
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 20px;
-  padding: 5px;
-  color: #333;
+  background-color: rgba(255, 255, 255, 0.9); 
+  border-radius: 20px; 
+  padding: 5px; 
+  color: #333; 
 }
 
 #nombre {
   margin-top: 5%;
   text-align: center;
-  /* margin-top:10%; */
-  font-size: 22px;
+  font-size: 22px; 
   font-weight: bold;
-  color: rgb(104, 86, 52);
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-#likes {
-  border-radius: 30px;
-  color: rgb(171, 31, 31);
-  width: 80px;
-  text-align: center;
-  font-size: 18px;
-  background-color: rgba(255, 235, 235, 0.8);
-  padding: 5px;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  color: rgba(104, 86, 52); 
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); 
 }
 
 @media (max-width: 768px) {
@@ -260,14 +259,7 @@ h1 {
     font-size: 12px;
     text-align: justify;
   }
-  .topProductos {
-    display: block;
-  }
-  .divProduc {
-    width: 60%;
-    margin: auto;
-    margin-bottom: 10%;
-  }
+ 
 
   h1{
     font-size: 30px;
@@ -276,7 +268,15 @@ h1 {
 
 }
 
-
+#h2Populares {
+  background-color: rgb(104, 86, 52);
+  color: white;
+  border-radius: 20px;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  margin-top: 30px;
+}
 
 #imagenTejidos img:hover {
   transform: scale(1.05);

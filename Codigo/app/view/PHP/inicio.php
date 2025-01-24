@@ -50,7 +50,7 @@ $mejoresProductos = $productController->productosConMasLikes();
             </div>
 
             <div class="contMateriales">
-                <div id="imagenTejidos1">
+                <div id="imagenTejidos">
                     <img id="tejidos" src="/NosaSports/Codigo/app/view/Img/tejidos.png" alt="">
                 </div>
                 <div class="textoTejidos">
@@ -60,7 +60,7 @@ $mejoresProductos = $productController->productosConMasLikes();
 
             </div>
 
-            <div class="contMateriales2">
+            <div class="contMateriales">
                 <div class="textoTejidos">
                     <P>En NosaSports, nos comprometemos con el medio ambiente. La mayoría de nuestros productos deportivos están fabricados con materiales reciclados, combinando calidad y sostenibilidad. ¡Haz tu parte por el planeta mientras disfrutas de tus deportes favoritos!</P>
                 </div>
@@ -73,23 +73,27 @@ $mejoresProductos = $productController->productosConMasLikes();
             <h2 id="h2Populares">
                 <blink>Productos más populares</blink>
             </h2>
-            <div class="topProductos">
-
-                <?php foreach ($mejoresProductos as $producto) { ?>
-
+            
+            <div class="contProductos">
+        <div class="productos">
+            <?php
+            if ($mejoresProductos) {
+                foreach ($mejoresProductos as $producto) { ?>
                     <form class="formProducto" action="productodetalle.php" method="GET">
                         <div class="divProduc" onclick="this.closest('form').submit()">
                             <input type="hidden" name="id" value="<?= htmlspecialchars($producto['id_producto']) ?>">
-                            <h3 id="likes"><?= htmlspecialchars($producto['likes']) . " &#x2764;"  ?></h3>
                             <img class="imgProducto" src="<?= htmlspecialchars($producto['imagen']) ?>" alt="">
+                            <h3 id="likes"><?= htmlspecialchars($producto['likes']) . " &#x2764;" ?></h3>
                             <h3 id="nombre"><?= htmlspecialchars($producto['nombre_producto']) ?></h3>
-                            <p id="precio"> <?= htmlspecialchars($producto['precio']) ?>€</p>
-
+                            <p id="precio"><?= htmlspecialchars($producto['precio']) ?>€</p>
                         </div>
                     </form>
-                <?php } ?>
-
-            </div>
+                <?php }
+            } else { ?>
+                <p>No se han encontrado productos.</p>
+            <?php } ?>
+        </div>
+    </div>
 
             <?php include "../Generales/footer.php" ?>
         </div>

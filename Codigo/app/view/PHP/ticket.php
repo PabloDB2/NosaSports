@@ -8,7 +8,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
-    width: 400px;
+    width: 30%;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -32,12 +32,14 @@
     display: grid;
     grid-template-columns: auto;
     gap: 20px;
+    
 }
 
 .tarjeta {
     width: 400px;
     background: rgb(255, 250, 235);
     box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    padding: 5%;
 }
 
 .title {
@@ -46,11 +48,14 @@
     position: relative;
     display: flex;
     align-items: center;
-    padding-left: 20px;
-    border-bottom: 1px solid rgba(16, 86, 82, .75);
+    border-bottom: 1px solid rgb(104, 86, 52);
     font-weight: 700;
     font-size: 11px;
     color: #000000;
+    font-size: 20px;
+    margin-bottom: 7%;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .promo form {
@@ -66,7 +71,7 @@
     padding: 0 0 0 12px;
     border-radius: 5px;
     outline: none;
-    border: 1px solid rgb(16, 86, 82);
+    border: 1px solid rgb(104, 86, 52);
     background-color: rgb(251, 243, 228);
 }
 
@@ -79,12 +84,12 @@
     gap: 10px;
     width: 100%;
     height: 36px;
-    background: rgba(16, 86, 82, .75);
+    background: rgb(104, 86, 52);
     border-radius: 5px;
     border: 0;
     font-weight: 600;
     font-size: 12px;
-    color: #000000;
+    color:white;
 }
 
 .pago .detalle {
@@ -111,12 +116,12 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 10px 10px 20px;
-    background-color: rgba(16, 86, 82, .5);
+    background-color:rgb(104, 86, 52);
 }
 
 .price {
     font-size: 22px;
-    color: #2B2B2F;
+    color: white;
     font-weight: 900;
 }
 
@@ -126,16 +131,32 @@
     align-items: center;
     width: 150px;
     height: 36px;
-    background: rgba(16, 86, 82, .55);
+    background: rgb(104, 86, 52);
     border-radius: 7px;
-    border: 1px solid rgb(16, 86, 82);
-    color: #000000;
-    font-size: 13px;
+    border: 1px solid rgb(104, 86, 52);
+    
+    font-size: 15px;
     font-weight: 600;
+   
+}
+
+button{
+    color:white;
 }
 
 .compra-btn:hover{
   cursor:pointer;  
+}
+
+span{
+    
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.codigo{
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 </style>
@@ -179,7 +200,7 @@ if (isset($_POST['accion']) && $_POST['accion'] == 'comprar') {
 
 <div class="container">
   <div class="tarjeta cart">
-      <label class="title">compra</label>
+      <label class="title">RESUMEN DE COMPRA</label>
       <div class="steps">
           <div class="step">
               <div>
@@ -201,7 +222,7 @@ if (isset($_POST['accion']) && $_POST['accion'] == 'comprar') {
               <hr>
               <div class="promo">
                   <span>CODIGO PROMOCIONAL</span>
-                  <form method="POST" class="form">
+                  <form method="POST" class="codigo">
                       <input type="text" name="codigo_promocional" placeholder="Introduce un código válido" class="input_field">
                       <button type="submit">Aplicar</button>
                   </form>
