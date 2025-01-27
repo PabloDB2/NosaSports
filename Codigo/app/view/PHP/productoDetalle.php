@@ -22,7 +22,8 @@ if (isset($_SESSION['nombre_usuario'])) {
     $nombre_usuario = null;
 }
 
-$nombre_usuario = $_SESSION['nombre_usuario'];
+//Esta linea da problemas(comentada por si acaso)
+// $nombre_usuario = $_SESSION['nombre_usuario']; 
 
 $usuario = $usuarioController->getUserByName($nombre_usuario);
 
