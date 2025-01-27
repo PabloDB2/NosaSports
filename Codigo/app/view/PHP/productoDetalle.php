@@ -15,8 +15,10 @@ $usuarioController = new UsuarioController();
 session_start();
 
 if (isset($_SESSION['nombre_usuario'])) {
+
     $nombre_usuario = $_SESSION['nombre_usuario'];
 } else {
+
     $nombre_usuario = null;
 }
 
@@ -47,9 +49,9 @@ if (!isset($_SESSION['wishlist'])) {
 if (isset($_POST['accion']) && $_POST['accion'] === 'añadirAWishlist') {
     if (!in_array($id_producto, $_SESSION['wishlist'], true)) {
         $_SESSION['wishlist'][] = $id_producto;
-        $mensaje = "¡Producto añadido a tu wishlist!";
+        $mensaje = "¡Producto añadido a tu Wishlist!";
     } else {
-        $mensaje = "Este producto ya está en tu wishlist.";
+        $mensaje = "Este producto ya está en tu Wishlist.";
     }
 }
 

@@ -7,10 +7,7 @@
 
     // comprobamos si el usuario no está logeado
     if (!isset($_SESSION['nombre_usuario'])) {
-        echo "<h3>No has iniciado sesión.</h3>";
-        echo '<form action="login.php" method="get">
-                <button type="submit">Iniciar sesión</button>
-            </form>';
+        header("Location: login.php");
         exit();
     }
 

@@ -9,10 +9,7 @@ session_start();
 
 // Verificar si el usuario ha iniciado sesión
 if (!isset($_SESSION['nombre_usuario'])) {
-    echo "<h3>No has iniciado sesión.</h3>";
-    echo '<form action="login.php" method="get">
-            <button type="submit">Iniciar sesión</button>
-          </form>';
+    header("Location: login.php"); // al entrar en wishlist y no tener sesion te redirige a login
     exit();
 }
 
