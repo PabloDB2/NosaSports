@@ -1,1 +1,1 @@
-{"version":1,"defects":{"TestRuben::testCrearUsuarioExitoso":8},"times":{"TestRuben::testCrearUsuarioExitoso":0.048}}
+{"version":1,"defects":{"TestRuben::testCrearUsuarioExitoso":8,"TestRuben::testEliminarProductoCorrecto":7},"times":{"TestRuben::testCrearUsuarioExitoso":0.034,"TestRuben::testEliminarProductoCorrecto":0.099,"TestRuben::testFormularioDeporteFutbol":0.005,"TestRuben::testFormularioDeporteTenis":0,"TestRuben::testFormularioDeporteBaloncesto":0,"TestRuben::testFormularioDeporteBoxeo":0}}

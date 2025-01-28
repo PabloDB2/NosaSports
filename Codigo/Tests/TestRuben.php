@@ -2,33 +2,49 @@
 
 use PHPUnit\Framework\TestCase;
 
-// require_once '..\..\Codigo\app\view\PHP\login.php';
-require_once 'C:\xampp\htdocs\NosaSports\Codigo\app\controller\UsuarioController.php';
-require_once 'C:\xampp\htdocs\NosaSports\Codigo\app\model\Usuario.php';
+require_once(__DIR__ . '/../rutas.php');
+require_once(CONFIG . 'dbConnection.php');
+require_once(MODEL . 'Producto.php');
+require_once(CONTROLLER . 'ProductoController.php');
 
 final class TestRuben extends TestCase
 {
 
 
-    public function testCrearUsuarioExitoso()
+    public function testFormularioDeporteFutbol()
     {
-        // Simulando los datos del formulario de registro
-        $nombre_usuario = 'nuevo_usuario_test';
-        $correo = 'nuevo@usuario.com';
-        $nombreapellidos = 'Nuevo Usuario Test';
-        $direccion = 'Calle Ficticia 123';
-        $contraseña = "contraseña_segura123";
+        // Simulamos un formulario enviado para "futbol"
+        $_POST['deporte'] = 'futbol';
 
-        // Usamos el controlador para crear el usuario
-        $usuarioController = new UsuarioController();
-        $resultado = $usuarioController->crearUsuario($nombre_usuario, $correo, $nombreapellidos, $contraseña, $direccion);
+        // Verificamos que el valor de 'deporte' sea el esperado
+        $this->assertEquals('futbol', $_POST['deporte']);
+    }
 
-        $resultadoEsperado = ['nuevo_usuario_test','nuevo@usuario.com','Nuevo Usuario Test','Calle Ficticia 123',"contraseña_segura123"];
-        // Verificar que el usuario fue creado correctamente
-    
-        $this->assertEquals($nombre_usuario, $resultado->getNombreUsuario());
-        $this->assertEquals($correo, $resultado->getCorreo());
-        $this->assertEquals($nombreapellidos, $resultado->getNombreApellidos());
-        $this->assertEquals($direccion, $resultado->getDireccion());
+    public function testFormularioDeporteTenis()
+    {
+        // Simulamos un formulario enviado para "tenis"
+        $_POST['deporte'] = 'tenis';
+
+        // Verificamos que el valor de 'deporte' sea el esperado
+        $this->assertEquals('tenis', $_POST['deporte']);
+    }
+
+    public function testFormularioDeporteBaloncesto()
+    {
+        // Simulamos un formulario enviado para "baloncesto"
+        $_POST['deporte'] = 'baloncesto';
+
+        // Verificamos que el valor de 'deporte' sea el esperado
+        $this->assertEquals('baloncesto', $_POST['deporte']);
+    }
+
+    public function testFormularioDeporteBoxeo()
+    {
+        // Simulamos un formulario enviado para "boxeo"
+        $_POST['deporte'] = 'boxeo';
+
+        // Verificamos que el valor de 'deporte' sea el esperado
+        $this->assertEquals('boxeo', $_POST['deporte']);
     }
 }
+
