@@ -1,1 +1,1 @@
-{"version":1,"defects":{"TestRuben::testCrearUsuarioExitoso":8},"times":{"TestRuben::testCrearUsuarioExitoso":0.048}}
+{"version":1,"defects":{"TestRuben::testCrearUsuarioExitoso":8,"TestPablo::testCrearUsuario":7},"times":{"TestRuben::testCrearUsuarioExitoso":0.048,"TestPablo::testCrearUsuario":0.043}}
