@@ -1,1 +1,1 @@
-{"version":1,"defects":{"TestRuben::testCrearUsuarioExitoso":8},"times":{"TestRuben::testCrearUsuarioExitoso":0.048}}
+{"version":1,"defects":{"TestRuben::testCrearUsuarioExitoso":8,"TestJorge::testGetProductsByNameReturnsFilteredProducts":8,"TestJorge::testObtenerPorDeporte":8},"times":{"TestRuben::testCrearUsuarioExitoso":0.048,"TestJorge::testGetProductsByNameReturnsFilteredProducts":0.009,"TestJorge::testObtenerPorDeporte":0.006}}
