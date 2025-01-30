@@ -4,47 +4,33 @@ use PHPUnit\Framework\TestCase;
 
 require_once(__DIR__ . '/../rutas.php');
 require_once(CONFIG . 'dbConnection.php');
-require_once(MODEL . 'Producto.php');
-require_once(CONTROLLER . 'ProductoController.php');
+require_once(MODEL . 'Usuario.php');
+require_once(CONTROLLER . 'UsuarioController.php');
 
 final class TestRuben extends TestCase
 {
 
-
-    public function testFormularioDeporteFutbol()
+    public function testBorrarCuenta()
     {
-        // Simulamos un formulario enviado para "futbol"
-        $_POST['deporte'] = 'futbol';
+        $nombre_usuario = 'testuser';
+        $correo = 'testuser@example.com';
+        $nombreapellidos = 'Test User';
+        $contraseña = 'password123';
+        $direccion = '123 Test St';
 
-        // Verificamos que el valor de 'deporte' sea el esperado
-        $this->assertEquals('futbol', $_POST['deporte']);
-    }
+        $usuarioController = new UsuarioController();
 
-    public function testFormularioDeporteTenis()
-    {
-        // Simulamos un formulario enviado para "tenis"
-        $_POST['deporte'] = 'tenis';
+        $usuarioController->crearUsuario($nombre_usuario, $correo, $nombreapellidos, $contraseña, $direccion);
 
-        // Verificamos que el valor de 'deporte' sea el esperado
-        $this->assertEquals('tenis', $_POST['deporte']);
-    }
+        $usuario = Usuario::getUserByName($nombre_usuario);
+        $this->assertNotNull($usuario);
 
-    public function testFormularioDeporteBaloncesto()
-    {
-        // Simulamos un formulario enviado para "baloncesto"
-        $_POST['deporte'] = 'baloncesto';
+        $usuarioController->eliminarUsuario($nombre_usuario);
 
-        // Verificamos que el valor de 'deporte' sea el esperado
-        $this->assertEquals('baloncesto', $_POST['deporte']);
-    }
-
-    public function testFormularioDeporteBoxeo()
-    {
-        // Simulamos un formulario enviado para "boxeo"
-        $_POST['deporte'] = 'boxeo';
-
-        // Verificamos que el valor de 'deporte' sea el esperado
-        $this->assertEquals('boxeo', $_POST['deporte']);
+        $usuario = Usuario::getUserByName($nombre_usuario);
+        $this->assertNull($usuario);
     }
 }
+?>
+
 
