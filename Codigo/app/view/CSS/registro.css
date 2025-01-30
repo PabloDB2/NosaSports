@@ -83,3 +83,13 @@ a:hover {
     font-size: 20px;
     display: block;
 }
+
+@media (max-width: 480px) {
+
+    .popup {
+        
+        width: 80%;
+      
+    }
+
+}
