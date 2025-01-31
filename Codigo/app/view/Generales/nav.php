@@ -95,6 +95,8 @@ a img {
     <!-- Opciones de usuario -->
     <div class="opcionesUsuario">
         <?php
+
+    
         if ($nombre_usuario) {
             echo '<a href="cuenta.php"><img src="../Img/icons8-usuario-masculino-en-círculo-60.png" style="width: 40px; height: 40px; margin-right: 8px;">' . htmlspecialchars($nombre_usuario) . '</a>';
 
@@ -128,10 +130,25 @@ a img {
         <img src="../Img/icons8-teléfono-50.png" alt="Contactanos">
         <span>Contactanos</span>
     </a>
-    <a href="../PHP/pedidos.php">
-        <img src="../Img/icons8-camión-50.png" alt="Ped">
-        <span>Pedidos</span>
+    <?php
+
+if($nombre_usuario == null){
+?>
+    <a style="display:none" href="../PHP/pedidos.php">
+    <img src="../Img/icons8-camión-50.png" alt="Ped">
+    <span>Pedidos</span>
     </a>
+    <?php
+    }else{
+        ?>
+    <img src="../Img/icons8-camión-50.png" alt="Ped">
+    <span>Pedidos</span>
+    </a>
+   
+   <?php
+}
+    ?>
+    
 </nav>
 
 
