@@ -68,5 +68,19 @@ class Pedido {
             return [];
         }
     }
+
+
+    public function getPedidosByNombreUsuario($nombre_usuario) {
+        try {
+            $conn = getDBConnection();
+            $sentencia = $conn->prepare("SELECT * FROM pedido WHERE nombre_usuario = ?");
+            $sentencia->bindParam(1, $nombre_usuario);
+            $sentencia->execute();
+            return $sentencia->fetchAll();
+        } catch (PDOException $e) {
+            echo "Error al obtener los pedidos: " . $e->getMessage();
+            return [];
+        }
+    }
 }
 ?>

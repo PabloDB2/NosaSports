@@ -46,6 +46,16 @@ if (!isset($_SESSION['wishlist'])) {
     $_SESSION['wishlist'] = [];
 }
 
+if (!isset($_SESSION['entrega'])) {
+    $_SESSION['entrega'] = [];
+}
+
+// Añadir a wishlist
+if (isset($_POST['accion']) && $_POST['accion'] === 'comprar') {
+   
+        $_SESSION['entrega'] = $id_producto;    
+}
+
 // Añadir a wishlist
 if (isset($_POST['accion']) && $_POST['accion'] === 'añadirAWishlist') {
     if (!in_array($id_producto, $_SESSION['wishlist'], true)) {
@@ -72,14 +82,18 @@ if (isset($_POST['accion']) && $_POST['accion'] === 'darLike') {
 
 // Verificar si el usuario está logueado antes de permitir la compra
 if (isset($_POST['accion']) && $_POST['accion'] === 'comprar') {
-    if ($nombre_usuario) {
+    
         // Crear un pedido
         $pedidoController->crearPedido($id_producto, $nombre_usuario);
-        $mensajeCompra = "Pedido realizado con éxito";
-    } else {
-        $mensajeCompra = "Debes iniciar sesión para realizar la compra.";
-    }
-}
+
+        
+        // $mensajeCompra = "Pedido realizado con éxito";
+        header("Location: entrega.php");
+        exit();
+     } 
+
+ 
+
 
 // Publicar reseña
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['accion']) && $_POST['accion'] === 'publicarReseña') {
@@ -90,6 +104,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['accion']) && $_POST['
         if ($texto && $puntuacion) {
             $resenaController->crearReseña($texto, $puntuacion, $nombre_usuario, $id_producto);
             $mensajeReseña = "¡Reseña publicada con éxito!";
+            
+            $_SESSION['entrega'] = $id_producto;
             header("Location: " . $_SERVER['PHP_SELF'] . "?id=" . $id_producto); // Redirigir con id
             exit; // Es importante llamar a exit después de la redirección
         } else {
@@ -141,17 +157,27 @@ $resenas = $resenaController->getReseñasByProducto($id_producto);
                     <p class="mensajeAñadido"><?= $mensaje ?></p>
                 <?php } ?>
 
-                <?php if (isset($mensajeCompra)) { ?>
-                    <p class="mensajeCompra"><?= $mensajeCompra ?></p>
-                <?php } ?>
+                
 
                 <div class="acciones">
                     <form id="form-comprar" action="" method="POST" style="display:none;">
                         <input type="hidden" name="id" value="<?= htmlspecialchars($producto['id_producto']) ?>">
                         <input type="hidden" name="accion" value="comprar">
                     </form>
+                    <?php
+                    if($nombre_usuario){
+                    ?>
                     <button type="button" class="botonComprar" onclick="confirmarCompra(event)">Comprar</button>
+                    
+                    <?php
+                    } else {
+                        $mensajeCompra = "Debes iniciar sesión para comprar.";
+                    }
+                    ?>
 
+                    <?php if (isset($mensajeCompra)) { ?>
+                    <p class="mensajeCompra"><?= $mensajeCompra ?></p>
+                <?php } ?>
                     <div class="accionesBotones">
                         <form action="" method="POST">
                             <input type="hidden" name="accion" value="añadirAWishlist">
@@ -255,11 +281,7 @@ function cancelarCompra() {
     document.querySelector('.popup-overlay').style.display = 'none';
 }
 
-function confirmarYComprar() {
-    // Enviar el formulario de compra y cerrar el popup
-    document.getElementById('form-comprar').submit();
-    cancelarCompra(); // Cerrar el popup y el overlay
-}
+
 
     </script>
 </body>

@@ -7,11 +7,8 @@ require_once(MODEL . 'Wishlist.php');
 
 session_start();
 
-// Verificar si el usuario ha iniciado sesión
-if (!isset($_SESSION['nombre_usuario'])) {
-    header("Location: login.php"); // al entrar en wishlist y no tener sesion te redirige a login
-    exit();
-}
+
+
 
 $nombre_usuario = $_SESSION['nombre_usuario'];
 
@@ -78,29 +75,21 @@ foreach ($_SESSION['wishlist'] as $id) {
 <body>
     <div class="content">
         <?php include "../Generales/nav.php"; ?>
-        <h1>Mi wishlist</h1>
+        <h2>Mi wishlist</h2>
 
         <?php if (!empty($productos_wishlist)) { ?>
-            <div class="topProductos">
+     <div class="contProductos">
+         <div class="productos">
                 <?php foreach ($productos_wishlist as $producto) { ?>
-                    <div class="tarjetaProducto">
-                        <form action="productodetalle.php" method="POST" class="tarjetaProductoInterior">
+                    <div class="formProducto">
+                        <div class="divProduc">
                             <input type="hidden" name="id" value="<?= htmlspecialchars($producto['id_producto']) ?>">
-                            <div class="tarjetaProductoInterior" onclick="this.closest('form').submit()">
-                                <img class="imgProductos" src="<?= htmlspecialchars($producto['imagen']) ?>" alt="Imagen de <?= htmlspecialchars($producto['nombre_producto']) ?>">
-                                <div class="productoInfo">
-                                    <h3>
-                                        <?= htmlspecialchars($producto['nombre_producto']) ?><br>
-                                        <?= htmlspecialchars($producto['likes']) ?> &#x2764;
-                                    </h3>
-                                    <p><?= htmlspecialchars($producto['precio']) ?>€</p>
-                                </div>
-                            </div>
-                        </form>
-
-                        <div class="accionesProducto">
-                            <!-- Eliminar de la wishlist -->
-                            <form action="paginaWishlist.php" method="POST">
+                            <img class="imgProducto" src="<?= htmlspecialchars($producto['imagen']) ?>" alt="">
+                            <h3 id="likes"><?= htmlspecialchars($producto['likes']) . " &#x2764;" ?></h3>
+                            <h3 id="nombre"><?= htmlspecialchars($producto['nombre_producto']) ?></h3>
+                            <p id="precio"><?= htmlspecialchars($producto['precio']) ?>€</p>
+                            <!-- Eliminar de la sesion  -->
+                             <form action="paginaWishlist.php" method="POST">
                                 <input type="hidden" name="id_producto" value="<?= htmlspecialchars($producto['id_producto']) ?>">
                                 <input type="hidden" name="accion" value="eliminarDeWishlist">
                                 <button type="submit" class="btnEliminar">Eliminar</button>
@@ -109,16 +98,26 @@ foreach ($_SESSION['wishlist'] as $id) {
                             <!-- Guardar en la base de datos -->
                             <form action="paginaWishlist.php" method="POST">
                                 <input type="hidden" name="accion" value="guardarEnBaseDeDatos">
-                                <button type="submit" class="btnGuardar">Guardar en base de datos</button>
-                            </form>
+                                <button type="submit" class="btnGuardar">Guardar</button>
+                            </form> 
+                            
                         </div>
-                    </div>
+                </div>     
+                   
                 <?php } ?>
-            </div>
+            
         <?php } else { ?>
-            <h1>No tienes productos en tu wishlist.</h1>
+            <div class="sinProductos">
+            <h3>No tienes productos en tu wishlist.</h3>
+            </div>
         <?php } ?>
+        
+        </div>
     </div>
-    <?php include "../Generales/footer.php"; ?>
+
+
+   
 </body>
+
+
 </html>

@@ -8,5 +8,10 @@ class PedidoController {
         $pedido = new Pedido();
         $pedido->crearPedido($id_producto, $nombre_usuario);
     }
+
+    public function getPedidosByUser($nombre_usuario) {
+        $pedido = new Pedido();
+        return $pedido->getPedidosByNombreUsuario($nombre_usuario);
+    }
 }
 ?>
