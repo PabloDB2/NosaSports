@@ -14,6 +14,8 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     height: 60px;
     min-height: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    
 }
 
 
@@ -125,6 +127,10 @@ a img {
     <a href="../PHP/contacto.php">
         <img src="../Img/icons8-teléfono-50.png" alt="Contactanos">
         <span>Contactanos</span>
+    </a>
+    <a href="../PHP/pedidos.php">
+        <img src="../Img/icons8-teléfono-50.png" alt="Ped">
+        <span>Pedidos</span>
     </a>
 </nav>
 

@@ -129,7 +129,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150px;
+    width: 300px;
     height: 36px;
     background: rgb(104, 86, 52);
     border-radius: 7px;
@@ -148,11 +148,7 @@ button{
   cursor:pointer;  
 }
 
-span{
-    
-    font-weight: bold;
-    font-size: 18px;
-}
+
 
 .codigo{
     margin-top: 5%;
@@ -185,17 +181,8 @@ if (isset($_POST['codigo_promocional'])) {
 
 $total_con_descuento = $total - $descuento;
 
-// Verificar si se está comprando
-if (isset($_POST['accion']) && $_POST['accion'] == 'comprar') {
-  $nombre_usuario = isset($_SESSION['nombre_usuario']) ? $_SESSION['nombre_usuario'] : null;
-  if ($nombre_usuario) {
-      $pedidoController = new PedidoController();
-      $pedidoController->crearPedido($id_producto, $nombre_usuario);
-      $mensajeCompra = "Pedido realizado con éxito.";
-  } else {
-      $mensajeCompra = "Debes iniciar sesión para realizar la compra.";
-  }
-}
+
+
 ?>
 
 <div class="container">
