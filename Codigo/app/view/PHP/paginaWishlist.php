@@ -6,11 +6,11 @@ require_once(MODEL . 'Producto.php');
 require_once(MODEL . 'Wishlist.php');
 
 session_start();
-
-
-
-
-$nombre_usuario = $_SESSION['nombre_usuario'];
+if (isset($_SESSION['nombre_usuario'])) {
+    $nombre_usuario = $_SESSION['nombre_usuario'];
+} else {
+    $nombre_usuario = null;
+}
 
 if (!isset($_SESSION['wishlist'])) {
     $_SESSION['wishlist'] = [];
