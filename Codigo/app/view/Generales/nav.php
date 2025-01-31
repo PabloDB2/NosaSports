@@ -129,7 +129,7 @@ a img {
         <span>Contactanos</span>
     </a>
     <a href="../PHP/pedidos.php">
-        <img src="../Img/icons8-teléfono-50.png" alt="Ped">
+        <img src="../Img/icons8-camión-50.png" alt="Ped">
         <span>Pedidos</span>
     </a>
 </nav>

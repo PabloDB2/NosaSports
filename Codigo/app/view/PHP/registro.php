@@ -89,8 +89,23 @@ if (isset($_POST['formCreate']) && $_POST['formCreate'] == 'crearUsuario') {
 
         $usuarioController->crearUsuario($nombreUsuario, $correo, $nombreApellidos, $contraseña, $direccion);
         echo "<p>Se ha creado el usuario " . $nombreUsuario . ".</p>";
-        header("Location: login.php");
-        exit();
+
+
+        if (isset($_POST['nombre_usuario'], $_POST['contraseña'])) {
+            $nombre_usuario = $_POST['nombre_usuario'];
+            $contraseña = $_POST['contraseña'];
+        
+            $usuario = $usuarioController->getUserByName($nombre_usuario);
+        
+            if ($usuario==true) {
+                if ($contraseña == $usuario->getContraseña()) {
+                    $_SESSION['nombre_usuario'] = $usuario->getNombreUsuario();
+                    header("Location: inicio.php"); 
+                    exit();
+                }           
+            }
+        }
+        
     } else {
         echo "<p>Completa todos los campos.</p>";
     }

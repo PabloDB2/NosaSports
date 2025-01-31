@@ -130,7 +130,6 @@ if (!isset($_SESSION['nombre_usuario']) || $_SESSION['nombre_usuario'] !== 'admi
         </form>
     </div>
 
-    <?php  include "../Generales/footer.php" ?>
 </body>
 
 </html>

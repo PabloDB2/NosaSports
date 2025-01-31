@@ -146,6 +146,5 @@
         </div>
     </body>
 
-    <?php include "../Generales/footer.php"; ?>
 
     </html>

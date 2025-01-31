@@ -78,7 +78,6 @@ if ($deporte) {
         </div>
     </div>
 
-    <?php include "../Generales/footer.php" ?>
 
 </body>
 
