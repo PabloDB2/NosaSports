@@ -141,6 +141,7 @@ if($nombre_usuario == null){
     <?php
     }else{
         ?>
+     <a href="../PHP/pedidos.php">  
     <img src="../Img/icons8-camión-50.png" alt="Ped">
     <span>Pedidos</span>
     </a>
