@@ -50,7 +50,6 @@ if (!isset($_SESSION['entrega'])) {
     $_SESSION['entrega'] = [];
 }
 
-// Añadir a wishlist
 if (isset($_POST['accion']) && $_POST['accion'] === 'comprar') {
    
         $_SESSION['entrega'] = $id_producto;    
@@ -98,16 +97,15 @@ if (isset($_POST['accion']) && $_POST['accion'] === 'comprar') {
 // Publicar reseña
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['accion']) && $_POST['accion'] === 'publicarReseña') {
     if ($nombre_usuario) {
-        $texto = $_POST['texto'] ?? '';
-        $puntuacion = $_POST['puntuacion'] ?? 0;
+        $texto = $_POST['texto'];
+        $puntuacion = $_POST['puntuacion'];
 
         if ($texto && $puntuacion) {
             $resenaController->crearReseña($texto, $puntuacion, $nombre_usuario, $id_producto);
             $mensajeReseña = "¡Reseña publicada con éxito!";
             
-            $_SESSION['entrega'] = $id_producto;
-            header("Location: " . $_SERVER['PHP_SELF'] . "?id=" . $id_producto); // Redirigir con id
-            exit; // Es importante llamar a exit después de la redirección
+            header("Location: " . $_SERVER['PHP_SELF'] . "?id=" . $id_producto); // Redirigir con la misma id
+            exit;
         } else {
             $mensajeReseña = "Por favor, completa todos los campos para publicar tu reseña.";
         }

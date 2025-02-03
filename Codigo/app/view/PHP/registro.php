@@ -58,7 +58,7 @@ $usuarios = $usuarioController->getAllUsers();
 </form>
 
     <p id="pregunta">¿Ya tienes cuenta?</p>
-    <a href="../PHP/registro.php">Iniciar Sesión</a>
+    <a href="../PHP/login.php">Iniciar Sesión</a>
     <a href="../PHP/inicio.php">Volver al Inicio</a>
 
     <?php

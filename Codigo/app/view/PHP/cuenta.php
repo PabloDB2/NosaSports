@@ -45,9 +45,8 @@
         $contraseña = $_POST['contraseña'];
         $direccion = $_POST['direccion'];
 
-        // Comparar la contraseña actual con la almacenada (en texto plano)
         if (comprobarContraseñaActual($contraseña_actual, $usuario)) {
-            // Contraseña correcta, proceder con la modificación
+
             $usuarioController->modificarUsuario($nombre_usuario, $correo, $usuario->getNombreApellidos(), $contraseña, $direccion);
 
             if ($nuevo_nombre_usuario !== $nombre_usuario) {

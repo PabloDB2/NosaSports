@@ -27,7 +27,6 @@ if (isset($_SESSION['nombre_usuario'])) {
 <body>
     <?php 
 
-    session_start();
     
     include "../Generales/nav.php";
 
